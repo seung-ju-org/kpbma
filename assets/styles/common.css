@@ -4,6 +4,9 @@
     --white: #ffffff;
     --text-copyright: #666666;
     --text-gnb: #888888;
+    --main-hover: #1e74bd;
+    --sub-hover: #e56824;
+    --white-hover: #eeeeee;
     --text-main: #111111;
     --text-white: #ffffff;
 }
@@ -71,10 +74,19 @@ header h1 img {
     color: var(--text-gnb);
     font-size: 1.6rem;
     font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.gnb a:hover {
+    color: var(--text-main);
 }
 
 .gnb a.active {
     color: var(--main);
+}
+
+.gnb a.active:hover {
+    color: var(--main-hover);
 }
 
 .btn {
@@ -87,11 +99,22 @@ header h1 img {
     font-weight: 600;
     gap: 1.4rem;
     padding: 1.7rem 2.5rem 1.5rem;
+    transition-duration: 0.2s;
+    transition-property: background-color, color;
+    transition-timing-function: ease;
+}
+
+a.btn:hover {
+    background-color: var(--main-hover);
 }
 
 .btn-sub {
     background-color: var(--sub);
     color: var(--text-white)
+}
+
+a.btn-sub:hover {
+    background-color: var(--sub-hover);
 }
 
 .btn-sm {
@@ -101,6 +124,11 @@ header h1 img {
 
 .btn-white {
     background-color: var(--white);
+    color: var(--text-main)
+}
+
+a.btn-white:hover {
+    background-color: var(--white-hover);
     color: var(--text-main)
 }
 
