@@ -1,6 +1,7 @@
 :root {
     --main: #1989e6;
     --sub: #fa6e22;
+    --white: #ffffff;
     --text-copyright: #666666;
     --text-gnb: #888888;
     --text-main: #111111;
@@ -8,7 +9,6 @@
 }
 
 html, body {
-    font-family: Pretendard sans-serif;
     font-size: 10px;
     letter-spacing: -0.03rem;
 }
@@ -24,6 +24,7 @@ a {
     flex-direction: column;
     justify-content: center;
     min-height: 100vh;
+    overflow: hidden;
 }
 
 main {
@@ -76,12 +77,30 @@ header h1 img {
 }
 
 .btn {
+    align-items: baseline;
     background-color: var(--main);
     border-radius: 2.5rem;
     color: var(--text-white);
+    display: inline-flex;
     font-size: 1.6rem;
     font-weight: 600;
-    padding: 1.7rem 2.5rem 1.3rem;
+    gap: 1.4rem;
+    padding: 1.7rem 2.5rem 1.5rem;
+}
+
+.btn-sub {
+    background-color: var(--sub);
+    color: var(--text-white)
+}
+
+.btn-sm {
+    font-size: 1.4rem;
+    padding: 0.8rem 1.5rem 0.7rem;
+}
+
+.btn-white {
+    background-color: var(--white);
+    color: var(--text-main)
 }
 
 .copyright {
@@ -103,4 +122,12 @@ header h1 img {
     font-weight: 500;
     letter-spacing: -0.05rem;
     text-align: center;
+}
+
+.shadow {
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
+}
+
+.shadow-sm {
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.05);
 }
