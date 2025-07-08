@@ -39,8 +39,10 @@ main {
 }
 
 .container {
+    box-sizing: border-box;
     margin: 0 auto;
-    max-width: 146rem;
+    max-width: 150rem;
+    padding: 0 2rem;
     width: 100%;
 }
 

@@ -33,7 +33,7 @@ window.addEventListener('load', function () {
                 element.style.transform = 'translateX(-' + scrollY + 'px)';
             });
 
-            const scrollPercent = scrollY / (scrollHeight - windowHeight)
+            const scrollPercent = Math.min(scrollY / (scrollHeight - windowHeight), 1)
             const historyYearLine = historyYearContainerElement.querySelector('.history-year-line')
             historyYearLine.style.transform = 'scaleX(' + scrollPercent * 100 + '%)'
             const historyYear = historyYearContainerElement.querySelector('.btn')
