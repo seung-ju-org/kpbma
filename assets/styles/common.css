@@ -49,6 +49,7 @@ header {
     position: fixed;
     right: 0;
     top: 0;
+    z-index: 1000;
 }
 
 header .container {
@@ -114,6 +115,7 @@ header h1 img {
     position: fixed;
     right: 0;
     width: 100%;
+    z-index: 1000;
 }
 
 .copyright p {
