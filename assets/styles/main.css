@@ -1,4 +1,5 @@
 .main-bg {
+    background-color: #000000;
     bottom: 0;
     height: 100%;
     left: 0;
@@ -8,6 +9,14 @@
     top: 0;
     width: 100%;
     z-index: -1;
+}
+
+.main-bg img {
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.9;
+    transform: scale(1.5);
+    width: 100%;
 }
 
 main {
@@ -79,6 +88,14 @@ main .gallery .images-container .image-container {
     flex-direction: column;
     gap: 4rem;
     line-height: 0;
+}
+
+main .gallery .images-container a {
+    transition-property: box-shadow, transform;
+}
+
+main .gallery .images-container a:hover {
+    transform: scale(1.05);
 }
 
 main .history-year-container {
