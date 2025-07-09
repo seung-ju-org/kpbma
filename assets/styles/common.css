@@ -16,6 +16,7 @@
 html, body {
     font-size: 10px;
     letter-spacing: -0.03rem;
+    scroll-behavior: smooth;
 }
 
 a {
