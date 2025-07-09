@@ -88,6 +88,9 @@ main .gallery .images-container .image-container {
     flex-direction: column;
     gap: 4rem;
     line-height: 0;
+    opacity: 0;
+    transform: translateY(10%);
+    transition: all 0.2s ease;
 }
 
 main .gallery .images-container a {
