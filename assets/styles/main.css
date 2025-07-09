@@ -78,6 +78,7 @@ main .gallery .images-container .image-container {
     display: flex;
     flex-direction: column;
     gap: 4rem;
+    line-height: 0;
 }
 
 main .history-year-container {

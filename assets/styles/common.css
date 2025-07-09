@@ -1,9 +1,11 @@
 :root {
+    --gray: #666666;
     --main: #1989e6;
     --sub: #fa6e22;
     --white: #ffffff;
     --text-copyright: #666666;
     --text-gnb: #888888;
+    --text-gray: #666666;
     --main-hover: #1e74bd;
     --sub-hover: #e56824;
     --white-hover: #eeeeee;
@@ -44,6 +46,10 @@ main {
     max-width: 150rem;
     padding: 0 2rem;
     width: 100%;
+}
+
+.sub header {
+    background-color: var(--white);
 }
 
 header {
@@ -158,6 +164,11 @@ a.btn-white:hover {
 
 .shadow {
     box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.2s ease;
+}
+
+a.shadow:hover {
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.5);
 }
 
 .shadow-sm {
