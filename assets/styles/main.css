@@ -23,7 +23,7 @@ main {
     bottom: 0;
     display: flex;
     flex-direction: column;
-    gap: 8rem;
+    gap: 5rem;
     height: 100%;
     justify-content: center;
     margin: auto 0;
