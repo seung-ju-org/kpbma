@@ -158,6 +158,10 @@ main .gallery .images-container {
     gap: 4.5rem;
 }
 
+main .gallery .images-container + .meta {
+    margin-left:60px;
+}
+
 main .gallery .images-container .image-container {
     display: flex;
     flex-direction: column;
@@ -183,7 +187,17 @@ main .history-year-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 100%;
+    padding:0 40px;
+    position: relative;
+}
+
+main .history-year-container:before {
+    content:'';
+    position: absolute;
+    width:40px;
+    height:1px;
+    background: var(--sub);
+    left:0;
 }
 
 main .history-year-container .history-year-line-container {
@@ -198,7 +212,6 @@ main .history-year-container .history-year-line-container .history-year-line {
     height: 100%;
     transform: scaleX(0%);
     transform-origin: left;
-    width: 100%;
 }
 
 main .history-year-container .btn {

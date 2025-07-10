@@ -60,7 +60,7 @@ window.addEventListener('load', function () {
 
                             if (maxScrollWidth > 0) {
                                 const minYear = 1885;
-                                const maxYear = 1969;
+                                const maxYear = 2024;
                                 const years = new Array(maxYear - minYear + 1).fill(null).map(function (_, index) {
                                     return minYear + index;
                                 })
