@@ -13,6 +13,7 @@
     height: 100vh;
     padding-top: 30rem;
     position: relative;
+    transition: padding-top 0.5s ease;
 }
 
 .board-detail .meta-container .meta {
