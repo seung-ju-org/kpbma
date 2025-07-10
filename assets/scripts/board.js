@@ -25,6 +25,7 @@ window.addEventListener('load', function () {
             boardDetailMainImgElement.style.height = null;
             boardDetailMainImgElement.style.top = null;
             boardDetailMainImgImgElement.style.opacity = null;
+            boardDetailMetaContainerElement.style.paddingTop = null;
             boardDetailMetaTitleElement.style.color = null;
             boardDetailBreadcrumbItems.forEach(function (element) {
                 element.style.color = null;
