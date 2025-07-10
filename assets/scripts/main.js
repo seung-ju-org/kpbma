@@ -20,10 +20,7 @@ window.addEventListener('load', function () {
                 introHrElement.style.transform = 'scaleX(0)';
                 setTimeout(function () {
                     introImg.style.opacity = '0';
-                    introImg.style.transform = 'translateY(-50%)';
-
                     introText.style.opacity = '0';
-                    introText.style.transform = 'translateY(50%)';
 
                     setTimeout(function () {
                         introElement.style.opacity = '0';
