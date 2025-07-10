@@ -104,7 +104,7 @@
     right: 0;
     top: calc(100vh - 37.5%);
     transition: all 0.5s ease;
-    width: 108rem;
+    width: 132rem;
 }
 
 .board-detail #board-detail-main-img img {
