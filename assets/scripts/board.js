@@ -1,0 +1,32 @@
+window.addEventListener('load', function () {
+    const wrapperElement = document.body.querySelector('#wrapper');
+    const boardDetailElement = wrapperElement.querySelector('.board-detail');
+    const boardDetailMainImgElement = boardDetailElement.querySelector('#board-detail-main-img');
+    const boardDetailMainImgImgElement = boardDetailMainImgElement.querySelector('#board-detail-main-img img');
+    const boardDetailMetaTitleElement = boardDetailElement.querySelector('.board-detail .meta-container .meta .title');
+    const boardDetailBreadcrumbItems = boardDetailElement.querySelectorAll('.board-detail .breadcrumb li a');
+
+    window.addEventListener('scroll', function () {
+        const scrollY = window.scrollY;
+
+        if (scrollY > 0) {
+            boardDetailMainImgElement.style.width = '100%';
+            boardDetailMainImgElement.style.height = '100%';
+            boardDetailMainImgElement.style.top = '0';
+            boardDetailMainImgImgElement.style.opacity = '0.45';
+            boardDetailMetaTitleElement.style.color = '#ffffff';
+            boardDetailBreadcrumbItems.forEach(function (element) {
+                element.style.color = '#ffffff';
+            });
+        } else {
+            boardDetailMainImgElement.style.width = null;
+            boardDetailMainImgElement.style.height = null;
+            boardDetailMainImgElement.style.top = null;
+            boardDetailMainImgImgElement.style.opacity = null;
+            boardDetailMetaTitleElement.style.color = null;
+            boardDetailBreadcrumbItems.forEach(function (element) {
+                element.style.color = null;
+            });
+        }
+    });
+});

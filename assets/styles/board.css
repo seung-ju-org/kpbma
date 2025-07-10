@@ -2,26 +2,36 @@
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    gap: 3.5rem;
-    padding: 5rem 0;
+    gap: 5rem;
 }
 
-.board-detail .meta {
+.board-detail .meta-container {
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 10rem;
+    height: 100vh;
+    padding-top: 50rem;
+    position: relative;
 }
 
-.board-detail .meta .year {
+.board-detail .meta-container .meta {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.board-detail .meta-container .meta .year {
     color: var(--main);
     font-size: 1.6rem;
     font-weight: 600;
 }
 
-.board-detail .meta .title {
+.board-detail .meta-container .meta .title {
     color: var(--text-main);
     font-size: 6rem;
     font-weight: 800;
+    transition: all 0.5s ease;
 }
 
 .board-detail .breadcrumb {
@@ -41,20 +51,14 @@
     font-size: 1.4rem;
     font-weight: 600;
     gap: 1rem;
-}
-
-.board-detail .breadcrumb li:first-child a img {
-    width: 2rem;
-}
-
-.board-detail .breadcrumb li a img {
-    width: 1rem;
+    transition: all 0.5s ease;
 }
 
 .board-detail .content-container {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 10rem;
+    padding: 20rem 0;
 }
 
 .board-detail .content-container .content {
@@ -88,6 +92,31 @@
 
 .board-detail .content-container .content hr {
     background-color: var(--gray);
+    width: 100%;
+}
+
+.board-detail #board-detail-main-img {
+    background-color: #000000;
+    height: 67.5rem;
+    left: 0;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    top: calc(100vh - 67.5rem);
+    transition: all 0.5s ease;
+    width: 108rem;
+}
+
+.board-detail #board-detail-main-img img {
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.5s ease;
+    width: 100%;
+}
+
+.board-detail .content-container {
+    background: var(--white);
+    position: relative;
     width: 100%;
 }
 

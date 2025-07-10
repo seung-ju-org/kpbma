@@ -6,11 +6,12 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"/>
     <link rel="stylesheet" href="/assets/styles/font.css">
     <link rel="stylesheet" href="/assets/styles/reset.css">
     <link rel="stylesheet" href="/assets/styles/common.css">
     <link rel="stylesheet" href="/assets/styles/board.css">
-    <script type="application/javascript" src="/assets/scripts/main.js"></script>
+    <script type="application/javascript" src="/assets/scripts/board.js"></script>
 </head>
 <body>
 <div id="wrapper" class="sub">
@@ -27,21 +28,25 @@
         </div>
     </header>
     <main>
-        <div class="container">
-            <div class="board-detail">
+        <div class="board-detail">
+            <div id="board-detail-main-img">
+                <img src="/assets/images/contents-img01.png" alt="contents-image">
+            </div>
+            <div class="meta-container container">
                 <div class="meta">
                     <span class="year">1897 ~ 1960</span>
                     <h2 class="title">대한민국 제약 역사의 서막</h2>
                 </div>
-                <div class="content-container">
-                    <ul class="breadcrumb">
-                        <li><a href=""><img src="/assets/icons/home_black.png" alt="home"></a></li>
-                        <li><a href="">협회관 <img src="/assets/icons/chevron_bottom_black.png" alt="more"></a></li>
-                        <li><a href="">CHAPTER. 01 <img src="/assets/icons/chevron_bottom_black.png" alt="more"></a>
-                        </li>
-                    </ul>
+                <ul class="breadcrumb">
+                    <li><a href=""><i class="fa fa-home"></i></a></li>
+                    <li><a href="">협회관 <i class="fa fa-angle-down"></i></a></li>
+                    <li><a href="">CHAPTER. 01 <i class="fa fa-angle-down"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="content-container">
+                <div class="container">
                     <div class="content">
-                        <img src="/assets/images/contents-img01.png" alt="contents-image">
                         <section>
                             <p>
                                 지금으로부터 100여 년 전인 1924년 10월 1일 전라남도 장성군 남면에 위치한 장성농장 정미소에 현판이 내걸렸다.
