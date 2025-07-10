@@ -38,14 +38,13 @@ main {
     display: flex;
     flex: 1;
     flex-direction: column;
-    padding: 8.5rem 0 9rem;
     width: 100%;
 }
 
 .container {
     box-sizing: border-box;
     margin: 0 auto;
-    max-width: 104rem;
+    max-width: 112rem;
     padding: 0 2rem;
     width: 100%;
 }
