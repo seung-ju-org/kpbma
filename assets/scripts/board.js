@@ -4,6 +4,7 @@ window.addEventListener('load', function () {
     const boardDetailMainImgElement = boardDetailElement.querySelector('#board-detail-main-img');
     const boardDetailMainImgImgElement = boardDetailMainImgElement.querySelector('#board-detail-main-img img');
     const boardDetailMetaTitleElement = boardDetailElement.querySelector('.board-detail .meta-container .meta .title');
+    const boardDetailMetaContainerElement = boardDetailElement.querySelector('.board-detail .meta-container');
     const boardDetailBreadcrumbItems = boardDetailElement.querySelectorAll('.board-detail .breadcrumb li a');
 
     window.addEventListener('scroll', function () {
@@ -14,6 +15,7 @@ window.addEventListener('load', function () {
             boardDetailMainImgElement.style.height = '100%';
             boardDetailMainImgElement.style.top = '0';
             boardDetailMainImgImgElement.style.opacity = '0.45';
+            boardDetailMetaContainerElement.style.paddingTop = '60rem';
             boardDetailMetaTitleElement.style.color = '#ffffff';
             boardDetailBreadcrumbItems.forEach(function (element) {
                 element.style.color = '#ffffff';
