@@ -104,10 +104,10 @@ header h1 img {
     border-radius: 2.5rem;
     color: var(--text-white);
     display: inline-flex;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-weight: 600;
     gap: 1.4rem;
-    padding: 1.7rem 2.5rem 1.5rem;
+    padding: 1.3rem 2rem 1.3rem;
     transition-duration: 0.2s;
     transition-property: background-color, color;
     transition-timing-function: ease;
@@ -157,8 +157,8 @@ a.btn-white:hover {
 
 .copyright p {
     color: var(--text-copyright);
-    font-size: 1.6rem;
-    font-weight: 500;
+    font-size: 1.3rem;
+    font-weight: 400;
     letter-spacing: -0.05rem;
     text-align: center;
 }

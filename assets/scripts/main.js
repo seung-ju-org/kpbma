@@ -17,13 +17,14 @@ window.addEventListener('load', function () {
             introText.style.opacity = '1';
             introText.style.transform = 'translateY(0)';
             setTimeout(function () {
-                introHrElement.style.transform = 'scaleX(0)';
+                introHrElement.style.transform = 'scaleX(1)';
                 setTimeout(function () {
                     introImg.style.opacity = '0';
                     introText.style.opacity = '0';
 
                     setTimeout(function () {
                         introElement.style.opacity = '0';
+                        introHrElement.style.opacity = '0';
 
                         setTimeout(function () {
                             setTimeout(function () {
@@ -120,12 +121,12 @@ window.addEventListener('load', function () {
                                 const clientXPercent = event.clientX / windowWidth;
                                 const clientYPercent = event.clientY / windowHeight;
                                 const translateMargin = 15;
-                                const translateX = -clientXPercent * translateMargin + translateMargin / 2 + '%';
-                                const translateY = -clientYPercent * translateMargin + translateMargin / 2 + '%';
+                                const translateX = -clientXPercent * translateMargin + translateMargin / 1 + '%';
+                                const translateY = -clientYPercent * translateMargin + translateMargin / 1 + '%';
                                 mainBgImgElement.style.transform = 'scale(' + backgroundScale + ') translateX(' + translateX + ') translateY(' + translateY + ')';
                                 galleryElements.forEach(function (element, elementIndex) {
-                                    element.dataset.x = '' + (clientXPercent - 0.5) * 50;
-                                    element.dataset.y = '' + (clientYPercent - 0.5) * 50;
+                                    element.dataset.x = '' + (clientXPercent - 0.5) * 25;
+                                    element.dataset.y = '' + (clientYPercent - 0.5) * 25;
                                     handleGallery();
                                 });
                             });
