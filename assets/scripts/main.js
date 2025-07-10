@@ -48,9 +48,13 @@ window.addEventListener('load', function () {
             const scrollPercent = Math.min(scrollY / (scrollHeight - windowHeight), 1)
 
             galleryElements.forEach(function (element) {
-                let transform = 'translateX(' + -scrollY + 'px)';
-                if (element.dataset.matrix3d) {
-                    transform += ' matrix3d(' + element.dataset.matrix3d + ')';
+                let x = -scrollY;
+                if (element.dataset.x) {
+                    x += +element.dataset.x
+                }
+                let transform = 'translateX(' + x + 'px)';
+                if (element.dataset.y) {
+                    transform += ' translateY(' + element.dataset.y + 'px)';
                 }
                 element.style.transform = transform;
             });
@@ -92,22 +96,8 @@ window.addEventListener('load', function () {
         const translateY = -clientYPercent * translateMargin + translateMargin / 2 + '%';
         mainBgImgElement.style.transform = 'scale(' + backgroundScale + ') translateX(' + translateX + ') translateY(' + translateY + ')';
         galleryElements.forEach(function (element, elementIndex) {
-            element.dataset.matrix3d = '1' +
-                ', 0' +
-                ', 0' +
-                ', ' + (clientXPercent - 0.5) * 0.00005 * (elementIndex % 2 ? 1 : -1) + '' +
-                ', 0' +
-                ', 1' +
-                ', 0' +
-                ', ' + (clientYPercent - 0.5) * 0.0001 * (clientYPercent > 0.5 ? elementIndex % 2 ? -1 : 1 : elementIndex % 2 ? 1 : -1) + '' +
-                ', 0' +
-                ', 0' +
-                ', 1' +
-                ', 0' +
-                ', 0' +
-                ', 0' +
-                ', 0' +
-                ', 1';
+            element.dataset.x = '' + (clientXPercent - 0.5) * 50 * (elementIndex % 2 ? -1 : 1);
+            element.dataset.y = '' + (clientYPercent - 0.5) * 50 * (clientYPercent > 0.5 ? elementIndex % 2 ? 1 : -1 : elementIndex % 2 ? -1 : 1);
             handleGallery();
         });
     });

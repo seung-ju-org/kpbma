@@ -23,7 +23,7 @@ main {
     bottom: 0;
     display: flex;
     flex-direction: column;
-    gap: 15rem;
+    gap: 8rem;
     height: 100%;
     justify-content: center;
     margin: auto 0;
@@ -94,10 +94,12 @@ main .gallery .images-container .image-container {
 }
 
 main .gallery .images-container a {
-    transition-property: box-shadow, transform;
+    opacity: 0.5;
+    transition-property: box-shadow, transform, opacity;
 }
 
 main .gallery .images-container a:hover {
+    opacity: 1;
     transform: scale(1.05);
 }
 
