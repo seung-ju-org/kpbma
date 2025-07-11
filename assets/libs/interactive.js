@@ -1,4 +1,4 @@
-window.addEventListener('load', function () {
+(function () {
     function handleGetIsVisibleElement(element, offset = 0) {
         const boundingClientRect = element.getBoundingClientRect();
         return (
@@ -47,6 +47,10 @@ window.addEventListener('load', function () {
         }
     }
 
-    handler();
-    window.addEventListener("scroll", handler);
-});
+    window.interactiveHandler = handler;
+
+    window.addEventListener('load', function () {
+        handler();
+        window.addEventListener("scroll", handler);
+    });
+})();

@@ -1,9 +1,16 @@
-window.addEventListener('load', function () {
+document.addEventListener("DOMContentLoaded", (event) => {
+    gsap.registerPlugin(ScrollTrigger, ScrollSmoother)
+
     const windowWidth = window.innerWidth;
     const windowHeight = window.innerHeight;
     const wrapperElement = document.querySelector('#wrapper')
     const introElement = wrapperElement.querySelector('.intro');
     const introHrElement = introElement.querySelector('hr');
+    const mainElement = wrapperElement.querySelector('main');
+    const galleryElements = mainElement.querySelectorAll('.gallery');
+    const galleryImageElements = mainElement.querySelectorAll('.gallery .image-container');
+    const smoothContentElement = document.querySelector('#smooth-content');
+
     introHrElement.style.transform = 'scaleX(1)';
     setTimeout(function () {
         const introBgImg = introElement.querySelector('.intro-bg-img');
@@ -31,9 +38,6 @@ window.addEventListener('load', function () {
                                 introElement.style.display = 'none';
                             }, 1000);
 
-                            const mainElement = wrapperElement.querySelector('main');
-                            const galleryElements = mainElement.querySelectorAll('.gallery');
-                            const galleryImageElements = mainElement.querySelectorAll('.gallery .image-container');
 
                             galleryElements.forEach(function (element) {
                                 const galleryImageElements = element.querySelectorAll('.gallery .image-container');
@@ -67,21 +71,25 @@ window.addEventListener('load', function () {
                                 const scrollElement = document.createElement('div');
 
                                 scrollElement.style.height = maxScrollWidth + (windowHeight / 2) + 'px';
-                                wrapperElement.appendChild(scrollElement);
+                                smoothContentElement.appendChild(scrollElement);
 
                                 const historyYearContainerElement = mainElement.querySelector('.history-year-container')
 
-                                function handleGallery() {
-                                    const scrollY = window.scrollY;
-                                    const scrollHeight = window.document.body.scrollHeight;
-                                    const scrollPercent = Math.min(scrollY / (scrollHeight - windowHeight), 1)
+                                let x = 0
+                                let progress = 0
+
+                                function handleGallery(event) {
+                                    if (event && event.scrollTrigger) {
+                                        progress = event.scrollTrigger.progress;
+                                        x = maxScrollWidth * progress
+                                    }
 
                                     galleryElements.forEach(function (element) {
-                                        let x = -scrollY;
+                                        let elementX = -x;
                                         if (element.dataset.x) {
-                                            x += +element.dataset.x
+                                            elementX += +element.dataset.x
                                         }
-                                        let transform = 'translateX(' + x + 'px)';
+                                        let transform = 'translateX(' + elementX + 'px)';
                                         if (element.dataset.y) {
                                             transform += ' translateY(' + element.dataset.y + 'px)';
                                         }
@@ -101,16 +109,20 @@ window.addEventListener('load', function () {
                                     });
 
                                     const historyYearLine = historyYearContainerElement.querySelector('.history-year-line')
-                                    historyYearLine.style.transform = 'scaleX(' + scrollPercent * 100 + '%)'
+                                    historyYearLine.style.transform = 'scaleX(' + progress * 100 + '%)'
                                     const historyYear = historyYearContainerElement.querySelector('.btn')
-                                    historyYear.style.transform = 'translateX(' + ((windowWidth - historyYear.clientWidth) * scrollPercent) + 'px)'
+                                    historyYear.style.transform = 'translateX(' + ((windowWidth - historyYear.clientWidth) * progress) + 'px)'
                                     historyYear.innerHTML = years.find(function (_, index, array) {
-                                        return (index * (1 / (array.length - 1))) >= scrollPercent;
+                                        return (index * (1 / (array.length - 1))) >= progress;
                                     });
                                 }
 
-                                handleGallery();
-                                document.addEventListener('scroll', handleGallery);
+                                ScrollSmoother.create({
+                                    smooth: 1.5,
+                                    speed: 0.25,
+                                    effects: true,
+                                    onUpdate: handleGallery
+                                });
                             }
 
                             const mainBgImgElement = wrapperElement.querySelector('.main-bg img');
@@ -124,7 +136,7 @@ window.addEventListener('load', function () {
                                 const translateX = -clientXPercent * translateMargin + translateMargin / 1 + '%';
                                 const translateY = -clientYPercent * translateMargin + translateMargin / 1 + '%';
                                 mainBgImgElement.style.transform = 'scale(' + backgroundScale + ') translateX(' + translateX + ') translateY(' + translateY + ')';
-                                galleryElements.forEach(function (element, elementIndex) {
+                                galleryElements.forEach(function (element) {
                                     element.dataset.x = '' + (clientXPercent - 0.5) * 25;
                                     element.dataset.y = '' + (clientYPercent - 0.5) * 25;
                                     handleGallery();
