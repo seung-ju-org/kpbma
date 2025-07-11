@@ -1,7 +1,10 @@
 html::-webkit-scrollbar {
     display: none;
 }
-* { letter-spacing: -0.05em; }
+
+* {
+    letter-spacing: -0.05em;
+}
 
 #smooth-wrapper {
     pointer-events: none;
@@ -92,9 +95,16 @@ html::-webkit-scrollbar {
 .main-bg img {
     height: 100%;
     object-fit: cover;
-    opacity: 0.9;
+    opacity: 0;
     transform: scale(1.5);
     width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    transition: opacity 1s ease;
 }
 
 main {
@@ -163,7 +173,7 @@ main .gallery .images-container {
 }
 
 main .gallery .images-container + .meta {
-    margin-left:60px;
+    margin-left: 60px;
 }
 
 main .gallery .images-container .image-container {
@@ -191,17 +201,17 @@ main .history-year-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding:0 40px;
+    padding: 0 40px;
     position: relative;
 }
 
 main .history-year-container:before {
-    content:'';
+    content: '';
     position: absolute;
-    width:40px;
-    height:1px;
+    width: 40px;
+    height: 1px;
     background: var(--sub);
-    left:0;
+    left: 0;
 }
 
 main .history-year-container .history-year-line-container {
