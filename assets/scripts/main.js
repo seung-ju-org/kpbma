@@ -119,7 +119,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
                                 ScrollSmoother.create({
                                     smooth: 1.5,
-                                    speed: 0.25,
+                                    speed: 0.5,
                                     effects: true,
                                     onUpdate: handleGallery
                                 });
