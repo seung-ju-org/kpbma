@@ -17,6 +17,7 @@ main .swiper {
 }
 
 main .swiper .swiper-wrapper {
+    transition-timing-function: ease;
 }
 
 main .swiper .swiper-wrapper .swiper-slide {
