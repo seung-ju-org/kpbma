@@ -49,7 +49,7 @@
 
     window.interactiveHandler = handler;
 
-    window.addEventListener('load', function () {
+    document.addEventListener('DOMContentLoaded', function () {
         handler();
         window.addEventListener("scroll", handler);
     });
