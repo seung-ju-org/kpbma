@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
         ballElement.style.left = '0';
         ballElement.style.margin = 'auto';
         ballElement.style.backgroundColor = color;
-        ballElement.style.transition = 'opacity 0.8s ease, transform 0.25s ease, top 0.6s cubic-bezier(0, 1, 0.1, 1), left 0.6s cubic-bezier(0, 1, 0.1, 1)';
+        ballElement.style.transition = 'opacity 0.8s ease, transform 0.25s ease, top 0.8s cubic-bezier(0, 1, 0.1, 1), left 0.8s cubic-bezier(0, 1, 0.1, 1)';
         ballElement.style.transform = 'scale(0)';
         ballElement.style.opacity = '0';
 
