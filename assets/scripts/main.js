@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
     new Swiper('.swiper', {
         direction: 'horizontal',
         loop: true,
+        speed: 1000,
         autoplay: {
             delay: 5000,
         },
