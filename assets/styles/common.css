@@ -7,11 +7,11 @@
     --text-copyright: #ffffff;
     --text-gnb: #888888;
     --text-gnb-active: #17469e;
+    --text-gnb-active-hover: #163673;
+    --text-gnb-hover: #cccccc;
     --text-gray: #666666;
     --main-hover: #4fb8c5;
     --sub-hover: #e56824;
-    --text-gnb-hover: #666666;
-    --text-gnb-active-hover: #163673;
     --white-hover: #eeeeee;
     --text-main: #111111;
     --text-white: #ffffff;
@@ -75,28 +75,96 @@ header {
 header .container {
     align-items: center;
     display: flex;
-    justify-content: space-between;
+    gap: 2rem;
+}
+
+header h1 {
+    flex: 1;
 }
 
 header h1 img {
     width: 20.6rem;
 }
 
+header h1 a {
+    align-items: center;
+    display: flex;
+    gap: 1rem;
+}
+
+header h1 a span {
+    color: var(--text-gnb);
+    font-family: NanumSquareNeo sans-serif;
+    font-size: 1.4rem;
+    margin-top: 1rem;
+}
+
 .gnb {
     display: flex;
-    gap: 6rem;
+}
+
+.gnb .sub-menu-container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    position: relative;
 }
 
 .gnb a {
-    color: var(--text-gnb);
+    color: #888888;
     font-family: NanumSquareNeo sans-serif;
     font-size: 1.6rem;
     font-weight: 600;
+    padding: 1.5rem 2rem;
+    text-align: center;
     transition: color 0.2s ease;
 }
 
 .gnb a:hover {
-    color: var(--text-gnb-hover);
+    color: #cccccc;
+}
+
+.gnb a.active {
+    color: #17469e;
+}
+
+.gnb .sub-menu-container:hover a {
+    color: #cccccc;
+}
+
+.gnb .sub-menu-container:hover .sub-menu {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(-50%) translateY(0rem);
+}
+
+.gnb .sub-menu-container .sub-menu {
+    background-color: var(--white);
+    border-radius: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    justify-content: center;
+    left: 50%;
+    margin: 0 auto;
+    opacity: 0;
+    padding: 3rem 3.5rem 2.5rem;
+    pointer-events: none;
+    position: absolute;
+    top: 4.5rem;
+    transform: translateX(-50%) translateY(1rem);
+    transition: all 0.2s ease;
+}
+
+.gnb .sub-menu-container .sub-menu a {
+    color: #888888;
+    padding: 0;
+    white-space: nowrap;
+    word-break: keep-all;
+}
+
+.gnb .sub-menu-container .sub-menu a:hover {
+    color: #555555;
 }
 
 .sub .gnb a:hover {
@@ -115,13 +183,13 @@ header h1 img {
     align-items: baseline;
     background-color: var(--main);
     border-radius: 2.5rem;
-    color: var(--text-main);
+    color: #16626c;
     display: inline-flex;
     font-family: NanumSquareNeo sans-serif;
     font-size: 1.4rem;
     font-weight: 600;
     gap: 1.4rem;
-    padding: 1.3rem 2rem 0.9rem;
+    padding: 1.3rem 2rem 1rem;
     transition-duration: 0.2s;
     transition-property: background-color, color;
     transition-timing-function: ease;
