@@ -269,7 +269,7 @@ hr {
     content: "";
     position: absolute;
     top: 0;
-    left: calc((100vw - 128rem) / 2 * -1);
+    left: calc((100vw - 142rem) / 2 * -1);
     width: 100vw;
     z-index: 0;
 }
