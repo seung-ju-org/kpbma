@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
         arrowElement.style.transform = 'rotate(45deg)';
         arrowElement.style.top = -arrowSize / 2 + 'px';
         arrowElement.style.left = itemElement.getBoundingClientRect().left - arrowSize / 2 + 'px';
-        arrowElement.style.backgroundColor = '#111111';
+        arrowElement.style.backgroundColor = '#333333';
 
         detailInfoElement.appendChild(arrowElement);
 

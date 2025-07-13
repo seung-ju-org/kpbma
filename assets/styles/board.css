@@ -242,12 +242,40 @@ hr {
     padding:30px;
     position: relative;
     z-index: 5;
+    cursor: pointer;
 }
 .fame-list .item .thumb {
     width:100%;
-    padding-top:120%;
+    padding-top:145%;
     border:1px #e2e4e7 solid;
+    position: relative;
+    overflow: hidden;
+    transition-duration: .3s;
 }
+.fame-list .item .thumb img {
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    width:100%;
+    height:100%;
+    transform: scale(1);
+    transform-origin: center;
+    transition-duration: .3s;
+    object-fit: cover;
+}
+.fame-list .item:hover .thumb {
+    border-color:#4fb8c5;
+    transition-duration: .3s;
+}
+.fame-list .item:hover .thumb img {
+    transform: scale(1.1);
+    transform-origin: center;
+    transition-duration: .3s;
+    object-fit: cover;
+}
+
 .fame-list .item p {
     font-size:1.6rem;
     font-weight:700;
@@ -255,10 +283,10 @@ hr {
     margin:20px 0;
 }
 .fame-list .detail-info {
-    background: #111;
+    background: #333;
     display: none;
     font-size: 2rem;
-    margin:0 30px;
+    margin:0;
     padding:80px 40px;
     position: relative;
     transition: transform 0.5s ease;
@@ -268,14 +296,36 @@ hr {
     color:#fff;
     z-index: 1;
     position: relative;
+    display: flex;
+    gap:40px;
 }
-
+.fame-list .detail-contents .main-copy {
+    flex: 1;
+}
+.fame-list .detail-contents .sub-copy {
+    flex: 2;
+}
+.fame-list .detail-contents h2 {
+    font-size:3rem;
+    font-weight:600;
+    margin-bottom:2rem;
+}
+.fame-list .detail-contents p {
+    font-size:1.6rem;
+    font-weight:400;
+    line-height:1.7;
+    color:#ccc;
+    text-align: justify;
+}
+.fame-list .detail-contents p+p {
+    margin-top:1rem;
+}
 .fame-list .detail-info:before {
     transform: translateY(0);
     background-color: #ffffff;
     content: "";
     height: 100%;
-    left: calc((100vw - 142rem) / 2 * -1);
+    left: calc((100vw - 148rem) / 2 * -1);
     position: absolute;
     top: -2.5rem;
     width: 100vw;
@@ -288,11 +338,11 @@ hr {
 }
 
 .fame-list .detail-info:after {
-    background-color: #111;
+    background-color: #333;
     bottom: 0;
     box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
     content: "";
-    left: calc((100vw - 142rem) / 2 * -1);
+    left: calc((100vw - 148rem) / 2 * -1);
     position: absolute;
     top: 0;
     width: 100vw;
