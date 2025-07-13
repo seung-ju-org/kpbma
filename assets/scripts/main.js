@@ -15,6 +15,10 @@ document.addEventListener('DOMContentLoaded', function () {
     const ballContainerElement = document.createElement('div');
 
     ballContainerElement.style.position = 'absolute';
+    ballContainerElement.style.width = '100vw';
+    ballContainerElement.style.height = '100vh';
+    ballContainerElement.style.pointerEvents = 'none';
+    ballContainerElement.style.zIndex = '0';
 
     const ballCount = 15;
     const sizes = [10, 15, 20];
@@ -29,14 +33,21 @@ document.addEventListener('DOMContentLoaded', function () {
         ballElement.style.width = size + 'px';
         ballElement.style.height = size + 'px';
         ballElement.style.borderRadius = size + 'px';
-        ballElement.style.left = Math.round(Math.random() * window.innerWidth) + 'px';
-        ballElement.style.top = (85 + Math.round(Math.random() * (window.innerHeight - 85))) + 'px';
+        ballElement.style.top = '0';
+        ballElement.style.right = '0';
+        ballElement.style.bottom = '0';
+        ballElement.style.left = '0';
+        ballElement.style.margin = 'auto';
         ballElement.style.backgroundColor = color;
-        ballElement.style.transition = 'opacity 0.5s ease, transform 0.25s ease';
+        ballElement.style.transition = 'opacity 0.5s ease, transform 0.25s ease, top 0.5s ease, left 0.5s ease';
+        ballElement.style.transform = 'scale(0)';
         ballElement.style.opacity = '0';
 
         setTimeout(function () {
             ballElement.style.opacity = (Math.random() * 0.5 + 0.25) + '';
+            ballElement.style.transform = 'scale(1)';
+            ballElement.style.left = (Math.round(Math.random() * window.innerWidth) - window.innerWidth / 2) * 2 + 'px';
+            ballElement.style.top = ((85 + Math.round(Math.random() * (window.innerHeight - 85))) - window.innerHeight / 2) * 2 + 'px';
         }, 100);
 
         ballElements.push(ballElement);
@@ -44,16 +55,18 @@ document.addEventListener('DOMContentLoaded', function () {
         ballContainerElement.appendChild(ballElement);
     }
 
-    document.body.addEventListener('mousemove', function (event) {
-        const clientXPercent = event.clientX / window.innerWidth;
-        const clientYPercent = event.clientY / window.innerHeight;
-        const translateMargin = 500;
-        const translateX = -clientXPercent * translateMargin + translateMargin / 2 + '%';
-        const translateY = -clientYPercent * translateMargin + translateMargin / 2 + '%';
-        ballElements.forEach(function (element) {
-            element.style.transform = 'translateX(' + translateX + ') translateY(' + translateY + ')';
+    setTimeout(function () {
+        document.body.addEventListener('mousemove', function (event) {
+            const clientXPercent = event.clientX / window.innerWidth;
+            const clientYPercent = event.clientY / window.innerHeight;
+            const translateMargin = 500;
+            const translateX = -clientXPercent * translateMargin + translateMargin / 2 + '%';
+            const translateY = -clientYPercent * translateMargin + translateMargin / 2 + '%';
+            ballElements.forEach(function (element) {
+                element.style.transform = 'scale(1) translateX(' + translateX + ') translateY(' + translateY + ')';
+            });
         });
-    });
+    }, 500);
 
     mainElement.appendChild(ballContainerElement)
 });
