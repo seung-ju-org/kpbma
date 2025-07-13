@@ -33,11 +33,20 @@ document.addEventListener('DOMContentLoaded', function () {
 
             detailInfoElements.forEach(function (element) {
                 element.style.display = 'none';
+                element.style.transform = 'translateY(-100%)';
+                element.classList.remove('active');
             });
 
             if (!isActive) {
                 detailInfoElement.style.display = 'block';
             }
+
+            const y = detailInfoElement.getBoundingClientRect().height;
+
+            setTimeout(function () {
+                detailInfoElement.classList.add('active');
+                detailInfoElement.style.transform = 'translateY(0)';
+            });
         });
     }
 });
