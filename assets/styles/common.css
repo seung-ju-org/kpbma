@@ -182,7 +182,7 @@ header h1 a span {
     color: var(--text-gnb-active-hover);
 }
 
-.btn {
+header .btn {
     align-items: baseline;
     background-color: var(--main);
     border-radius: 2.5rem;
@@ -190,9 +190,9 @@ header h1 a span {
     display: inline-flex;
     font-family: NanumSquareNeo sans-serif;
     font-size: 1.4rem;
+    line-height:1;
     font-weight: 600;
-    gap: 1.4rem;
-    padding: 1.3rem 2rem 1rem;
+    padding: 1.3rem 2rem 1.3rem;
     transition-duration: 0.2s;
     transition-property: background-color, color;
     transition-timing-function: ease;

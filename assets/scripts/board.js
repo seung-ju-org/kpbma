@@ -12,7 +12,7 @@ window.addEventListener('load', function () {
 
         if (scrollY > 0) {
             boardDetailMainImgElement.style.width = '100%';
-            boardDetailMainImgElement.style.height = '100%';
+            boardDetailMainImgElement.style.height = '100vh';
             boardDetailMainImgElement.style.top = '0';
             boardDetailMainImgImgElement.style.opacity = '0.45';
             boardDetailMetaContainerElement.style.paddingTop = '60rem';
