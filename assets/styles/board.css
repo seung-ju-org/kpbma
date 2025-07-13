@@ -257,6 +257,7 @@ hr {
     background: #111;
     font-size:2rem;
     position: relative;
+    display: none;
 }
 .fame-list .detail-contents {
     color:#fff;
