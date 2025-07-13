@@ -19,6 +19,7 @@
 
 * {
     letter-spacing: -0.05em;
+    font-family: NanumSquareNeo sans-serif;
 }
 
 html, body {
@@ -52,7 +53,7 @@ main {
 .container {
     box-sizing: border-box;
     margin: 0 auto;
-    max-width: 132rem;
+    max-width: 146rem;
     padding: 0 2rem;
     width: 100%;
 }
@@ -96,7 +97,7 @@ header h1 a span {
     color: var(--text-gnb);
     font-family: NanumSquareNeo sans-serif;
     font-size: 1.4rem;
-    margin-top: 1rem;
+    margin-top: 0.3rem;
 }
 
 .gnb {
@@ -115,7 +116,7 @@ header h1 a span {
     font-family: NanumSquareNeo sans-serif;
     font-size: 1.6rem;
     font-weight: 600;
-    padding: 1.5rem 2rem;
+    padding: 1.5rem 2.5rem;
     text-align: center;
     transition: color 0.2s ease;
 }
@@ -151,20 +152,22 @@ header h1 a span {
     padding: 3rem 3.5rem 2.5rem;
     pointer-events: none;
     position: absolute;
-    top: 4.5rem;
+    top: 4.8rem;
     transform: translateX(-50%) translateY(1rem);
     transition: all 0.2s ease;
 }
 
 .gnb .sub-menu-container .sub-menu a {
-    color: #888888;
+    color: #777;
+    font-weight:500;
+    font-size:1.5rem;
     padding: 0;
     white-space: nowrap;
     word-break: keep-all;
 }
 
 .gnb .sub-menu-container .sub-menu a:hover {
-    color: #555555;
+    color: #111;
 }
 
 .sub .gnb a:hover {
@@ -238,9 +241,11 @@ a.btn-white:hover {
 
 .copyright p {
     color: var(--text-copyright);
-    font-size: 1.6rem;
-    font-weight: 400;
+    font-family: 'Montserrat';
+    font-size: 1.4rem;
+    font-weight: 300;
     letter-spacing: -0.05rem;
+    opacity: 0.5;
 }
 
 .shadow {
