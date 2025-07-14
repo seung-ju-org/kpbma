@@ -5,7 +5,7 @@
     --sub: #fa6e22;
     --white: #ffffff;
     --text-copyright: #ffffff;
-    --text-gnb: #888888;
+    --text-gnb: #eee;
     --text-gnb-active: #17469e;
     --text-gnb-active-hover: #163673;
     --text-gnb-hover: #cccccc;
@@ -58,10 +58,6 @@ main {
     width: 100%;
 }
 
-.sub header {
-    background-color: var(--white);
-}
-
 header {
     box-sizing: border-box;
     height: 8.5rem;
@@ -112,7 +108,7 @@ header h1 a span {
 }
 
 .gnb a {
-    color: #888888;
+    color: var(--text-gnb);
     font-family: NanumSquareNeo sans-serif;
     font-size: 1.6rem;
     font-weight: 600;
@@ -122,15 +118,15 @@ header h1 a span {
 }
 
 .gnb a:hover {
-    color: #cccccc;
+    color: var(--main);
 }
 
 .gnb a.active {
-    color: #17469e;
+    color: var(--main);
 }
 
 .gnb .sub-menu-container:hover a {
-    color: #cccccc;
+    color: var(--main);
 }
 
 .gnb .sub-menu-container:hover .sub-menu {
@@ -141,7 +137,7 @@ header h1 a span {
 
 .gnb .sub-menu-container .sub-menu {
     background-color: var(--white);
-    border-radius: 4rem;
+    border-radius: 2rem;
     display: flex;
     flex-direction: column;
     gap: 2.5rem;
@@ -149,12 +145,13 @@ header h1 a span {
     left: 50%;
     margin: 0 auto;
     opacity: 0;
-    padding: 3rem 3.5rem 2.5rem;
+    padding: 3rem 2.5rem 3rem;
     pointer-events: none;
     position: absolute;
-    top: 4.8rem;
+    top: 4.5rem;
     transform: translateX(-50%) translateY(1rem);
     transition: all 0.2s ease;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
 }
 
 .gnb .sub-menu-container .sub-menu a {
@@ -170,16 +167,24 @@ header h1 a span {
     color: #111;
 }
 
-.sub .gnb a:hover {
-    color: var(--text-main);
+.sub header {
+    background-color: var(--white);
 }
 
-.gnb a.active {
-    color: var(--text-gnb-active);
+header h1 a span,.sub header .gnb a {
+    color:#333;
+}
+.slide-page header .gnb a {
+    color:#333;
+}
+.slide-page header .gnb a:hover,
+.slide-page header .gnb a.active {
+    color:var(--text-gnb-active)
 }
 
-.gnb a.active:hover {
-    color: var(--text-gnb-active-hover);
+.sub header .gnb a:hover,
+.sub header .gnb a.active {
+    color:var(--main)
 }
 
 header .btn {
