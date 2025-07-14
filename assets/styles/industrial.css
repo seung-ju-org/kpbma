@@ -68,8 +68,8 @@ main .gallery {
     align-items: center;
     display: flex;
     flex: 1;
-    gap: 5rem;
-    padding: 11rem 0;
+    gap: 8rem;
+    padding: 10rem 0;
     transition: transform 0.25s ease-out;
 }
 
@@ -100,9 +100,9 @@ main .gallery .meta .text-container .year {
 main .gallery .meta .text-container .title {
     color: var(--text-main);
     font-family: NanumSquareNeo sans-serif;
-    font-size: 6rem;
+    font-size: 5rem;
     font-weight: 800;
-    line-height: 8rem;
+    line-height: 6rem;
     word-break: keep-all;
 }
 
@@ -124,19 +124,42 @@ main .gallery .images-container .image-container {
     opacity: 0;
     transform: translateY(10%);
     transition: all 0.2s ease;
+    position: relative;
+}
+
+main .gallery .images-container .image-container span {
+    display: block;
+    background: rgba(0,0,0,0.8);
+    color:#fff;
+    font-size:1.4rem;
+    padding:2rem 2rem 2.3rem;
+    position: absolute;
+    bottom:0;
+    left:0;
+    right:0;
+    opacity: 0;
+    transform: translateY(100%);
+    transition-duration: .2s;
+}
+
+main .gallery .images-container .image-container a:hover span {
+    opacity: 1;
+    transform: translateY(0);
+    transition-duration: .3s;
 }
 
 main .gallery .images-container a {
     opacity: 0.8;
+    overflow: hidden;
     transition-property: box-shadow, transform, opacity;
 }
 
 main .gallery .images-container a.type1 img {
-    width: 46rem;
+    width: 56rem;
 }
 
 main .gallery .images-container a.type2 img {
-    width: 52rem;
+    height: 56rem;
 }
 
 main .gallery .images-container a:hover {
@@ -179,4 +202,6 @@ main .history-year-container .history-year-line-container .history-year-line {
 main .history-year-container .btn {
     position: relative;
     border-radius: 2rem;
+    font-family: 'Montserrat';
+    font-size:1.3rem;
 }
