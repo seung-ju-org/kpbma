@@ -6,16 +6,40 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"/>
+    <link rel="stylesheet" href="/assets/libs/interactive.css">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
+    <script type="application/javascript" src="/assets/libs/interactive.js"></script>
+
     <link rel="stylesheet" href="/assets/styles/font.css">
     <link rel="stylesheet" href="/assets/styles/reset.css">
     <link rel="stylesheet" href="/assets/styles/common.css">
-    <script type="application/javascript" src="/assets/scripts/main.js"></script>
+    <link rel="stylesheet" href="/assets/styles/industrial.css">
+    <script type="application/javascript" src="/assets/scripts/industrial.js"></script>
 </head>
 <body>
-<div id="wrapper">
+<div id="wrapper" class="slide-page">
+    <div class="bg">
+        <img src="/assets/images/ass_bg.jpg" alt="background">
+    </div>
+    <p class="bg-txt">ASSOCIATION</p>
     <header>
         <div class="container">
-            <h1 class="logo"><a href="/"><img src="/assets/images/logo.png" alt="kpbma"><span>디지털역사관</span></a></h1>
+            <h1 class="logo">
+                <a href="/">
+                    <div class="logo-simbol">
+                        <img src="/assets/images/simbol-white.png" class="white" alt="kpbma">
+                        <img src="/assets/images/simbol.png" class="color" alt="kpbma">
+                    </div>
+                    <div class="logo-txt">
+                        <img src="/assets/images/logotxt-white.png" class="white" alt="kpbma">
+                        <img src="/assets/images/logotxt-color.png" class="color" alt="kpbma">
+                    </div>
+                    <span>디지털역사관</span>
+                </a>
+            </h1>
             <nav class="gnb">
                 <a href="/fame">명예의전당</a>
                 <a href="/highlight">역사하이라이트</a>
@@ -45,10 +69,149 @@
         </div>
     </header>
     <main>
+        <div class="container">
+            <div class="gallery">
+                <div class="meta">
+                    <div class="text-container">
+                        <p class="year">1945 ~ 1959</p>
+                        <p class="title">제약보국<br>소명 아래 뭉치다</p>
+                    </div>
+                </div>
+                <ul class="images-container">
+                    <li class="image-container">
+                        <a href="/industrial/details" class="shadow type3">
+                            <span>대한약품공업협회 제3회 정기총회</span>
+                            <img src="/assets/images/asso/img01.jpg" >
+                        </a>
+                    </li>
+                    <li class="image-container">
+                        <a href="/industrial/details" class="shadow type3">
+                            <span>상량식을 올린 약공회관 기공식 광경</span>
+                            <img src="/assets/images/asso/img02.jpg" >
+                        </a>
+                    </li>
+                </ul>
+                <div class="meta">
+                    <div class="text-container">
+                        <p class="year">1960 ~ 1979</p>
+                        <p class="title">협회의 역할을 강화하고 <br>기능을 정립하다</p>
+                    </div>
+                </div>
+                <ul class="images-container">
+                    <li class="image-container">
+                        <a href="/industrial/details" class="shadow type3">
+                            <span> 의약품거래질서위원회 회의</span>
+                            <img src="/assets/images/asso/img03.jpg" >
+                        </a>
+                    </li>
+                    <li class="image-container">
+                        <a href="/industrial/details" class="shadow type3">
+                            <span>임시총회 개최, '거래질서 확립, 표시가격 현실화, 세무체계 확립' 준수 결의문 채택</span>
+                            <img src="/assets/images/asso/img04.jpg" >
+                        </a>
+                    </li>
+                </ul>
+                <div class="meta">
+                    <div class="text-container">
+                        <p class="year">1980 ~ 1999</p>
+                        <p class="title">정책 수립 및 <br>대응 단체로 자리잡다</p>
+                    </div>
+                </div>
+                <ul class="images-container">
+                    <li class="image-container">
+                        <a href="/industrial/details" class="shadow type3">
+                            <span>향남제약산업단지 준공식</span>
+                            <img src="/assets/images/asso/img05.jpg">
+                        </a>
+                    </li>
+                    <li class="image-container">
+                        <a href="/industrial/details" class="shadow type3">
+                            <span>의약 3단체장, 물질특허 조기 도입 철회 메시지 채택</span>
+                            <img src="/assets/images/asso/img06.jpg">
+                        </a>
+                    </li>
+                    <li class="image-container">
+                        <a href="/industrial/details" class="shadow type3">
+                            <span>한국제얍협회로 명칭 변경</span>
+                            <img src="/assets/images/asso/img07.jpg">
+                        </a>
+                    </li>
+                </ul>
+                <div class="meta">
+                    <div class="text-container">
+                        <p class="year">2000 ~ 2019</p>
+                        <p class="title">국민 속으로 <br>들어가다</p>
+                    </div>
+                </div>
+                <ul class="images-container">
+                    <li class="image-container">
+                        <a href="/industrial/details" class="shadow type3">
+                            <span>한국제약협회 기업윤리헌장 선포식</span>
+                            <img src="/assets/images/asso/img08.jpg">
+                        </a>
+                    </li>
+                    <li class="image-container">
+                        <a href="/industrial/details" class="shadow type3">
+                            <span>한국제약협회 창립 70주년 기념식</span>
+                            <img src="/assets/images/asso/img09.jpg">
+                        </a>
+                    </li>
+                    <li class="image-container">
+                        <a href="/industrial/details" class="shadow type3">
+                            <span>제1회 바이오 오픈 플라자</span>
+                            <img src="/assets/images/asso/img10.jpg">
+                        </a>
+                    </li>
+                </ul>
+                <div class="meta">
+                    <div class="text-container">
+                        <p class="year">2000 ~ 2019</p>
+                        <p class="title">신약과 기술의 시대 <br>연구개발이 산업을 이끌다</p>
+                    </div>
+                </div>
+                <ul class="images-container">
+                    <li class="image-container">
+                        <a href="/industrial/details" class="shadow type3">
+                            <span>KPBMA 자원봉사단 트럭기부</span>
+                            <img src="/assets/images/asso/img11.jpg" >
+                        </a>
+                    </li>
+                    <li class="image-container">
+                        <a href="/industrial/details" class="shadow type3">
+                            <span>오픈이노베이션 플라자</span>
+                            <img src="/assets/images/asso/img12.jpg" >
+                        </a>
+                    </li>
+                </ul>
+                <div class="meta">
+                    <div class="text-container">
+                        <p class="year">2020 ~ 2025</p>
+                        <p class="title">제약바이오강국 <br>도약을 선언하다</p>
+                    </div>
+                </div>
+                <ul class="images-container">
+                    <li class="image-container">
+                        <a href="/industrial/details" class="shadow type3">
+                            <span>AI신약융합연구원 개원식</span>
+                            <img src="/assets/images/asso/img13.jpg" >
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="history-year-container">
+            <div class="history-year-line-container">
+                <div class="history-year-line"></div>
+            </div>
+            <span class="btn btn-sm btn-white shadow-sm">1945</span>
+        </div>
     </main>
-    <div class="copyright">
+    <footer class="copyright container">
         <p>COPYRIGHT© KPBMA. all rights reserved.</p>
-    </div>
+    </footer>
+</div>
+<div id="smooth-wrapper">
+    <div id="smooth-content"></div>
 </div>
 </body>
 </html>

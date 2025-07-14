@@ -25,7 +25,7 @@
     position: absolute;
     right: 0;
     top: 0;
-    transform: scale(1.5);
+    transform: scale(1.2);
     width: 100%;
 }
 
@@ -160,6 +160,10 @@ main .gallery .images-container a.type1 img {
 
 main .gallery .images-container a.type2 img {
     height: 56rem;
+}
+
+main .gallery .images-container a.type3 img {
+    height: 50rem;
 }
 
 main .gallery .images-container a:hover {
