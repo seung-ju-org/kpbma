@@ -106,7 +106,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     document.body.addEventListener('mousemove', function (event) {
         const clientXPercent = event.clientX / windowWidth;
         const clientYPercent = event.clientY / windowHeight;
-        const translateMargin = 2.5;
+        const translateMargin = 2;
         const translateX = -clientXPercent * translateMargin + '%';
         const translateY = -clientYPercent * translateMargin + '%';
         bgElement.style.transform = 'scale(' + backgroundScale + ') translateX(' + translateX + ') translateY(' + translateY + ')';
