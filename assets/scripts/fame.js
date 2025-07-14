@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const columnCount = 3;
+    const columnCount = 4;
     const arrowSize = 30;
 
     const fameListElement = document.querySelector('.fame-list');
