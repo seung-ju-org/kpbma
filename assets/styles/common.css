@@ -5,7 +5,7 @@
     --sub: #fa6e22;
     --white: #ffffff;
     --text-copyright: #ffffff;
-    --text-gnb: #888888;
+    --text-gnb: #eee;
     --text-gnb-active: #17469e;
     --text-gnb-active-hover: #163673;
     --text-gnb-hover: #cccccc;
@@ -58,10 +58,6 @@ main {
     width: 100%;
 }
 
-.sub header {
-    background-color: var(--white);
-}
-
 header {
     box-sizing: border-box;
     height: 8.5rem;
@@ -81,10 +77,50 @@ header .container {
 
 header h1 {
     flex: 1;
+    display: flex;
+    align-items: center;
 }
 
-header h1 img {
-    width: 20.6rem;
+header h1 .logo-simbol {
+    width:7rem;
+    line-height:0;
+    position: relative;
+}
+
+header h1 .logo-simbol img {
+    width:100%;
+    line-height:0;
+}
+
+header h1 .logo-simbol .color {
+    position: absolute;
+    z-index: 1;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    opacity: 0;
+}
+
+header h1 .logo-txt {
+    width: 16rem;
+    line-height:0;
+    position: relative;
+}
+
+header h1 .logo-txt img {
+    width:100%;
+    line-height:0;
+}
+
+header h1 .logo-txt .color {
+    position: absolute;
+    z-index: 1;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    opacity: 0;
 }
 
 header h1 a {
@@ -98,6 +134,7 @@ header h1 a span {
     font-family: NanumSquareNeo sans-serif;
     font-size: 1.4rem;
     margin-top: 0.3rem;
+    font-weight: 400;
 }
 
 .gnb {
@@ -112,7 +149,7 @@ header h1 a span {
 }
 
 .gnb a {
-    color: #888888;
+    color: var(--text-gnb);
     font-family: NanumSquareNeo sans-serif;
     font-size: 1.6rem;
     font-weight: 600;
@@ -122,15 +159,15 @@ header h1 a span {
 }
 
 .gnb a:hover {
-    color: #cccccc;
+    color: var(--main);
 }
 
 .gnb a.active {
-    color: #17469e;
+    color: var(--main);
 }
 
 .gnb .sub-menu-container:hover a {
-    color: #cccccc;
+    color: var(--main);
 }
 
 .gnb .sub-menu-container:hover .sub-menu {
@@ -141,7 +178,7 @@ header h1 a span {
 
 .gnb .sub-menu-container .sub-menu {
     background-color: var(--white);
-    border-radius: 4rem;
+    border-radius: 2rem;
     display: flex;
     flex-direction: column;
     gap: 2.5rem;
@@ -149,12 +186,13 @@ header h1 a span {
     left: 50%;
     margin: 0 auto;
     opacity: 0;
-    padding: 3rem 3.5rem 2.5rem;
+    padding: 3rem 2.5rem 3rem;
     pointer-events: none;
     position: absolute;
-    top: 4.8rem;
+    top: 4.5rem;
     transform: translateX(-50%) translateY(1rem);
     transition: all 0.2s ease;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
 }
 
 .gnb .sub-menu-container .sub-menu a {
@@ -170,19 +208,49 @@ header h1 a span {
     color: #111;
 }
 
-.sub .gnb a:hover {
-    color: var(--text-main);
+.sub header {
+    background-color: var(--white);
 }
 
-.gnb a.active {
-    color: var(--text-gnb-active);
+.sub header h1 a span,.sub header .gnb a {
+    color:#333;
 }
 
-.gnb a.active:hover {
-    color: var(--text-gnb-active-hover);
+.sub header h1 .logo-txt .color {
+    opacity: 1;
 }
 
-.btn {
+.sub header h1 .logo-simbol .color {
+    opacity: 1;
+}
+
+.slide-page header h1 a span {
+    color:#4d5a63;
+}
+
+.slide-page header h1 .logo-txt .color {
+    opacity: 1;
+}
+
+.slide-page header h1 .logo-simbol .color {
+    opacity: 1;
+}
+
+.slide-page header .gnb a {
+    color:#4d5a63;
+}
+.slide-page header .gnb a:hover,
+.slide-page header .gnb a.active {
+    color:var(--text-gnb-active)
+}
+
+
+.sub header .gnb a:hover,
+.sub header .gnb a.active {
+    color:var(--main)
+}
+
+header .btn {
     align-items: baseline;
     background-color: var(--main);
     border-radius: 2.5rem;
@@ -190,9 +258,9 @@ header h1 a span {
     display: inline-flex;
     font-family: NanumSquareNeo sans-serif;
     font-size: 1.4rem;
+    line-height:1;
     font-weight: 600;
-    gap: 1.4rem;
-    padding: 1.3rem 2rem 1rem;
+    padding: 1.3rem 2rem 1.3rem;
     transition-duration: 0.2s;
     transition-property: background-color, color;
     transition-timing-function: ease;
@@ -243,10 +311,12 @@ a.btn-white:hover {
     color: var(--text-copyright);
     font-family: 'Montserrat';
     font-size: 1.4rem;
-    font-weight: 300;
-    letter-spacing: -0.05rem;
+    font-weight:500;
+    text-transform: uppercase;
     opacity: 0.5;
 }
+
+.slide-page .copyright p { color:#3d4a53; }
 
 .shadow {
     box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);

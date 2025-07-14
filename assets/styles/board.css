@@ -11,7 +11,7 @@
     flex-direction: column;
     gap: 6rem;
     height: 100vh;
-    padding-top: 30rem;
+    padding-top: 24rem;
     position: relative;
     transition: padding-top 0.5s ease;
 }
@@ -26,12 +26,14 @@
     color: var(--main);
     font-size: 1.6rem;
     font-weight: 600;
+    font-family: 'Montserrat';
+    letter-spacing: 2rem;
 }
 
 .board-detail .meta-container .meta .title {
     color: var(--text-main);
     font-size: 6rem;
-    font-weight: 800;
+    font-weight: 500;
     transition: all 0.5s ease;
 }
 
@@ -59,7 +61,7 @@
     display: flex;
     flex-direction: column;
     gap: 10rem;
-    padding: 20rem 0;
+    padding: 6rem 0;
 }
 
 .board-detail .content-container .content {
@@ -98,14 +100,14 @@
 
 .board-detail #board-detail-main-img {
     background-color: #000000;
-    height: 30vh;
+    height: 40vh;
     left: 0;
     margin: 0 auto;
     position: absolute;
     right: 0;
-    top: calc(100vh - 30vh);
+    top: calc(100vh - 40vh);
     transition: all 0.5s ease;
-    width: 132rem;
+    width: 146rem;
 }
 
 .board-detail #board-detail-main-img img {
@@ -235,17 +237,45 @@ hr {
     margin:-30px -30px 0;
 }
 .fame-list .item {
-    width:33.3%;
+    width:25%;
     box-sizing: border-box;
     padding:30px;
     position: relative;
     z-index: 5;
+    cursor: pointer;
 }
 .fame-list .item .thumb {
     width:100%;
-    padding-top:120%;
+    padding-top:145%;
     border:1px #e2e4e7 solid;
+    position: relative;
+    overflow: hidden;
+    transition-duration: .3s;
 }
+.fame-list .item .thumb img {
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    width:100%;
+    height:100%;
+    transform: scale(1);
+    transform-origin: center;
+    transition-duration: .3s;
+    object-fit: cover;
+}
+.fame-list .item:hover .thumb {
+    border-color:#4fb8c5;
+    transition-duration: .3s;
+}
+.fame-list .item:hover .thumb img {
+    transform: scale(1.1);
+    transform-origin: center;
+    transition-duration: .3s;
+    object-fit: cover;
+}
+
 .fame-list .item p {
     font-size:1.6rem;
     font-weight:700;
@@ -253,10 +283,10 @@ hr {
     margin:20px 0;
 }
 .fame-list .detail-info {
-    background: #111;
+    background: #333;
     display: none;
     font-size: 2rem;
-    margin:0 30px;
+    margin:0;
     padding:80px 40px;
     position: relative;
     transition: transform 0.5s ease;
@@ -266,14 +296,36 @@ hr {
     color:#fff;
     z-index: 1;
     position: relative;
+    display: flex;
+    gap:40px;
 }
-
+.fame-list .detail-contents .main-copy {
+    flex: 1;
+}
+.fame-list .detail-contents .sub-copy {
+    flex: 2;
+}
+.fame-list .detail-contents h2 {
+    font-size:3rem;
+    font-weight:600;
+    margin-bottom:2rem;
+}
+.fame-list .detail-contents p {
+    font-size:1.6rem;
+    font-weight:400;
+    line-height:1.7;
+    color:#ccc;
+    text-align: justify;
+}
+.fame-list .detail-contents p+p {
+    margin-top:1rem;
+}
 .fame-list .detail-info:before {
     transform: translateY(0);
     background-color: #ffffff;
     content: "";
     height: 100%;
-    left: calc((100vw - 142rem) / 2 * -1);
+    left: calc((100vw - 148rem) / 2 * -1);
     position: absolute;
     top: -2.5rem;
     width: 100vw;
@@ -286,11 +338,11 @@ hr {
 }
 
 .fame-list .detail-info:after {
-    background-color: #111;
+    background-color: #333;
     bottom: 0;
     box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
     content: "";
-    left: calc((100vw - 142rem) / 2 * -1);
+    left: calc((100vw - 148rem) / 2 * -1);
     position: absolute;
     top: 0;
     width: 100vw;
@@ -309,14 +361,46 @@ hr {
 }
 .archive-list .item .thumb {
     width:100%;
-    padding-top:100%;
+    aspect-ratio: 4 / 3;
+    position: relative;
     border:1px #e2e4e7 solid;
+    overflow: hidden;
+    transition-duration: .3s;
 }
+.archive-list .item .thumb img {
+    width:100%;
+    height:100%;
+    transform: scale(1);
+    transform-origin: center;
+    transition-duration: .3s;
+    object-fit: cover;
+}
+.archive-list .item:hover .thumb {
+    border-color:#4fb8c5;
+    transition-duration: .3s;
+}
+.archive-list .item:hover .thumb img {
+    transform: scale(1.1);
+    transform-origin: center;
+    transition-duration: .3s;
+    object-fit: cover;
+}
+
 .archive-list .item p {
-    font-size:1.6rem;
+    font-size:1.5rem;
+    color:#555;
     font-weight:400;
     text-align: left;
     margin:15px 0;
+    transition-duration: .3s;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.archive-list .item:hover p {
+    color:#111;
+    transition-duration: .3s;
 }
 
 .search-bar {
@@ -335,25 +419,48 @@ hr {
 .search-bar .search {
     height:50px;
     position: relative;
-    border-bottom:1px #4fb8c5 solid;
     margin-bottom:-1px;
     width:300px;
+    transition-duration: .3s;
+}
+.search-bar .search:after {
+    content:'';
+    position: absolute;
+    background:#4fb8c5;
+    bottom:0;
+    left:0;
+    right:0;
+    height:2px;
+    transform: scaleY(0.5);
+    transition-duration: .3s;
+}
+.search-bar .search:hover:after,
+.search-bar .search:focus:after,
+.search-bar .search:focus-within:after {
+    transform: scaleY(1);
+    transition-duration: .3s;
 }
 .search-bar .search input {
     height:50px;
     width:100%;
+    position: absolute;
     border-width: 0;
     background: none;
     outline: none;
 }
 .search-bar .search button {
     border:0;
-    width:24px;
-    height:24px;
+    width:36px;
+    height:36px;
     border-radius: 50%;
     position: absolute;
-    right:10px;
-    top:calc(50% - 12px);
+    right:0;
+    background: none;
+    top:calc(50% - 18px);
+}
+.search-bar .search button img {
+    width: 100%;
+    height:100%;
 }
 
 .search-field {
@@ -388,6 +495,8 @@ hr {
     border-radius: 2.2rem;
     display: flex;
     align-items: center;
+    transition-duration: .2s;
+    cursor: pointer;
 }
 
 .search-field li .contents a b {
@@ -395,23 +504,29 @@ hr {
     font-weight:400;
     line-height:1;
     font-size:1.4rem;
-
+    transition-duration: .2s;
 }
 .search-field li .contents a span {
     color:#999;
     margin-left:6px;
     font-size:1.4rem;
     line-height:1;
-    font-family: Montserrat;
+    font-family: 'Montserrat';
+    transition-duration: .2s;
 }
 
-
+.search-field li .contents a:hover,
 .search-field li .contents a.active {
     background:#4fb8c5;
+    transition-duration: .2s;
 }
+.search-field li .contents a:hover b,
 .search-field li .contents a.active b {
     color:#fff;
+    transition-duration: .2s;
 }
+.search-field li .contents a:hover span,
 .search-field li .contents a.active span {
     color:#fff;
+    transition-duration: .2s;
 }

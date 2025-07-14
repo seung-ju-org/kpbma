@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const columnCount = 3;
+    const columnCount = 4;
     const arrowSize = 30;
 
     const fameListElement = document.querySelector('.fame-list');
@@ -21,8 +21,9 @@ document.addEventListener('DOMContentLoaded', function () {
         arrowElement.style.height = arrowSize + 'px';
         arrowElement.style.transform = 'rotate(45deg)';
         arrowElement.style.top = -arrowSize / 2 + 'px';
-        arrowElement.style.left = itemElement.getBoundingClientRect().left - arrowSize / 2 + 'px';
-        arrowElement.style.backgroundColor = '#111111';
+        const boundingClientRect = itemElement.getBoundingClientRect();
+        arrowElement.style.left = boundingClientRect.left + boundingClientRect.width / 2 - arrowSize + 'px';
+        arrowElement.style.backgroundColor = '#333333';
 
         detailInfoElement.appendChild(arrowElement);
 
