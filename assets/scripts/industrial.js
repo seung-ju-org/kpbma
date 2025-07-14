@@ -106,9 +106,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
     document.body.addEventListener('mousemove', function (event) {
         const clientXPercent = event.clientX / windowWidth;
         const clientYPercent = event.clientY / windowHeight;
-        const translateMargin = 15;
-        const translateX = -clientXPercent * translateMargin + translateMargin / 1 + '%';
-        const translateY = -clientYPercent * translateMargin + translateMargin / 1 + '%';
+        const translateMargin = 2.5;
+        const translateX = -clientXPercent * translateMargin + '%';
+        const translateY = -clientYPercent * translateMargin + '%';
         bgElement.style.transform = 'scale(' + backgroundScale + ') translateX(' + translateX + ') translateY(' + translateY + ')';
         galleryElements.forEach(function (element) {
             element.dataset.x = '' + (clientXPercent - 0.5) * 25;
