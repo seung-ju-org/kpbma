@@ -316,7 +316,7 @@ a.btn-white:hover {
     opacity: 0.5;
 }
 
-.slider-page .copyright p { color:#3d4a53 !important; }
+.slide-page .copyright p { color:#3d4a53; }
 
 .shadow {
     box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
