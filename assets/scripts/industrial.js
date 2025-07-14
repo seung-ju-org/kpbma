@@ -83,11 +83,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
                     element.style.transform = 'translateY(' + (10 - visibilityRatio * 10) + '%)';
                 }
             });
-
-            const historyYearLine = historyYearContainerElement.querySelector('.history-year-line')
-            historyYearLine.style.transform = 'scaleX(' + progress * 100 + '%)'
-            const historyYear = historyYearContainerElement.querySelector('.btn')
-            historyYear.style.transform = 'translateX(' + ((windowWidth - historyYear.clientWidth) * progress) + 'px)'
+            const historyYear = historyYearContainerElement.querySelector('.btn');
+            const historyYearMargin = 40;
+            historyYear.style.transform = 'translateX(' + ((windowWidth - historyYear.clientWidth - historyYearMargin) * progress + historyYearMargin) + 'px)'
             const year = years.find(function (_, index, array) {
                 return (index * (1 / (array.length - 1))) >= progress;
             });
