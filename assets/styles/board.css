@@ -30,6 +30,10 @@
     letter-spacing: 2rem;
 }
 
+.board-detail .meta-container .meta .year.narrow {
+    letter-spacing: -0.03em;
+}
+
 .board-detail .meta-container .meta .title {
     color: var(--text-main);
     font-size: 6rem;
@@ -85,6 +89,13 @@
     text-align: center;
 }
 
+.board-detail .content-container .content h4 {
+    color: var(--text-main);
+    font-size: 2.4rem;
+    font-weight: 600;
+    text-align: center;
+}
+
 .board-detail .content-container .content p {
     color: var(--text-gray);
     font-size: 1.8rem;
@@ -125,13 +136,23 @@
 
 .board-detail .content-container .content img {
     width: 100%;
+    max-height:600px;
+    object-fit: contain;
 }
 
 .board-detail .content-container .content article {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    width: 670px;
+    width: 760px;
+}
+
+.board-detail .content-container .content span {
+    color: var(--text-gray);
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 2.4rem;
+    text-align: center;
 }
 
 .board-detail .content-container .content dl dt {
@@ -152,6 +173,29 @@
     font-weight: 400;
     line-height: 2.4rem;
 }
+
+.board-detail .content-container .content table {
+    border-top:1px #333 solid;
+    border-left:1px #333 solid;
+}
+
+.board-detail .content-container .content table td {
+    font-size:1.6rem;
+    font-weight:500;
+    padding:1.5rem 0;
+    border-right:1px #e2e4e7 solid;
+    border-bottom:1px #e2e4e7 solid;
+    text-align: center;
+}
+
+.board-detail .content-container .content table td:last-child {
+    border-right-color:#333;
+}
+
+.board-detail .content-container .content table tr:last-child td {
+    border-bottom-color:#333;
+}
+
 
 hr {
     margin:40px 0;
