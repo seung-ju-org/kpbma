@@ -77,10 +77,50 @@ header .container {
 
 header h1 {
     flex: 1;
+    display: flex;
+    align-items: center;
 }
 
-header h1 img {
-    width: 20.6rem;
+header h1 .logo-simbol {
+    width:7rem;
+    line-height:0;
+    position: relative;
+}
+
+header h1 .logo-simbol img {
+    width:100%;
+    line-height:0;
+}
+
+header h1 .logo-simbol .color {
+    position: absolute;
+    z-index: 1;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    opacity: 0;
+}
+
+header h1 .logo-txt {
+    width: 16rem;
+    line-height:0;
+    position: relative;
+}
+
+header h1 .logo-txt img {
+    width:100%;
+    line-height:0;
+}
+
+header h1 .logo-txt .color {
+    position: absolute;
+    z-index: 1;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    opacity: 0;
 }
 
 header h1 a {
@@ -94,6 +134,7 @@ header h1 a span {
     font-family: NanumSquareNeo sans-serif;
     font-size: 1.4rem;
     margin-top: 0.3rem;
+    font-weight: 400;
 }
 
 .gnb {
@@ -171,11 +212,32 @@ header h1 a span {
     background-color: var(--white);
 }
 
-header h1 a span,.sub header .gnb a {
+.sub header h1 a span,.sub header .gnb a {
     color:#333;
 }
+
+.sub header h1 .logo-txt .color {
+    opacity: 1;
+}
+
+.sub header h1 .logo-simbol .color {
+    opacity: 1;
+}
+
+.slide-page header h1 a span {
+    color:#4d5a63;
+}
+
+.slide-page header h1 .logo-txt .color {
+    opacity: 1;
+}
+
+.slide-page header h1 .logo-simbol .color {
+    opacity: 1;
+}
+
 .slide-page header .gnb a {
-    color:#333;
+    color:#4d5a63;
 }
 .slide-page header .gnb a:hover,
 .slide-page header .gnb a.active {
