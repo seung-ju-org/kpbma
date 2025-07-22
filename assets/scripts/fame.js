@@ -22,7 +22,8 @@ document.addEventListener('DOMContentLoaded', function () {
         arrowElement.style.transform = 'rotate(45deg)';
         arrowElement.style.top = -arrowSize / 2 + 'px';
         const boundingClientRect = itemElement.getBoundingClientRect();
-        arrowElement.style.left = boundingClientRect.left + boundingClientRect.width / 2 - arrowSize + 'px';
+        const containerMargin = Math.max(window.innerWidth - 1480, 0) / 2
+        arrowElement.style.left = boundingClientRect.left - containerMargin + boundingClientRect.width / 2 - arrowSize / 2 + 'px';
         arrowElement.style.backgroundColor = '#333333';
 
         detailInfoElement.appendChild(arrowElement);
