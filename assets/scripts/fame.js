@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     const columnCount = 4;
-    const arrowSize = 30;
+    const arrowSize = 24;
 
     const fameListElement = document.querySelector('.fame-list');
     const detailInfoElements = fameListElement.querySelectorAll('.detail-info');
