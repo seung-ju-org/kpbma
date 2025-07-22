@@ -324,8 +324,17 @@ hr {
     font-size:1.6rem;
     font-weight:700;
     text-align: center;
-    margin:20px 0;
+    margin:20px 0 10px;
 }
+.fame-list .item span {
+    display: block;
+    text-align: center;
+    font-size:1.4rem;
+    color:#999;
+    font-weight:400;
+    font-family: 'Montserrat', 'Pretendard';
+}
+
 .fame-list .detail-info {
     background: #333;
     display: none;
