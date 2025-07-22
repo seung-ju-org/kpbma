@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
         autoplay: {
             delay: 20000,
         },
-        slidesPerView: 2,
+        slidesPerView: 1,
         mousewheel: {
             enabled: 1
         },

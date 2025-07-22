@@ -13,7 +13,7 @@ main {
 
 main .swiper {
     height: 100vh;
-    width: 150%;
+    width: 100%;
 }
 
 main .swiper .swiper-wrapper {
@@ -40,9 +40,9 @@ main .swiper .swiper-wrapper .swiper-slide hr {
 main .swiper .swiper-wrapper .swiper-slide .container {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-    opacity: 0.2;
-    padding-left: calc(16% + 2rem);
+    /*gap: 1rem;*/
+    /*opacity: 0.2;*/
+    /*padding-left: calc(16% + 2rem);*/
     transition: opacity 0.2s ease;
 }
 
