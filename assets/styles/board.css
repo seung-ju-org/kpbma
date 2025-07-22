@@ -346,11 +346,16 @@ hr {
 .fame-list .detail-contents .main-copy {
     flex: 1;
 }
+.fame-list .detail-contents .main-copy p {
+    font-size:1.3rem;
+}
+
 .fame-list .detail-contents .sub-copy {
     flex: 2;
 }
 .fame-list .detail-contents h2 {
-    font-size:3rem;
+    font-size:2.6rem;
+    line-height:1.4;
     font-weight:600;
     margin-bottom:2rem;
 }
