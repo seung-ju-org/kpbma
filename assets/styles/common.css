@@ -251,16 +251,17 @@ header h1 a span {
 }
 
 header .btn {
-    align-items: baseline;
     background-color: var(--main);
+    border:0;
     border-radius: 2.5rem;
     color: #16626c;
-    display: inline-flex;
+    display: flex;
+    align-items: center;
     font-family: NanumSquareNeo sans-serif;
     font-size: 1.4rem;
     line-height:1;
     font-weight: 600;
-    padding: 1.3rem 2rem 1.3rem;
+    padding: 1.4rem 2rem;
     transition-duration: 0.2s;
     transition-property: background-color, color;
     transition-timing-function: ease;

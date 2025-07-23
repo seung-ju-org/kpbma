@@ -350,14 +350,26 @@ hr {
     z-index: 1;
     position: relative;
     display: flex;
-    gap:40px;
+    flex-direction: row-reverse;
+}
+.fame-list .detail-contents .aside {
+    width:25%;
+    padding-left:50px;
+    box-sizing: border-box;
+}
+.fame-list .detail-contents .main-contents {
+    flex:1;
+    padding-right:30px;
 }
 .fame-list .detail-contents .main-copy {
     flex: 1;
     opacity: 0;
+    border-bottom:1px rgba(255,255,255,0.1) solid;
+    padding-bottom:2rem;
+    margin-bottom:2rem;
 }
 .fame-list .detail-contents .main-copy p {
-    font-size:1.3rem;
+    font-size:1.5rem;
 }
 
 .fame-list .detail-contents .sub-copy {
@@ -374,6 +386,25 @@ hr {
     transition-duration: .3s;
     opacity: 1;
 }
+.fame-list .detail-info .sub-copy .half {
+    display: flex;
+    gap:60px;
+}
+.fame-list .detail-info .sub-copy .half > * {
+    flex:1;
+}
+.fame-list .detail-info .list-style+.list-style {
+    margin-top:30px;
+}
+.fame-list .detail-info .list-style h4 {
+    font-size:1.6rem;
+    margin:0 0 20px;
+}
+.fame-list .detail-info .list-style li {
+    font-size:1.4rem;
+    margin-bottom:1.5rem;
+    color:#eee;
+}
 .fame-list .detail-contents h2 {
     font-size:2.6rem;
     line-height:1.4;
@@ -381,9 +412,9 @@ hr {
     margin-bottom:2rem;
 }
 .fame-list .detail-contents p {
-    font-size:1.6rem;
+    font-size:1.5rem;
     font-weight:400;
-    line-height:1.7;
+    line-height:1.6;
     color:#ccc;
     text-align: justify;
 }
