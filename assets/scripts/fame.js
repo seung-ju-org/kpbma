@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const boundingClientRect = itemElement.getBoundingClientRect();
         const containerMargin = Math.max(window.innerWidth - 1480, 0) / 2
         arrowElement.style.left = boundingClientRect.left - containerMargin + boundingClientRect.width / 2 - arrowSize / 2 + 'px';
-        arrowElement.style.backgroundColor = '#333333';
+        arrowElement.style.backgroundColor = '#f0f0f0';
 
         detailInfoElement.appendChild(arrowElement);
 

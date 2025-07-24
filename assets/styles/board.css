@@ -336,26 +336,61 @@ hr {
 }
 
 .fame-list .detail-info {
-    background: #333;
+    background: #f5f5f5;
     display: none;
     font-size: 2rem;
     margin:0;
-    padding:80px 40px;
+    padding:120px 40px;
     position: relative;
     transition: transform 0.5s ease;
     width: 100%;
 }
 .fame-list .detail-contents {
-    color:#fff;
+    color:#111;
     z-index: 1;
     position: relative;
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
 }
-.fame-list .detail-contents .aside {
+.fame-list .detail-info .detail-contents .aside {
     width:25%;
-    padding-left:50px;
+    padding-right:60px;
     box-sizing: border-box;
+    opacity: 0;
+}
+.fame-list .detail-info.active .detail-contents .aside {
+    transition-delay: .2s;
+    transition-duration: .3s;
+    opacity: 1;
+}
+
+.fame-list .detail-contents .profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.fame-list .detail-contents .profile .thumb {
+    max-width:300px;
+    width:100%;
+    overflow: hidden;
+    margin-bottom:20px;
+}
+.fame-list .detail-contents .profile .thumb img {
+    width:100%;
+}
+.fame-list .detail-contents .profile p {
+    font-size:1.8rem;
+    color:#111;
+    font-weight:600;
+    text-align: center;
+    margin-bottom:1rem;
+}
+.fame-list .detail-contents .profile span {
+    font-size:1.4rem;
+    color:#999;
+    font-weight:400;
+    text-align: center;
+    font-family: 'Montserrat';
 }
 .fame-list .detail-contents .main-contents {
     flex:1;
@@ -364,12 +399,13 @@ hr {
 .fame-list .detail-contents .main-copy {
     flex: 1;
     opacity: 0;
-    border-bottom:1px rgba(255,255,255,0.1) solid;
     padding-bottom:2rem;
+    border-bottom:1px #ddd solid;
     margin-bottom:2rem;
 }
 .fame-list .detail-contents .main-copy p {
-    font-size:1.5rem;
+    font-size:1.4rem;
+    color:#999;
 }
 
 .fame-list .detail-contents .sub-copy {
@@ -386,15 +422,14 @@ hr {
     transition-duration: .3s;
     opacity: 1;
 }
-.fame-list .detail-info .sub-copy .half {
+.fame-list .detail-info .half {
     display: flex;
     gap:60px;
+    align-items: flex-start;
+    margin-top:40px;
 }
-.fame-list .detail-info .sub-copy .half > * {
+.fame-list .detail-info .half > * {
     flex:1;
-}
-.fame-list .detail-info .list-style+.list-style {
-    margin-top:30px;
 }
 .fame-list .detail-info .list-style h4 {
     font-size:1.6rem;
@@ -403,19 +438,19 @@ hr {
 .fame-list .detail-info .list-style li {
     font-size:1.4rem;
     margin-bottom:1.5rem;
-    color:#eee;
+    color:#666;
 }
 .fame-list .detail-contents h2 {
     font-size:2.6rem;
     line-height:1.4;
     font-weight:600;
-    margin-bottom:2rem;
+    margin-bottom:1rem;
 }
 .fame-list .detail-contents p {
     font-size:1.5rem;
     font-weight:400;
     line-height:1.6;
-    color:#ccc;
+    color:#666;
     text-align: justify;
 }
 .fame-list .detail-contents p+p {
@@ -439,9 +474,8 @@ hr {
 }
 
 .fame-list .detail-info:after {
-    background-color: #333;
+    background-color: #f0f0f0;
     bottom: 0;
-    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
     content: "";
     left: calc((100vw - 148rem) / 2 * -1);
     position: absolute;
