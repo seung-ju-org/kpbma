@@ -240,10 +240,11 @@ hr {
 }
 .sticky-panel .year-list li label {
     font-size:1.8rem;
-    font-weight:700;
+    font-weight:500;
     line-height:1.4;
     color:#111;
     margin-right:40px;
+    font-family: 'Montserrat';
 }
 .sticky-panel .year-list li p {
     flex:1;
@@ -252,6 +253,15 @@ hr {
     font-weight:400;
     color:#555;
     margin:0;
+}
+
+.sticky-panel .year-list li .contents {
+    display: flex;
+    flex-direction: column;
+    row-gap:1.5rem;
+}
+.sticky-panel .year-list li .ind {
+    color:#17469e;
 }
 
 
