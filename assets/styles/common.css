@@ -406,3 +406,23 @@ a.shadow:hover {
     fill: #aaa !important;
 
 }
+
+.breadcrumb {
+    align-items: center;
+    display: flex;
+    gap: 2rem;
+}
+
+.breadcrumb li {
+
+}
+
+.breadcrumb li a {
+    align-items: center;
+    color: var(--text-main);
+    display: flex;
+    font-size: 1.4rem;
+    font-weight: 600;
+    gap: 1rem;
+    transition: all 0.5s ease;
+}
