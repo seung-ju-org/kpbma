@@ -214,9 +214,11 @@ hr {
     border:1px #e2e4e7 solid;
     margin-bottom:20px;
     min-height:240px;
+    line-height:0;
 }
 .sticky-panel .sticky-area .thumb img {
     width:100%;
+    line-height:0;
 }
 .sticky-panel .sticky-area p {
     text-align: justify;
