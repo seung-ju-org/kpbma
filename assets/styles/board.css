@@ -85,7 +85,7 @@
     font-weight: 600;
     text-align: justify;
     width:100%;
-    margin-bottom:1.5rem;
+    margin-bottom:2.5rem;
 }
 
 .board-detail .content-container .content p {
@@ -165,8 +165,10 @@
     width: 660px;
     margin:3rem auto;
 }
-
-.board-detail .content-container .content h4 span {
+.board-detail .content-container .content article h4 {
+    margin-bottom:1rem;
+}
+.board-detail .content-container .content article h4 span {
     padding-left:10px;
 }
 
