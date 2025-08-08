@@ -133,9 +133,10 @@ main .gallery .images-container .image-container span {
     color: #fff;
     display: block;
     font-size: 1.4rem;
+    line-height:1.5;
     left: 0;
     opacity: 0;
-    padding: 2rem 2rem 2.3rem;
+    padding: 1.5rem 2rem 1.7rem;
     position: absolute;
     right: 0;
     transform: translateY(100%);
