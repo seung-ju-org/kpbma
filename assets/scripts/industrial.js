@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", (event) => {
+window.addEventListener("load", function () {
     gsap.registerPlugin(ScrollTrigger, ScrollSmoother)
 
     const windowWidth = window.innerWidth;
