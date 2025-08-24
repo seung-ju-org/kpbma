@@ -1,3 +1,6 @@
+body {
+    background: #fafafa;
+}
 .board-detail {
     box-sizing: border-box;
     display: flex;
@@ -198,7 +201,6 @@
 }
 
 .board-detail .content-container {
-    background: var(--white);
     position: relative;
     width: 100%;
 }
@@ -240,6 +242,9 @@
 .board-detail .content-container .content article h4 span {
     padding-left:10px;
 }
+
+.board-detail .content-container .content .box-contents { border:1px #e2e4e7 solid; padding:40px; background: #fff; }
+.board-detail .content-container .content .box-contents p { font-size:1.4rem; }
 
 .board-detail .content-container .content span {
     color: var(--text-gray);

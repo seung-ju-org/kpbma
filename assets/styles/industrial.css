@@ -156,15 +156,15 @@ main .gallery .images-container a {
 }
 
 main .gallery .images-container a.type1 img {
-    width: 56rem;
+    width: 46rem;
 }
 
 main .gallery .images-container a.type2 img {
-    height: 56rem;
+    height: 46rem;
 }
 
 main .gallery .images-container a.type3 img {
-    height: 50rem;
+    height: 40rem;
 }
 
 main .gallery .images-container a:hover {
