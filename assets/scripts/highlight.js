@@ -11,5 +11,12 @@ document.addEventListener('DOMContentLoaded', function () {
             endTrigger: element,
             end: "bottom +=" + (stickyAreaBoundingClientRect.height + 100)
         });
+    });
+
+    ScrollTrigger.create({
+        trigger: ".fixed-category",
+        pin: true,
+        start: "-=100",
+        end: document.body.scrollHeight + "+=100",
     })
 });
