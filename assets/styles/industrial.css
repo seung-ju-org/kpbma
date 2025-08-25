@@ -192,6 +192,8 @@ main .history-year-container .btn {
     font-family: 'Montserrat';
     font-size: 1.3rem;
     position: relative;
+    user-select: none;
+    cursor: grab;
 }
 
 main .history-year-container .btn:before {
