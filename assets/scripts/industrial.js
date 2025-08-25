@@ -49,7 +49,9 @@ window.addEventListener("load", function () {
         scrollElement.style.height = maxScrollWidth + (windowHeight / 2) + 'px';
         smoothContentElement.appendChild(scrollElement);
 
-        const historyYearContainerElement = mainElement.querySelector('.history-year-container')
+        const historyYearContainerElement = mainElement.querySelector('.history-year-container');
+        const historyYear = historyYearContainerElement.querySelector('.btn');
+        const historyYearMargin = 40;
 
         let x = 0
         let progress = 0
@@ -83,8 +85,6 @@ window.addEventListener("load", function () {
                     element.style.transform = 'translateY(' + (10 - visibilityRatio * 10) + '%)';
                 }
             });
-            const historyYear = historyYearContainerElement.querySelector('.btn');
-            const historyYearMargin = 40;
             historyYear.style.transform = 'translateX(' + ((windowWidth - historyYear.clientWidth - historyYearMargin) * progress + historyYearMargin) + 'px)'
             const year = years.find(function (_, index, array) {
                 return (index * (1 / (array.length - 1))) >= progress;
@@ -93,12 +93,28 @@ window.addEventListener("load", function () {
         }
 
         handleGallery();
-        ScrollSmoother.create({
+        const scrollSmoother = ScrollSmoother.create({
             smooth: 1.5,
             speed: 0.75,
             effects: true,
             onUpdate: handleGallery
         });
+
+        let downClientX = 0;
+
+        function historyYearHandler(event) {
+            const mousePositionPercent = (event.clientX - historyYearMargin - historyYear.clientWidth / 2) / (window.innerWidth);
+            scrollSmoother.scrollTo(mousePositionPercent * maxScrollWidth);
+        }
+
+        historyYear.addEventListener('mousedown', function (event) {
+            downClientX = event.clientX;
+            window.addEventListener('mousemove', historyYearHandler);
+        });
+
+        window.addEventListener('mouseup', function () {
+            window.removeEventListener('mousemove', historyYearHandler);
+        })
     }
 
     document.body.addEventListener('mousemove', function (event) {
