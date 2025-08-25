@@ -1,6 +1,4 @@
-body {
-    background: #fafafa;
-}
+
 .board-detail {
     box-sizing: border-box;
     display: flex;
@@ -313,6 +311,35 @@ hr {
     border: 0;
 }
 
+.fixed-category { display: flex; gap:25px; position: absolute; top:-24px; right:160px; align-items: center; background: #fafafa; padding:0 22px; height:46px; border-radius: 23px; }
+
+.fixed-category span {
+    color:#e87927;
+    position: relative;
+    padding-left:20px;
+    font-size:1.4rem;
+    font-weight:500;
+}
+.fixed-category span:before {
+    content:'';
+    border:4px #e87927 solid;
+    width:7px;
+    height:7px;
+    border-radius: 50%;
+    left:0;
+    position: absolute;
+}
+
+
+.fixed-category .ind {
+    color:#17469e;
+}
+
+.fixed-category .ind:before {
+    content:'';
+    border:4px #17469e solid;
+}
+
 .sticky-panel {
     display: flex;
     gap:160px;
@@ -390,8 +417,31 @@ hr {
     flex-direction: column;
     row-gap:1.5rem;
 }
+
+.sticky-panel .year-list li p {
+    color:#e87927;
+    position: relative;
+    padding-left:25px;
+}
+.sticky-panel .year-list li p:before {
+    content:'';
+    border:4px #e87927 solid;
+    width:7px;
+    height:7px;
+    border-radius: 50%;
+    left:0;
+    top:6px;
+    position: absolute;
+}
+
+
 .sticky-panel .year-list li .ind {
     color:#17469e;
+}
+
+.sticky-panel .year-list li .ind:before {
+    content:'';
+    border:4px #17469e solid;
 }
 
 
