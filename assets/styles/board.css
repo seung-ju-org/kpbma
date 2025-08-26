@@ -909,3 +909,7 @@ hr {
     width:1000px;
 }
 
+.item img {
+    width:100%;
+}
+
