@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"/>
+    <link rel="stylesheet" href="/assets/libs/interactive.css">
 
     <script type="application/javascript" src="/assets/libs/interactive.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
@@ -20,7 +21,7 @@
     <script type="application/javascript" src="/assets/scripts/header-component.js"></script>
     <script type="application/javascript" src="/assets/scripts/board.js"></script>
     <script type="application/javascript" src="/assets/scripts/scroll-smoother.js"></script>
-    <script type="application/javascript" src="/assets/scripts/highlight.js"></script>
+    <script type="application/javascript" src="/assets/scripts/evolution-stats.js"></script>
 </head>
 <body>
 <div id="wrapper" class="sub">
@@ -44,194 +45,192 @@
                             </li>
                         </ul>
                     </div>
-                        <div class="container">
-                            <div class="tab-area">
-                                <a href="/evolution/first">최초의 기록</a>
-                                <a href="/evolution/stats" class="active">산업 주요 지표</a>
+                    <div class="tab-area">
+                        <a href="/evolution/first">최초의 기록</a>
+                        <a href="/evolution/stats" class="active">산업 주요 지표</a>
+                    </div>
+                    <section>
+                        <div class="section-cover">
+                            <div class="container">
+                                <label class="interactive-visible" data-interactive-offset="-150">Industry in numbers</label>
+                                <h2 class="interactive-visible" data-interactive-offset="-150">숫자로 보는 산업 변천</h2>
+                                <p class="interactive-visible" data-interactive-offset="-150">한국제약바이오산업은 더 건강한 삶을 향해 오늘도 성장하고 있습니다.</p>
                             </div>
                         </div>
-                        <section>
-                            <div class="section-cover">
-                                <div class="container">
-                                    <label>Industry in numbers</label>
-                                    <h2>숫자로 보는 산업 변천</h2>
-                                    <p>한국제약바이오산업은 더 건강한 삶을 향해 오늘도 성장하고 있습니다.</p>
+                        <div class="numbers bg">
+                            <div class="container">
+                                <div class="numbers-title interactive-visible" data-interactive-offset="-150">
+                                    <h4>한국 의약품 시장 규모</h4>
                                 </div>
-                            </div>
-                            <div class="numbers bg">
-                                <div class="container">
-                                    <div class="numbers-title">
-                                        <h4>한국 의약품 시장 규모</h4>
-                                    </div>
-                                    <div class="wrapper">
-                                        <div class="item">
-                                            <div class="unit">
-                                                <label>2013년</label>
-                                                <p class="small">19.3<span>조원</span></p>
-                                            </div>
-                                            <div class="unit">
-                                                <label>2023년</label>
-                                                <p class="">31.4<span>조원</span></p>
-                                            </div>
+                                <div class="wrapper">
+                                    <div class="item">
+                                        <div class="unit interactive-visible" data-interactive-offset="-150">
+                                            <label>2013년</label>
+                                            <p class="small interactive-number" data-interactive-offset="-150">19.3<span>조원</span></p>
+                                        </div>
+                                        <div class="unit interactive-visible" data-interactive-offset="-150">
+                                            <label>2023년</label>
+                                            <p class="interactive-number" data-interactive-offset="-150">31.4<span>조원</span></p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="numbers triple">
-                                <div class="container">
-                                    <div class="numbers-title">
-                                        <h4>매출액</h4>
-                                    </div>
-                                    <div class="wrapper">
-                                        <div class="item">
-                                            <h6 class="sub-title">의약품 제조기업</h6>
-                                            <div class="unit">
-                                                <label>2014년</label>
-                                                <p class="small">17.5<span>조원</span></p>
-                                            </div>
-                                            <div class="unit">
-                                                <label>2023년</label>
-                                                <p class="">42.2<span>조원</span></p>
-                                            </div>
-                                        </div>
-                                        <div class="item">
-                                            <h6 class="sub-title">상장기업</h6>
-                                            <div class="unit">
-                                                <label>2014년</label>
-                                                <p class="small">15.1<span>조원</span></p>
-                                            </div>
-                                            <div class="unit">
-                                                <label>2023년</label>
-                                                <p class="">37.6<span>조원</span></p>
-                                            </div>
-                                        </div>
-                                        <div class="item">
-                                            <h6 class="sub-title">혁신형 제약기업</h6>
-                                            <div class="unit">
-                                                <label>2014년</label>
-                                                <p class="small">15.2<span>조원</span></p>
-                                            </div>
-                                            <div class="unit">
-                                                <label>2023년</label>
-                                                <p class="">16.8<span>조원</span></p>
-                                            </div>
-                                        </div>
-                                    </div>
+                        </div>
+                        <div class="numbers triple">
+                            <div class="container">
+                                <div class="numbers-title interactive-visible" data-interactive-offset="-150">
+                                    <h4>매출액</h4>
                                 </div>
-                            </div>
-                            <div class="numbers triple">
-                                <div class="container">
-                                    <div class="numbers-title">
-                                        <h4>연구개발비</h4>
-                                    </div>
-                                    <div class="wrapper">
-                                        <div class="item">
-                                            <h6 class="sub-title">의약품 제조기업</h6>
-                                            <div class="unit">
-                                                <label>2013년</label>
-                                                <p class="small">0.97<span>조원</span></p>
-                                            </div>
-                                            <div class="unit">
-                                                <label>2023년</label>
-                                                <p class="">2.4<span>조원</span></p>
-                                            </div>
+                                <div class="wrapper">
+                                    <div class="item ">
+                                        <h6 class="sub-title interactive-visible" data-interactive-offset="-150">의약품 제조기업</h6>
+                                        <div class="unit interactive-visible" data-interactive-offset="-150">
+                                            <label>2014년</label>
+                                            <p class="small interactive-number" data-interactive-offset="-150">17.5<span>조원</span></p>
                                         </div>
-                                        <div class="item">
-                                            <h6 class="sub-title">상장기업</h6>
-                                            <div class="unit">
-                                                <label>2013년</label>
-                                                <p class="small">1.1<span>조원</span></p>
-                                            </div>
-                                            <div class="unit">
-                                                <label>2023년</label>
-                                                <p class="">4.7<span>조원</span></p>
-                                            </div>
-                                        </div>
-                                        <div class="item">
-                                            <h6 class="sub-title">혁신형 제약기업</h6>
-                                            <div class="unit">
-                                                <label>2013년</label>
-                                                <p class="small">0.93<span>조원</span></p>
-                                            </div>
-                                            <div class="unit">
-                                                <label>2023년</label>
-                                                <p class="">2.7<span>조원</span></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="numbers double">
-                                <div class="container">
-                                    <div class="numbers-title">
-                                        <h4>수출액</h4>
-                                        <h4>수입액</h4>
-                                    </div>
-                                    <div class="wrapper">
-                                        <div class="item">
-                                            <h6 class="sub-title">국내 약품 수출액</h6>
-                                            <div class="unit">
-                                                <label>2013년</label>
-                                                <p class="small">2.54<span>조원</span></p>
-                                            </div>
-                                            <div class="unit">
-                                                <label>2023년</label>
-                                                <p class="">9.89<span>조원</span></p>
-                                            </div>
-                                        </div>
-                                        <div class="item">
-                                            <h6 class="sub-title">해외 약품 수입액</h6>
-                                            <div class="unit">
-                                                <label>2013년</label>
-                                                <p class="small">5.49<span>조원</span></p>
-                                            </div>
-                                            <div class="unit">
-                                                <label>2023년</label>
-                                                <p class="">10.71<span>조원</span></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="numbers chart">
-                                <div class="container">
-                                    <div class="numbers-title">
-                                        <h4>일반/전문의약품 생산실적<span>단위 십억원</span></h4>
-                                        <div class="category">
-                                            <span class="normal">일반의약품</span>
-                                            <span class="">전문의약품</span>
+                                        <div class="unit interactive-visible" data-interactive-offset="-150">
+                                            <label>2023년</label>
+                                            <p class="interactive-number" data-interactive-offset="-150">42.2<span>조원</span></p>
                                         </div>
                                     </div>
                                     <div class="item">
-                                        <img src="/assets/images/chart01.png"/>
+                                        <h6 class="sub-title interactive-visible" data-interactive-offset="-150">상장기업</h6>
+                                        <div class="unit interactive-visible" data-interactive-offset="-150">
+                                            <label>2014년</label>
+                                            <p class="small interactive-number" data-interactive-offset="-150">15.1<span>조원</span></p>
+                                        </div>
+                                        <div class="unit interactive-visible" data-interactive-offset="-150">
+                                            <label>2023년</label>
+                                            <p class="interactive-number" data-interactive-offset="-150">37.6<span>조원</span></p>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <h6 class="sub-title interactive-visible" data-interactive-offset="-150">혁신형 제약기업</h6>
+                                        <div class="unit interactive-visible" data-interactive-offset="-150">
+                                            <label>2014년</label>
+                                            <p class="small interactive-number" data-interactive-offset="-150">15.2<span>조원</span></p>
+                                        </div>
+                                        <div class="unit interactive-visible" data-interactive-offset="-150">
+                                            <label>2023년</label>
+                                            <p class="interactive-number" data-interactive-offset="-150">16.8<span>조원</span></p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </section>
-                        <section>
-                            <div class="section-cover">
-                                <div class="container">
-                                    <label>innovative medicine</label>
-                                    <h2>국내 개발 신약</h2>
-                                    <p>우리 약에서 모두의 약으로. 이제 한국의 제약바이오기술은 세계 속의 기술로 뻗어 나갑니다.</p>
+                        </div>
+                        <div class="numbers triple">
+                            <div class="container">
+                                <div class="numbers-title interactive-visible" data-interactive-offset="-150">
+                                    <h4>연구개발비</h4>
+                                </div>
+                                <div class="wrapper">
+                                    <div class="item">
+                                        <h6 class="sub-title interactive-visible" data-interactive-offset="-150">의약품 제조기업</h6>
+                                        <div class="unit interactive-visible" data-interactive-offset="-150">
+                                            <label>2013년</label>
+                                            <p class="small interactive-number" data-interactive-offset="-150">0.97<span>조원</span></p>
+                                        </div>
+                                        <div class="unit interactive-visible" data-interactive-offset="-150">
+                                            <label>2023년</label>
+                                            <p class="interactive-number" data-interactive-offset="-150">2.4<span>조원</span></p>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <h6 class="sub-title interactive-visible" data-interactive-offset="-150">상장기업</h6>
+                                        <div class="unit interactive-visible" data-interactive-offset="-150">
+                                            <label>2013년</label>
+                                            <p class="small interactive-number" data-interactive-offset="-150">1.1<span>조원</span></p>
+                                        </div>
+                                        <div class="unit interactive-visible" data-interactive-offset="-150">
+                                            <label>2023년</label>
+                                            <p class="interactive-number" data-interactive-offset="-150">4.7<span>조원</span></p>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <h6 class="sub-title interactive-visible" data-interactive-offset="-150">혁신형 제약기업</h6>
+                                        <div class="unit interactive-visible" data-interactive-offset="-150">
+                                            <label>2013년</label>
+                                            <p class="small interactive-number" data-interactive-offset="-150">0.93<span>조원</span></p>
+                                        </div>
+                                        <div class="unit interactive-visible" data-interactive-offset="-150">
+                                            <label>2023년</label>
+                                            <p class="interactive-number" data-interactive-offset="-150">2.7<span>조원</span></p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="slider-area">
-                                <div class="container">
-                                    <img src="/assets/images/medicine-item01.png" />
+                        </div>
+                        <div class="numbers double">
+                            <div class="container">
+                                <div class="numbers-title interactive-visible" data-interactive-offset="-150">
+                                    <h4>수출액</h4>
+                                    <h4>수입액</h4>
                                 </div>
+                                <div class="wrapper">
+                                    <div class="item">
+                                        <h6 class="sub-title interactive-visible" data-interactive-offset="-150">국내 약품 수출액</h6>
+                                        <div class="unit interactive-visible" data-interactive-offset="-150">
+                                            <label>2013년</label>
+                                            <p class="small interactive-number" data-interactive-offset="-150">2.54<span>조원</span></p>
+                                        </div>
+                                        <div class="unit interactive-visible" data-interactive-offset="-150">
+                                            <label>2023년</label>
+                                            <p class="interactive-number" data-interactive-offset="-150">9.89<span>조원</span></p>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <h6 class="sub-title interactive-visible" data-interactive-offset="-150">해외 약품 수입액</h6>
+                                        <div class="unit interactive-visible" data-interactive-offset="-150">
+                                            <label>2013년</label>
+                                            <p class="small interactive-number" data-interactive-offset="-150">5.49<span>조원</span></p>
+                                        </div>
+                                        <div class="unit interactive-visible" data-interactive-offset="-150">
+                                            <label>2023년</label>
+                                            <p class="interactive-number" data-interactive-offset="-150">10.71<span>조원</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="numbers chart">
+                            <div class="container">
+                                <div class="numbers-title interactive-visible" data-interactive-offset="-150">
+                                    <h4>일반/전문의약품 생산실적<span>단위 십억원</span></h4>
+                                    <div class="category">
+                                        <span class="normal">일반의약품</span>
+                                        <span class="">전문의약품</span>
+                                    </div>
+                                </div>
+                                <div class="item interactive-visible" data-interactive-offset="-150">
+                                    <img src="/assets/images/chart01.png"/>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="section-cover">
+                            <div class="container">
+                                <label class="interactive-visible" data-interactive-offset="-150">innovative medicine</label>
+                                <h2 class="interactive-visible" data-interactive-offset="-150">국내 개발 신약</h2>
+                                <p class="interactive-visible" data-interactive-offset="-150">우리 약에서 모두의 약으로. 이제 한국의 제약바이오기술은 세계 속의 기술로 뻗어 나갑니다.</p>
+                            </div>
+                        </div>
+                        <div class="slider-area">
+                            <div class="container interactive-visible" data-interactive-offset="-150">
+                                <img src="/assets/images/medicine-item01.png"/>
+                            </div>
 
                             </div>
                             <div class="numbers chart">
                                 <div class="container">
-                                    <div class="numbers-title">
+                                    <div class="numbers-title interactive-visible" data-interactive-offset="-150">
                                         <h4>신약 파이프라인 현황</h4>
                                         <div class="category">
                                             <span class="normal">의약품 수</span>
                                             <span class="">파이프라인비중(%)</span>
                                         </div>
                                     </div>
-                                    <div class="item">
+                                    <div class="item interactive-visible" data-interactive-offset="+250">
                                         <img src="/assets/images/chart02.png"/>
                                     </div>
                                 </div>
@@ -240,24 +239,24 @@
                         <section>
                             <div class="section-cover">
                                 <div class="container">
-                                    <label>HISTORY OF INDUSTRY</label>
-                                    <h2>산업 구조 변화</h2>
-                                    <p>우리 약에서 모두의 약으로. 이제 한국의 제약바이오기술은 세계 속의 기술로 뻗어 나갑니다.</p>
+                                    <label class="interactive-visible" data-interactive-offset="-150">HISTORY OF INDUSTRY</label>
+                                    <h2 class="interactive-visible" data-interactive-offset="-150">산업 구조 변화</h2>
+                                    <p class="interactive-visible" data-interactive-offset="-150">우리 약에서 모두의 약으로. 이제 한국의 제약바이오기술은 세계 속의 기술로 뻗어 나갑니다.</p>
                                 </div>
                             </div>
                             <div class="numbers chart double">
                                 <div class="container">
-                                    <div class="numbers-title">
+                                    <div class="numbers-title interactive-visible" data-interactive-offset="-150">
                                         <h4>의약품 지급도<span>단위 백만원, %</span></h4>
                                     </div>
                                     <div class="wrapper">
-                                        <div class="item">
+                                        <div class="item interactive-visible" data-interactive-offset="-150">
                                             <h6 class="sub-title">완제의약품</h6>
                                             <div class="item">
                                                 <img src="/assets/images/chart03.png"/>
                                             </div>
                                         </div>
-                                        <div class="item">
+                                        <div class="item interactive-visible" data-interactive-offset="-150">
                                             <h6 class="sub-title">원료의약품</h6>
                                             <div class="item">
                                                 <img src="/assets/images/chart04.png"/>
@@ -269,279 +268,279 @@
                             <div class="stats-list">
                                 <div class="container">
                                     <div class="fixed-area">
-                                        <p>혁신형 제약기업</p>
-                                        <h4>국내 제약기업의 <br/>혁신의 발걸음</h4>
+                                        <p class="interactive-visible" data-interactive-offset="-150">혁신형 제약기업</p>
+                                        <h4 class="interactive-visible" data-interactive-offset="-150">국내 제약기업의 <br/>혁신의 발걸음</h4>
                                     </div>
                                     <ul>
-                                        <li>
+                                        <li class="interactive-visible" data-interactive-offset="-15">
                                             <label>01</label>
                                             <div class="contents">
                                                 <p>녹십자</p>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li class="interactive-visible" data-interactive-offset="-15">
                                             <label>02</label>
                                             <div class="contents">
                                                 <p>동구바이오제약</p>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li class="interactive-visible" data-interactive-offset="-15">
                                             <label>03</label>
                                             <div class="contents">
                                                 <p>동국제약</p>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li class="interactive-visible" data-interactive-offset="-15">
                                             <label>04</label>
                                             <div class="contents">
                                                 <p>동화약품</p>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li class="interactive-visible" data-interactive-offset="-15">
                                             <label>05</label>
                                             <div class="contents">
                                                 <p>대웅제약</p>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li class="interactive-visible" data-interactive-offset="-15">
                                             <label>06</label>
                                             <div class="contents">
                                                 <p>대원제약</p>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li class="interactive-visible" data-interactive-offset="-15">
                                             <label>07</label>
                                             <div class="contents">
                                                 <p>대화제약</p>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li class="interactive-visible" data-interactive-offset="-15">
                                             <label>08</label>
                                             <div class="contents">
                                                 <p>보령</p>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li class="interactive-visible" data-interactive-offset="-15">
                                             <label>09</label>
                                             <div class="contents">
                                                 <p>부광약품</p>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li class="interactive-visible" data-interactive-offset="-15">
                                             <label>10</label>
                                             <div class="contents">
                                                 <p>삼양홀딩스</p>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li class="interactive-visible" data-interactive-offset="-15">
                                             <label>11</label>
                                             <div class="contents">
                                                 <p>셀트리온</p>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li class="interactive-visible" data-interactive-offset="-15">
                                             <label>12</label>
                                             <div class="contents">
                                                 <p>신풍제약</p>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li class="interactive-visible" data-interactive-offset="-15">
                                             <label>13</label>
                                             <div class="contents">
                                                 <p>에스티팜</p>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li class="interactive-visible" data-interactive-offset="-15">
                                             <label>14</label>
                                             <div class="contents">
                                                 <p>에이치케이이노엔</p>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li class="interactive-visible" data-interactive-offset="-15">
                                             <label>15</label>
                                             <div class="contents">
                                                 <p>유한양행</p>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li class="interactive-visible" data-interactive-offset="-15">
                                             <label>16</label>
                                             <div class="contents">
                                                 <p>이수앱지스</p>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li class="interactive-visible" data-interactive-offset="-15">
                                             <label>17</label>
                                             <div class="contents">
                                                 <p>일동제약</p>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li class="interactive-visible" data-interactive-offset="-15">
                                             <label>18</label>
                                             <div class="contents">
                                                 <p>태준제약</p>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li class="interactive-visible" data-interactive-offset="-15">
                                             <label>19</label>
                                             <div class="contents">
                                                 <p>파미셀</p>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li class="interactive-visible" data-interactive-offset="-15">
                                             <label>20</label>
                                             <div class="contents">
                                                 <p>
                                                     한국비엠아이</p>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li class="interactive-visible" data-interactive-offset="-15">
                                             <label>21</label>
                                             <div class="contents">
                                                 <p>
                                                     한국팜비오</p>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li class="interactive-visible" data-interactive-offset="-15">
                                             <label>22</label>
                                             <div class="contents">
                                                 <p>
                                                     한독</p>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li class="interactive-visible" data-interactive-offset="-15">
                                             <label>23</label>
                                             <div class="contents">
                                                 <p>
                                                     한림제약</p>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li class="interactive-visible" data-interactive-offset="-15">
                                             <label>24</label>
                                             <div class="contents">
                                                 <p>
                                                     한미약품</p>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li class="interactive-visible" data-interactive-offset="-15">
                                             <label>25</label>
                                             <div class="contents">
                                                 <p>
                                                     현대약품</p>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li class="interactive-visible" data-interactive-offset="-15">
                                             <label>26</label>
                                             <div class="contents">
                                                 <p>
                                                     LG화학</p>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li class="interactive-visible" data-interactive-offset="-15">
                                             <label>27</label>
                                             <div class="contents">
                                                 <p>
                                                     SK케미칼</p>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li class="interactive-visible" data-interactive-offset="-15">
                                             <label>28</label>
                                             <div class="contents">
                                                 <p>
                                                     브릿지바이오테라퓨틱스</p>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li class="interactive-visible" data-interactive-offset="-15">
                                             <label>29</label>
                                             <div class="contents">
                                                 <p>
                                                     메디톡스</p>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li class="interactive-visible" data-interactive-offset="-15">
                                             <label>30</label>
                                             <div class="contents">
                                                 <p>
                                                     비씨월드제약</p>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li class="interactive-visible" data-interactive-offset="-15">
                                             <label>31</label>
                                             <div class="contents">
                                                 <p>
                                                     알테오젠</p>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li class="interactive-visible" data-interactive-offset="-15">
                                             <label>32</label>
                                             <div class="contents">
                                                 <p>
                                                     올릭스</p>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li class="interactive-visible" data-interactive-offset="-15">
                                             <label>33</label>
                                             <div class="contents">
                                                 <p>
                                                     에이비엘바이오</p>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li class="interactive-visible" data-interactive-offset="-15">
                                             <label>34</label>
                                             <div class="contents">
                                                 <p>
                                                     제넥신</p>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li class="interactive-visible" data-interactive-offset="-15">
                                             <label>35</label>
                                             <div class="contents">
                                                 <p>
                                                     지아이이노베이션</p>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li class="interactive-visible" data-interactive-offset="-15">
                                             <label>36</label>
                                             <div class="contents">
                                                 <p>
                                                     코아스템</p>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li class="interactive-visible" data-interactive-offset="-15">
                                             <label>37</label>
                                             <div class="contents">
                                                 <p>
                                                     큐리언트</p>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li class="interactive-visible" data-interactive-offset="-15">
                                             <label>38</label>
                                             <div class="contents">
                                                 <p>
                                                     테고사이언스</p>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li class="interactive-visible" data-interactive-offset="-15">
                                             <label>39</label>
                                             <div class="contents">
                                                 <p>
                                                     헬릭스미스</p>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li class="interactive-visible" data-interactive-offset="-15">
                                             <label>40</label>
                                             <div class="contents">
                                                 <p>
                                                     한국아스트라제네카</p>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li class="interactive-visible" data-interactive-offset="-15">
                                             <label>41</label>
                                             <div class="contents">
                                                 <p>
                                                     한국얀센</p>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li class="interactive-visible" data-interactive-offset="-15">
                                             <label>42</label>
                                             <div class="contents">
                                                 <p>
@@ -555,63 +554,63 @@
                             <div class="stats-list">
                                 <div class="container">
                                     <div class="fixed-area">
-                                        <p>FDA 승인 현황</p>
-                                        <h4>국내 제약기업의 <br/>독보적 성과</h4>
+                                        <p class="interactive-visible" data-interactive-offset="-150">FDA 승인 현황</p>
+                                        <h4 class="interactive-visible" data-interactive-offset="-150">국내 제약기업의 <br/>독보적 성과</h4>
                                     </div>
                                     <ul>
-                                        <li>
+                                        <li class="interactive-visible" data-interactive-offset="-15">
                                             <label>2003</label>
                                             <div class="contents">
                                                 <p>팩티브<span>LG화학(전LG생명과학)</span></p>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li class="interactive-visible" data-interactive-offset="-15">
                                             <label>2007</label>
                                             <div class="contents">
                                                 <p>벨트로핀<span>LG화학(전LG생명과학)</span></p>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li class="interactive-visible" data-interactive-offset="-15">
                                             <label>2013</label>
                                             <div class="contents">
                                                 <p>에소매졸<span>LG화학(전LG생명과학)</span></p>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li class="interactive-visible" data-interactive-offset="-15">
                                             <label>2014</label>
                                             <div class="contents">
                                                 <p>시벡스트로(경구용)<span>동아에스티</span></p>
                                                 <p>시벡스트로(주사제)<span>동아에스티</span></p>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li class="interactive-visible" data-interactive-offset="-15">
                                             <label>2015</label>
                                             <div class="contents">
                                                 <p>메로페넴<span>대웅제약</span></p>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li class="interactive-visible" data-interactive-offset="-15">
                                             <label>2016</label>
                                             <div class="contents">
                                                 <p>인플렉트라(국내명:램시마)<span>셀트리온</span></p>
                                                 <p>앱스틸라<span>SK케미칼</span></p>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li class="interactive-visible" data-interactive-offset="-15">
                                             <label>2017</label>
                                             <div class="contents">
                                                 <p>렌플렉시스(국내명:레마로체)<span>삼성바이오에피스</span></p>
                                                 <p>0.9%생리식염주사제<span>휴온스</span></p>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li class="interactive-visible" data-interactive-offset="-15">
                                             <label>2018</label>
                                             <div class="contents">
                                                 <p>트룩시마<span>셀트리온</span></p>
                                                 <p>리도카인주사제(앰플)<span>휴온스</span></p>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li class="interactive-visible" data-interactive-offset="-15">
                                             <label>2019</label>
                                             <div class="contents">
                                                 <p>온트루잔트(국내명:삼페넷)<span>삼성바이오에피스</span></p>
@@ -625,26 +624,26 @@
                                                 <p>부피바카인염산염주사제<span>휴온스</span></p>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li class="interactive-visible" data-interactive-offset="-15">
                                             <label>2020</label>
                                             <div class="contents">
                                                 <p>리도카인주사제(바이알)<span>휴온스</span></p>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li class="interactive-visible" data-interactive-offset="-15">
                                             <label>2021</label>
                                             <div class="contents">
                                                 <p>바이우비즈<span>삼성바이오에피스</span></p>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li class="interactive-visible" data-interactive-offset="-15">
                                             <label>2022</label>
                                             <div class="contents">
                                                 <p>롤베돈(국내명:롤론티스)<span>스펙트럼</span></p>
                                                 <p>베그젤마(베바시주맙)<span>셀트리온</span></p>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li class="interactive-visible" data-interactive-offset="-15">
                                             <label>2023</label>
                                             <div class="contents">
                                                 <p>류플라이마(아달리무맙)<span>셀트리온</span></p>
@@ -653,7 +652,7 @@
                                                 <p>알리글로(Alyglo,정맥투여용면역글로불린(IVIG-SN)10%제제)<span>GC녹십자</span></p>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li class="interactive-visible" data-interactive-offset="-15">
                                             <label>2024</label>
                                             <div class="contents">
                                                 <p>피즈치바<span>삼성바이오에피스</span></p>
@@ -672,20 +671,20 @@
                                         <h4>국내 제약기업의 <br/>독보적 성과</h4>
                                     </div>
                                     <ul>
-                                        <li>
+                                        <li class="interactive-visible" data-interactive-offset="-15">
                                             <label>2006</label>
                                             <div class="contents">
                                                 <p>벨트로핀<span>LG화학(전LG생명과학)</span></p>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li class="interactive-visible" data-interactive-offset="-15">
                                             <label>2013</label>
                                             <div class="contents">
                                                 <p>SID710<span>SK케미칼</span></p>
                                                 <p>램시마<span>셀트리온</span></p>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li class="interactive-visible" data-interactive-offset="-15">
                                             <label>2015</label>
                                             <div class="contents">
                                                 <p>시벡스트로(경구용)<span>동아에스티</span></p>
@@ -693,14 +692,14 @@
                                                 <p>피라맥스<span>신풍제약</span></p>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li class="interactive-visible" data-interactive-offset="-15">
                                             <label>2016</label>
                                             <div class="contents">
                                                 <p>베네팔리(국내명:애톨로체)<span>삼성바이오에피스</span></p>
                                                 <p>플릭사비(국내명:리마로체)<span>삼성바이오에피스</span></p>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li class="interactive-visible" data-interactive-offset="-15">
                                             <label>2017</label>
                                             <div class="contents">
                                                 <p>앱스틸라<span>SK케미칼</span></p>
@@ -710,13 +709,13 @@
                                                 <p>온트루잔트(국내명:삼페넷)<span>삼성바이오에피스</span></p>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li class="interactive-visible" data-interactive-offset="-15">
                                             <label>2018</label>
                                             <div class="contents">
                                                 <p>허쥬마<span>셀트리온</span></p>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li class="interactive-visible" data-interactive-offset="-15">
                                             <label>2019</label>
                                             <div class="contents">
                                                 <p>누시바(국내명:나보타)<span>대웅제약</span></p>
@@ -724,14 +723,14 @@
                                                 <p>피노멜주<span>JW생명과학</span></p>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li class="interactive-visible" data-interactive-offset="-15">
                                             <label>2020</label>
                                             <div class="contents">
                                                 <p>수노시(Sunosi)<span>SK바이오팜</span></p>
                                                 <p>에이빈시오<span>삼성바이오에피스</span></p>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li class="interactive-visible" data-interactive-offset="-15">
                                             <label>2021</label>
                                             <div class="contents">
                                                 <p>유플라이마<span>셀트리온</span></p>
@@ -739,19 +738,19 @@
                                                 <p>렉키로나<span>셀트리온</span></p>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li class="interactive-visible" data-interactive-offset="-15">
                                             <label>2022</label>
                                             <div class="contents">
                                                 <p>베그젤마베바시주맙<span>셀트리온</span></p>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li class="interactive-visible" data-interactive-offset="-15">
                                             <label>2023</label>
                                             <div class="contents">
                                                 <p>에피스클리<span>삼성바이오에스피</span></p>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li class="interactive-visible" data-interactive-offset="-15">
                                             <label>2024</label>
                                             <div class="contents">
                                                 <p>피즈치바<span>삼성바이오에피스</span></p>
