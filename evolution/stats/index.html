@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"/>
+
+    <script type="application/javascript" src="/assets/libs/interactive.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
+
+    <link rel="stylesheet" href="/assets/styles/font.css">
+    <link rel="stylesheet" href="/assets/styles/reset.css">
+    <link rel="stylesheet" href="/assets/styles/common.css">
+    <link rel="stylesheet" href="/assets/styles/board.css">
+    <script type="application/javascript" src="/assets/scripts/board.js"></script>
+    <script type="application/javascript" src="/assets/scripts/scroll-smoother.js"></script>
+    <script type="application/javascript" src="/assets/scripts/highlight.js"></script>
+</head>
+<body>
+<div id="wrapper" class="sub">
+    <header>
+        <div class="container">
+            <h1 class="logo">
+                <a href="/">
+                    <div class="logo-simbol">
+                        <img src="/assets/images/simbol-white.png" class="white" alt="kpbma">
+                        <img src="/assets/images/simbol.png" class="color" alt="kpbma">
+                    </div>
+                    <div class="logo-txt">
+                        <img src="/assets/images/logotxt-white.png" class="white" alt="kpbma">
+                        <img src="/assets/images/logotxt-color.png" class="color" alt="kpbma">
+                    </div>
+                    <span>디지털역사관</span>
+                </a>
+            </h1>
+            <nav class="gnb">
+                <div class="sub-menu-container">
+                    <a href="/industrial">산업관</a>
+                    <div class="sub-menu shadow">
+                        <a href="/industrial#1">한국제약바이오산업의 120년</a>
+                        <a href="/evolution">한눈에 보는 산업 변천사</a>
+                    </div>
+                </div>
+                <div class="sub-menu-container">
+                    <a href="/association">협회관</a>
+                    <div class="sub-menu shadow">
+                        <a href="/association">KPBMA 80년</a>
+                        <a href="/fame">역대 회장/이사장</a>
+                    </div>
+                </div>
+                <a href="/digital-archive">디지털아카이브</a>
+                <!--                <a href="/">80주년 기념사업</a>-->
+            </nav>
+            <a class="btn" href="/highlight">
+                역사 하이라이트
+            </a>
+            <!--            <div class="header-btn-set">-->
+            <!--                <a href="/industrial/details">-->
+            <!--                    <div class="object book"></div>-->
+            <!--                    <label>KPBMA 80년사</label>-->
+            <!--                </a>-->
+            <!--            </div>-->
+        </div>
+    </header>
+    <div id="smooth-wrapper">
+        <div id="smooth-content">
+            <main id="content">
+                <div class="board-detail">
+                    <div id="board-detail-main-img">
+                        <img src="/assets/images/evol-bg.jpg" alt="contents-image">
+                    </div>
+                    <div class="meta-container container">
+                        <div class="meta">
+                            <span class="year">EVOLUTION</span>
+                            <h2 class="title">한눈에 보는 산업 변천사</h2>
+                        </div>
+                        <ul class="breadcrumb">
+                            <li><a href=""><i class="fa fa-home"></i></a></li>
+                            <li><a href="">산업관 <i class="fa fa-angle-down"></i></a>
+                            <li><a href="">한눈에 보는 산업 변천사 <i class="fa fa-angle-down"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="content-container">
+
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</div>
+</body>
+</html>
