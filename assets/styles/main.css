@@ -1,3 +1,14 @@
+.stroke {
+    z-index: 999;
+    position: fixed;
+    top:0;
+    right:0;
+    left:0;
+    bottom:0;
+    border:20px #fff solid;
+    border-top-width:0;
+}
+
 #intro {
     background-color: #ffffff;
     bottom: 0;
