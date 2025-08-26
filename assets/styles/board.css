@@ -901,3 +901,11 @@ hr {
     padding-left:8px;
 }
 
+.slider-area {
+    text-align: center;
+}
+
+.slider-area img {
+    width:1000px;
+}
+
