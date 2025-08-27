@@ -27,15 +27,11 @@ document.addEventListener('DOMContentLoaded', function () {
             end: element.scrollHeight + "-=300"
         });
     })
+});
 
-    document.addEventListener('DOMContentLoaded', function () {
-        new Swiper('.swiper', {
-            direction: 'horizontal',
-            slidesPerView: 3,
-            mousewheel: {
-                forceToAxis: true,
-            },
-        });
+document.addEventListener('DOMContentLoaded', function () {
+    new Swiper('.swiper', {
+        direction: 'horizontal',
+        slidesPerView: 2,
     });
-
 });

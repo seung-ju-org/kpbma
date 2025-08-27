@@ -948,9 +948,9 @@ section {
 }
 
 .swiper .swiper-wrapper .swiper-slide {
-    width:auto;
-    height:460px;
+    width:100%;
     margin:0 10px;
+    margin-left:-20px;
 }
 .swiper img {
     width:100%;
