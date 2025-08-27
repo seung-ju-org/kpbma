@@ -13,7 +13,6 @@ document.addEventListener('DOMContentLoaded', function () {
             pin: true,
             start: "-=125",
             end: "bottom",
-            markers: true,
             onUpdate(scrollTrigger) {
                 scrollTrigger.trigger.style.backgroundColor = 'rgba(33, 33, 33, ' + Math.max(0, (scrollTrigger.progress * 1.3) - 0.3) + ')'
             }
@@ -25,8 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
             trigger: element,
             pin: true,
             start: "-=125",
-            end: element.scrollHeight + "-=300",
-            markers: true,
+            end: element.scrollHeight + "-=300"
         });
     })
 });
