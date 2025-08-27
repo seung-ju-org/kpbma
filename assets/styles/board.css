@@ -855,11 +855,26 @@ section {
 
 .numbers.bg {
     background:#e7ecf5;
+    position: relative;
 }
 
 .numbers.bg .item {
     margin-top:60px;
     max-width:33.3%;
+}
+
+.numbers.bg .graphic {
+    position: absolute;
+    top:0;
+    right:260px;
+    width:400px;
+
+}
+
+
+.numbers.bg .graphic img {
+    width:100%;
+
 }
 
 .numbers .wrapper {
