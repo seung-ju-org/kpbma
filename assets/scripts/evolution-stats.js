@@ -32,6 +32,9 @@ document.addEventListener('DOMContentLoaded', function () {
         new Swiper('.swiper', {
             direction: 'horizontal',
             slidesPerView: 3,
+            mousewheel: {
+                forceToAxis: true,
+            },
         });
     });
 

@@ -942,3 +942,18 @@ section {
     width:100%;
 }
 
+.swiper {
+    margin:4rem 0;
+    overflow: visible;
+}
+
+.swiper .swiper-wrapper .swiper-slide {
+    width:auto;
+    height:460px;
+    margin:0 10px;
+}
+.swiper img {
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
