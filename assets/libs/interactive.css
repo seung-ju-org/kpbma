@@ -1,5 +1,5 @@
 .interactive-visible {
     opacity: 0;
     transform: translateY(30px);
-    transition: 0.2s all ease;
+    transition: 0.3s all;
 }
