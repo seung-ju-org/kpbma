@@ -1,5 +1,8 @@
 .interactive-visible {
     opacity: 0;
-    transform: translateY(30px);
     transition: 0.2s all ease;
+}
+
+.interactive-visible:not(:has(.without-y)) {
+    transform: translateY(30px);
 }
