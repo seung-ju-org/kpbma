@@ -982,6 +982,7 @@ section {
 .match-contents {
     padding-top:6rem;
     margin-bottom:12rem;
+    border-left:1px #e2e4e7 solid;
 }
 
 .match-contents .item {
@@ -1025,31 +1026,67 @@ section {
 }
 
 
-.match-contents .item .container {
+.match-contents .item .row {
     display: flex;
-    gap:60px;
+    gap:100px;
 }
 .match-contents .item .contents {
     flex:1;
-    padding-top:1rem;
 }
 
-.match-contents .item .contents h4 {
-    color: var(--text-main);
-    font-size: 3rem;
+.match-contents .item .title-depth {
+    display: flex;
+    background: #fff;
+    margin-left:-6px;
+    padding:3rem 0 6rem;
+}
+
+.match-contents .item .num {
+    font-size:4.4rem;
+    font-family: 'Montserrat';
+    font-weight:700;
+    line-height:1;
+    margin-top:0.6rem;
+    width:110px;
+    position: relative;
+    color:#17469e;
+}
+
+.match-contents .item .num:before {
+    width:12px;
+    height:12px;
+    border-radius: 50%;
+    background: #17469e;
+    content:'';
+    position: absolute;
+    top:-40px;
+    left:0;
+}
+
+
+
+.match-contents .item h4 {
+    color: #17469e;
+    font-size: 4rem;
     line-height:1.5;
-    font-weight: 800;
+    font-weight: 700;
     text-align: justify;
+    font-family: 'NanumSquareNeo';
     width:100%;
-    margin-bottom:4rem;
     letter-spacing: -0.07em;
 }
+
+.match-contents .item .row {
+    padding-left:105px;
+}
+
 .match-contents .item .contents p {
     color: var(--text-gray);
     font-size: 1.6rem;
     font-weight: 400;
     line-height: 1.8;
     text-align: justify;
+    font-family: 'NanumSquareNeo';
     letter-spacing: -0.07em;
 }
 
@@ -1064,13 +1101,34 @@ section {
     flex-direction: column;
 }
 
+.match-contents .item article .thumb {
+    position: relative;
+}
+
+.match-contents .item article .thumb img {
+    z-index: 2;
+    position: relative;
+}
+
+.match-contents .item article .thumb .back {
+    content: '';
+    position: absolute;
+    left:20px;
+    top:20px;
+    right:-20px;
+    bottom:-20px;
+    opacity: 0.2;
+    z-index: 1;
+}
+
 .match-contents .item article span {
     text-align: center;
     font-size: 1.4rem;
     font-weight: 400;
     line-height: 1.7;
-    margin:1.5rem 0;
-    color:#d6ad76;
+    margin:3rem 0;
+    font-family: 'NanumSquareNeo';
+    color:#111;
 }
 
 .match-contents .item+.item {
