@@ -1,6 +1,6 @@
 .interactive-visible {
     opacity: 0;
-    transition: 0.2s all ease;
+    transition: 0.3s all;
 }
 
 .interactive-visible:not(:has(.without-y)) {
