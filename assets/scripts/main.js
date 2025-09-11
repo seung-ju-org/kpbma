@@ -148,7 +148,7 @@ document.addEventListener('DOMContentLoaded', function () {
         loop: true,
         speed: 2000,
         autoplay: {
-            delay: 20000,
+            delay: 6000,
         },
         slidesPerView: 1,
         mousewheel: {

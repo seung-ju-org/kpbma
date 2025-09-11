@@ -38,9 +38,6 @@ class HeaderComponent extends HTMLElement {
             <a href="/digital-archive">디지털아카이브</a>
             <div class="sub-menu-container">
                 <a href="/">80주년 기념사업</a>
-                <div class="sub-menu shadow">
-                    <a href="/">80주년 이모저모</a>
-                </div>
             </div>
         </nav>
         <a class="btn" href="/highlight">

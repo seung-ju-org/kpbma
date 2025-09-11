@@ -737,18 +737,31 @@ section {
 }
 
 .stats-list .fixed-area {
+    max-width:400px !important;
+    width:100%;
+}
+
+.stats-list .fixed-area span {
+    font-weight: 700;
+    font-family: 'Montserrat';
+    text-transform: uppercase;
+    font-size: 16px;
+    color: #005dab;
+    display: block;
+    margin: 0 0 10px;
 }
 
 .stats-list .fixed-area p {
-    font-size:2rem;
-    font-weight:700;
-    color:#111;
-    margin:0 0 20px;
+    font-size:1.6rem;
+    font-weight:400;
+    color:#666;
+    line-height:1.5;
+    margin-top:2rem;
 }
 .stats-list .fixed-area h4 {
-    font-size:5.2rem;
+    font-size:4.2rem;
     line-height:1.2;
-    font-weight:700;
+    font-weight:800;
     color:#111;
     margin:0;
 }
