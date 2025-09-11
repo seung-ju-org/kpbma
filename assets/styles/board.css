@@ -1191,11 +1191,19 @@ section {
     transition-duration: .3s;
 }
 
+.match-contents .btn-set.ind a {
+    background: #17469e;
+}
+
+.match-contents .btn-set.ind a:hover {
+    background: #2e65cb;
+    transition-duration: .3s;
+}
+
 .match-contents .btn-set a:hover {
     background: #222;
     transition-duration: .3s;
 }
-
 
 .match-contents .btn-set .arrow {
     position: relative;
