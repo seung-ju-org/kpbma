@@ -1171,6 +1171,10 @@ section {
 .match-contents .btn-set {
     margin:6rem 0;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:4rem;
 }
 
 .match-contents .btn-set a {
@@ -1183,12 +1187,51 @@ section {
     color:#fff;
     font-weight:700;
     padding:0 9rem;
-    flex-direction: column;
+    gap:10px;
+    transition-duration: .3s;
+}
+
+.match-contents .btn-set a:hover {
+    background: #222;
+    transition-duration: .3s;
+}
+
+
+.match-contents .btn-set .arrow {
+    position: relative;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin-left:0px;
+    overflow: hidden;
+    vertical-align: middle;
+}
+
+.match-contents .btn-set .arrow:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 8px;
+    height:8px;
+    -webkit-transform: translate(-50%, -50%) rotate(45deg);
+    transform: translate(-50%, -50%) rotate(45deg);
+    margin-top: 0;
+    border-top: 3px solid #fff;
+    border-left: 3px solid #fff;
+}
+.match-contents .btn-set .arrow.right:before {
+    transform: translate(-50%, -50%) rotate(135deg);
+}
+
+.match-contents .btn-set .arrow.left:before {
+    transform: translate(-50%, -50%) rotate(-45deg);
 }
 
 .match-contents .btn-set p {
     font-size:1.6rem;
-    margin-bottom:1rem;
+    margin-bottom:0;
+    font-family: 'NanumSquareNeo';
 }
 .match-contents .btn-set span {
     font-size:1.4rem;
