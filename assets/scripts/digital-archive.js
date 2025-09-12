@@ -60,10 +60,39 @@ document.addEventListener('DOMContentLoaded', function () {
 
                     return previousValue;
                 }, {
-                    type: {},
-                    category: {},
-                    date: {},
-                    theme: {},
+                    type: {
+                        "산업": 0,
+                        "협회": 0,
+                    },
+                    category: {
+                        "사료": 0,
+                        "사진": 0,
+                        "광고": 0,
+                        "문헌": 0,
+                    },
+                    date: {
+                        1920: 0,
+                        1930: 0,
+                        1940: 0,
+                        1950: 0,
+                        1960: 0,
+                        1970: 0,
+                        1980: 0,
+                        1990: 0,
+                        2000: 0,
+                        2010: 0,
+                        2020: 0,
+                    },
+                    theme: {
+                        "테마없음": 0,
+                        "한국제약바이오산업의 유산": 0,
+                        "혁신의 발자국": 0,
+                        "사회공헌": 0,
+                        "영광의 순간": 0,
+                        "스타와 함께": 0,
+                        "스포츠와 함께": 0,
+                        "사이버역사관": 0,
+                    },
                 });
 
                 const searchFormElement = document.search;
