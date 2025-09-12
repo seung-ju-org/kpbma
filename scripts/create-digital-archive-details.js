@@ -66,14 +66,8 @@ digitalArchives.forEach((digitalArchive) => {
                         <div class="swiper">
                             <div class="swiper-wrapper">
                                 ${digitalArchive.images.map((image) => {
-                                    return `
-                                        <div class="swiper-slide">
-                                            <a href="#">
-                                                <img src="${image}" alt="${digitalArchive.title}"/>
-                                            </a>
-                                        </div>
-                                    `.trim();
-                                })}
+                                    return `<div class="swiper-slide"><a href="#"><img src="${image}" alt="${digitalArchive.title}"/></a></div>`;
+                                }).join('')}
                             </div>
                         </div>
                     </div>
