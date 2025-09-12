@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
     new Swiper('.swiper', {
         direction: 'horizontal',
         slidesPerView: 'auto',
+        spaceBetween: 3,
     });
 
     const swiperWrapperElement = document.querySelector('.swiper-wrapper');

@@ -3,6 +3,6 @@
     transition: 0.3s all;
 }
 
-.interactive-visible:not(:has(.without-y)) {
+.interactive-visible:not(.without-y) {
     transform: translateY(30px);
 }

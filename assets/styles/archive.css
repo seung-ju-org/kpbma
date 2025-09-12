@@ -239,6 +239,10 @@
     overflow: visible;
 }
 
+.swiper:not(.swiper-initialized) .swiper-wrapper {
+    gap: 3px;
+}
+
 .swiper .swiper-wrapper .swiper-slide {
     width:400px;
     height:360px;
