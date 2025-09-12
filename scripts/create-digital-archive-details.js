@@ -1,0 +1,116 @@
+const path = require('path');
+const fs = require('fs');
+
+const digitalArchivePath = path.join(__dirname, '../digital-archive');
+
+const digitalArchiveFiles = fs.readdirSync(digitalArchivePath);
+
+digitalArchiveFiles.forEach((digitalArchiveFile) => {
+    if (digitalArchiveFile !== 'index.html') {
+        const p = path.join(digitalArchivePath, digitalArchiveFile);
+        const stats = fs.statSync(p);
+
+        if (!stats.isDirectory()) {
+            fs.rmSync(p);
+        }
+    }
+});
+
+
+const digitalArchives = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/digital-archive.json'), 'utf8'));
+
+digitalArchives.forEach((digitalArchive) => {
+    const key = digitalArchive.src.split('/')[3].split('.')[0];
+    const filename = `${key}.html`;
+
+    const html = `
+    <!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"/>
+    <link rel="stylesheet" href="/assets/libs/interactive.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
+    <script type="application/javascript" src="/assets/libs/interactive.js"></script>
+    <link rel="stylesheet" href="/assets/styles/font.css">
+    <link rel="stylesheet" href="/assets/styles/reset.css">
+    <link rel="stylesheet" href="/assets/styles/common.css">
+    <link rel="stylesheet" href="/assets/styles/archive.css">
+    <script type="application/javascript" src="/assets/scripts/header-component.js"></script>
+    <script type="application/javascript" src="/assets/scripts/digital-archive-details.js"></script>
+</head>
+<body>
+<div id="wrapper" class="sub">
+    <header-component></header-component>
+    <div id="smooth-wrapper">
+        <div id="smooth-content">
+            <main id="content">
+                <div class="archive-detail-layout">
+                    <div class="container">
+                        <div class="archive-title">
+                            <h2>${digitalArchive.title}</h2>
+                            <ul class="breadcrumb">
+                                <li><a href=""><i class="fa fa-home"></i></a></li>
+                                <li><a href="">디지털 아카이브 <i class="fa fa-angle-down"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <a href="#">
+                                        <img src="${digitalArchive.src}" alt="${digitalArchive.title}"/>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="archive-contents">
+                            <p>
+                                ${digitalArchive.content}
+                            </p>
+                            <ul>
+                                <li>
+                                    <label>생성일</label>
+                                    <span>${digitalArchive.date}</span>
+                                </li>
+                                <li>
+                                    <label>카테고리</label>
+                                    <span>${digitalArchive.category}</span>
+                                </li>
+                                <li>
+                                    <label>사료구분</label>
+                                    <span>${digitalArchive.type}</span>
+                                </li>
+                                <li>
+                                    <label>세부카테고리</label>
+                                    <span>${digitalArchive.theme}</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </main>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+`.trim();
+
+    const p = path.join(digitalArchivePath, filename);
+    fs.writeFileSync(p, html);
+});
+
+console.log('Done');

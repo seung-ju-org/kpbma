@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    fetch('/assets/data/digital-archive.json')
+    fetch('/data/digital-archive.json')
         .then(function (response) {
             return response.json()
         })
