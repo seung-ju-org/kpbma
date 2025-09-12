@@ -1,29 +1,4 @@
-const path = require('path');
-const fs = require('fs');
-
-const digitalArchivePath = path.join(__dirname, '../digital-archive');
-
-const digitalArchiveFiles = fs.readdirSync(digitalArchivePath);
-
-digitalArchiveFiles.forEach((digitalArchiveFile) => {
-    if (digitalArchiveFile !== 'index.html') {
-        const p = path.join(digitalArchivePath, digitalArchiveFile);
-        const stats = fs.statSync(p);
-
-        if (!stats.isDirectory()) {
-            fs.rmSync(p);
-        }
-    }
-});
-
-const digitalArchives = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/digital-archive.json'), 'utf8'));
-
-digitalArchives.forEach((digitalArchive) => {
-    const key = digitalArchive.href.split('/')[2].split('.')[0];
-    const filename = `${key}.html`;
-
-    const html = `
-    <!doctype html>
+<!doctype html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
@@ -55,7 +30,7 @@ digitalArchives.forEach((digitalArchive) => {
                 <div class="archive-detail-layout">
                     <div class="container">
                         <div class="archive-title">
-                            <h2>${digitalArchive.title}</h2>
+                            <h2>의약품목 제조품목허가증</h2>
                             <ul class="breadcrumb">
                                 <li><a href=""><i class="fa fa-home"></i></a></li>
                                 <li><a href="">디지털 아카이브 <i class="fa fa-angle-down"></i></a></li>
@@ -65,39 +40,35 @@ digitalArchives.forEach((digitalArchive) => {
                     <div class="container">
                         <div class="swiper">
                             <div class="swiper-wrapper">
-                                ${digitalArchive.images.map((image) => {
-                                    return `
-                                        <div class="swiper-slide">
+                                <div class="swiper-slide">
                                             <a href="#">
-                                                <img src="${image}" alt="${digitalArchive.title}"/>
+                                                <img src="/data/files/dcid1980no001001.jpg" alt="의약품목 제조품목허가증"/>
                                             </a>
                                         </div>
-                                    `.trim();
-                                })}
                             </div>
                         </div>
                     </div>
                     <div class="container">
                         <div class="archive-contents">
                             <p>
-                                ${digitalArchive.content}
+                                의약품목 제조품목허가증
                             </p>
                             <ul>
                                 <li>
                                     <label>생성일</label>
-                                    <span>${digitalArchive.date}</span>
+                                    <span>1980</span>
                                 </li>
                                 <li>
                                     <label>카테고리</label>
-                                    <span>${digitalArchive.category}</span>
+                                    <span>산업</span>
                                 </li>
                                 <li>
                                     <label>사료구분</label>
-                                    <span>${digitalArchive.type}</span>
+                                    <span>사료</span>
                                 </li>
                                 <li>
                                     <label>세부카테고리</label>
-                                    <span>${digitalArchive.theme}</span>
+                                    <span>테마없음</span>
                                 </li>
                             </ul>
                         </div>
@@ -110,10 +81,3 @@ digitalArchives.forEach((digitalArchive) => {
 </div>
 </body>
 </html>
-`.trim();
-
-    const p = path.join(digitalArchivePath, filename);
-    fs.writeFileSync(p, html);
-});
-
-console.log('Done');

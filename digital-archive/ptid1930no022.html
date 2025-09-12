@@ -1,29 +1,4 @@
-const path = require('path');
-const fs = require('fs');
-
-const digitalArchivePath = path.join(__dirname, '../digital-archive');
-
-const digitalArchiveFiles = fs.readdirSync(digitalArchivePath);
-
-digitalArchiveFiles.forEach((digitalArchiveFile) => {
-    if (digitalArchiveFile !== 'index.html') {
-        const p = path.join(digitalArchivePath, digitalArchiveFile);
-        const stats = fs.statSync(p);
-
-        if (!stats.isDirectory()) {
-            fs.rmSync(p);
-        }
-    }
-});
-
-const digitalArchives = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/digital-archive.json'), 'utf8'));
-
-digitalArchives.forEach((digitalArchive) => {
-    const key = digitalArchive.href.split('/')[2].split('.')[0];
-    const filename = `${key}.html`;
-
-    const html = `
-    <!doctype html>
+<!doctype html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
@@ -55,7 +30,7 @@ digitalArchives.forEach((digitalArchive) => {
                 <div class="archive-detail-layout">
                     <div class="container">
                         <div class="archive-title">
-                            <h2>${digitalArchive.title}</h2>
+                            <h2>광동제약 최수부 선대회장</h2>
                             <ul class="breadcrumb">
                                 <li><a href=""><i class="fa fa-home"></i></a></li>
                                 <li><a href="">디지털 아카이브 <i class="fa fa-angle-down"></i></a></li>
@@ -65,39 +40,51 @@ digitalArchives.forEach((digitalArchive) => {
                     <div class="container">
                         <div class="swiper">
                             <div class="swiper-wrapper">
-                                ${digitalArchive.images.map((image) => {
-                                    return `
-                                        <div class="swiper-slide">
+                                <div class="swiper-slide">
                                             <a href="#">
-                                                <img src="${image}" alt="${digitalArchive.title}"/>
+                                                <img src="/data/files/ptid1930no022001.jpg" alt="광동제약 최수부 선대회장"/>
+                                            </a>
+                                        </div>,<div class="swiper-slide">
+                                            <a href="#">
+                                                <img src="/data/files/ptid1930no022002.jpg" alt="광동제약 최수부 선대회장"/>
+                                            </a>
+                                        </div>,<div class="swiper-slide">
+                                            <a href="#">
+                                                <img src="/data/files/ptid1930no022003.jpg" alt="광동제약 최수부 선대회장"/>
+                                            </a>
+                                        </div>,<div class="swiper-slide">
+                                            <a href="#">
+                                                <img src="/data/files/ptid1930no022004.jpg" alt="광동제약 최수부 선대회장"/>
+                                            </a>
+                                        </div>,<div class="swiper-slide">
+                                            <a href="#">
+                                                <img src="/data/files/ptid1930no022005.jpg" alt="광동제약 최수부 선대회장"/>
                                             </a>
                                         </div>
-                                    `.trim();
-                                })}
                             </div>
                         </div>
                     </div>
                     <div class="container">
                         <div class="archive-contents">
                             <p>
-                                ${digitalArchive.content}
+                                최수부(崔秀夫, 1936년 1월 10일 ~ 2013년 7월 24일)는 아버지의 사업 실패로 12살 때부터 가족의 생계를 위해 장사를 시작하고, 1960년 군 제대 후 3년간 고려인삼산업사에서 외판원으로 일한 경험을 바탕으로 1963년 10월 광동제약을 설립했다.
                             </p>
                             <ul>
                                 <li>
                                     <label>생성일</label>
-                                    <span>${digitalArchive.date}</span>
+                                    <span>1930</span>
                                 </li>
                                 <li>
                                     <label>카테고리</label>
-                                    <span>${digitalArchive.category}</span>
+                                    <span>산업</span>
                                 </li>
                                 <li>
                                     <label>사료구분</label>
-                                    <span>${digitalArchive.type}</span>
+                                    <span>사진</span>
                                 </li>
                                 <li>
                                     <label>세부카테고리</label>
-                                    <span>${digitalArchive.theme}</span>
+                                    <span>테마없음</span>
                                 </li>
                             </ul>
                         </div>
@@ -110,10 +97,3 @@ digitalArchives.forEach((digitalArchive) => {
 </div>
 </body>
 </html>
-`.trim();
-
-    const p = path.join(digitalArchivePath, filename);
-    fs.writeFileSync(p, html);
-});
-
-console.log('Done');

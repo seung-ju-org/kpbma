@@ -169,7 +169,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         itemThumbElement.classList.add('thumb');
 
                         const itemThumbImgElement = document.createElement('img');
-                        itemThumbImgElement.src = value.src;
+                        itemThumbImgElement.src = value.thumbnail;
 
                         itemThumbElement.appendChild(itemThumbImgElement);
 
