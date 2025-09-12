@@ -872,12 +872,17 @@ section {
 }
 
 .section-cover {
-    height: calc(100vh - 12.5rem);
+    height: calc(100vh - 10rem);
     padding-bottom: 50rem;
     background: #fff;
     display: flex;
     align-items: center;
     box-sizing: border-box;
+}
+
+.section-cover.yellow {
+    background: #F2ECCF;
+    background: linear-gradient(0deg,rgba(242, 236, 207, 1) 0%, rgba(255, 255, 255, 1) 100%);
 }
 
 .section-cover label {
@@ -1431,3 +1436,111 @@ section {
     opacity: 0.7;
 }
 
+.section-contents {
+    padding:0 8rem;
+}
+
+.section-contents .deco {
+    width:110px;
+    height:20px;
+}
+
+.section-contents .row {
+    display: flex;
+    gap:18rem;
+    align-items: flex-start;
+}
+
+.section-contents .title {
+    flex:1.4;
+}
+.section-contents .title img {
+    width:300px;
+}
+.section-contents h2 {
+    font-size:4.6rem;
+    font-weight: 400;
+    line-height:1.2;
+    color:#999;
+    margin-bottom:20px;
+    font-family: 'NanumSquareNeo';
+    text-align: justify;
+}
+
+.section-contents h2 b{
+    font-family: 'NanumSquareNeo';
+    font-weight:700;
+    color:#111;
+}
+
+.section-contents .contents {
+    flex:2;
+    display: flex;
+    flex-direction: column;
+    gap:6rem;
+    align-items: center;
+}
+
+.section-contents .contents .group {
+    display: flex;
+    align-items: center;
+    width:100%;
+    position: relative;
+    padding-top:60px;
+}
+
+.section-contents .contents .group-title {
+    font-family: 'NanumSquareNeo';
+    font-weight:700;
+    color:#111;
+    font-size:2rem;
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+}
+
+.section-contents .item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.section-contents .item.recent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.section-contents .item label {
+    font-size:18px;
+    color:#111;
+    font-family: NanumSquareNeo;
+    font-weight:600;
+    margin-bottom:1rem;
+}
+
+.section-contents .item span {
+    font-size:18px;
+    color:#111;
+    font-family: NanumSquareNeo;
+    font-weight:600;
+    margin-top:1rem;
+}
+
+.section-contents .numb {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+}
+
+.section-contents .numb h4 {
+    font-size:10rem;
+    color:#999;
+    font-family: 'Montserrat';
+    font-weight:700;
+}
+
+.section-contents .item.recent .numb h4 {
+    color:#111;
+}
