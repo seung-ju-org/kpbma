@@ -19,6 +19,10 @@ digitalArchiveFiles.forEach((digitalArchiveFile) => {
 const digitalArchives = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/digital-archive.json'), 'utf8'));
 
 digitalArchives.forEach((digitalArchive) => {
+    if (!digitalArchives.href) {
+        return;
+    }
+
     const key = digitalArchive.href.split('/')[2].split('.')[0];
     const filename = `${key}.html`;
 
@@ -66,8 +70,8 @@ digitalArchives.forEach((digitalArchive) => {
                         <div class="swiper">
                             <div class="swiper-wrapper">
                                 ${digitalArchive.images.map((image) => {
-                                    return `<div class="swiper-slide"><a href="#"><img src="${image}" alt="${digitalArchive.title}"/></a></div>`;
-                                }).join('')}
+        return `<div class="swiper-slide"><a href="#"><img src="${image}" alt="${digitalArchive.title}"/></a></div>`;
+    }).join('')}
                             </div>
                         </div>
                     </div>

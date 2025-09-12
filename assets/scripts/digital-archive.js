@@ -191,7 +191,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (filteredData.length > 0) {
                     filteredData.forEach(function (value, index) {
                         const itemElement = document.createElement('a');
-                        itemElement.href = value.href;
+                        if (value.href) {
+                            itemElement.href = value.href;
+                        }
                         itemElement.classList.add('item');
 
                         const itemThumbElement = document.createElement('div');
