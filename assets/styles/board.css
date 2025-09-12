@@ -888,6 +888,7 @@ section {
     color: #005dab;
     display: block;
     margin: 0;
+    text-align: center;
 }
 
 .section-cover h2 {
@@ -896,6 +897,7 @@ section {
     color: #111;
     line-height: 1;
     margin: 20px 0 40px;
+    text-align: center;
 }
 
 .section-cover p {
@@ -903,6 +905,7 @@ section {
     font-weight: 400;
     color: #666;
     line-height: 1.5;
+    text-align: center;
 }
 
 
