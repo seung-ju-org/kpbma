@@ -1,41 +1,36 @@
 window.addEventListener("load", function () {
-
-
-    const pictureListElement = document.querySelector(".picture-list");
-
-    for (let i = 0; i < pictureListElement.children.length; i++) {
-        const pictureListItemElement = pictureListElement.children[i];
-        const swiperElement = pictureListItemElement.querySelector('.swiper');
-        new Swiper(swiperElement, {
-            slidesPerView: '1',
-            centeredSlides: true,
-            spaceBetween: 0,
-        });
-    }
+    const swiper = new Swiper('.picture-container .swiper', {
+        direction: 'vertical',
+        slidesPerView: '1',
+        spaceBetween: 0,
+        allowSlideNext: true,
+        allowSlidePrev: true,
+        mousewheel: true,
+        keyboard: true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        }
+    });
 
     const pictureTitleListElement = document.querySelector(".picture-title-list");
+
+    swiper.on('slideChange', function () {
+        for (let i = 0; i < pictureTitleListElement.children.length; i++) {
+            const pictureTitleListItemElement = pictureTitleListElement.children[i];
+            pictureTitleListItemElement.classList.remove('active');
+
+            if (i === swiper.activeIndex) {
+                pictureTitleListItemElement.classList.add('active');
+            }
+        }
+    });
 
     for (let i = 0; i < pictureTitleListElement.children.length; i++) {
         const pictureTitleListItemElement = pictureTitleListElement.children[i]
         const pictureTitleListItemButtonElement = pictureTitleListItemElement.querySelector('button');
         pictureTitleListItemButtonElement.addEventListener('click', function () {
-            for (let j = 0; j < pictureTitleListElement.children.length; j++) {
-                const pictureTitleListItemElement = pictureTitleListElement.children[j];
-                pictureTitleListItemElement.classList.remove('active');
-
-                if (i === j) {
-                    pictureTitleListItemElement.classList.add('active');
-                }
-            }
-
-            for (let j = 0; j < pictureTitleListElement.children.length; j++) {
-                const pictureListItemElement = pictureListElement.children[j];
-                pictureListItemElement.classList.remove('active');
-
-                if (i === j) {
-                    pictureListItemElement.classList.add('active');
-                }
-            }
+            swiper.slideTo(i);
         });
     }
 });

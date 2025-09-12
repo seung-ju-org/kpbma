@@ -755,55 +755,53 @@ hr {
     margin-top: 6rem;
 }
 
-.picture-list {
-    flex: 1 0 0;
+.picture-container .swiper {
+    flex: 1;
+    height: 65rem;
     overflow: hidden;
 }
 
-.picture-list li {
-    display: none;
-    padding: 40px 0;
+.picture-container .swiper .swiper-button-prev,
+.picture-container .swiper .swiper-button-next {
+    top: 25%;
+    color: #141413;
+    font-size: 2.6rem;
+}
+
+.picture-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.picture-list > div {
+    display: flex;
     flex-direction: column;
     gap: 7rem;
     align-items: center;
 }
 
-.picture-list li.active {
+.picture-list > div.active {
     display: flex;
 }
 
-.picture-list li:last-child {
+.picture-list > div:last-child {
     border-color: transparent;
 }
 
-.picture-list li .contents {
+.picture-list > div .contents {
     flex: 1;
 }
 
-.picture-list li .thumb {
+.picture-list > div .thumb {
     height: 300px;
-    margin: 0;
-    width: 100%;
-    padding: 0 8rem;
-    box-sizing: border-box;
-    overflow: hidden;
 }
 
-.picture-list li .thumb .swiper-slide {
-    margin: 0;
-}
-
-.picture-list li .thumb .swiper-button-prev,
-.picture-list li .thumb .swiper-button-next {
-    color: #141413;
-}
-
-.picture-list li .thumb img {
+.picture-list > div .thumb img {
     height: 100%;
     object-fit: contain;
 }
 
-.picture-list li .contents {
+.picture-list > div .contents {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -811,29 +809,29 @@ hr {
     gap: 1.5rem;
 }
 
-.picture-list li .contents hr {
+.picture-list > div .contents hr {
     margin: 1rem 0;
 }
 
-.picture-list li h4 {
+.picture-list > div h4 {
     font-size: 46px;
     font-weight: 700;
     color: #111;
     margin: 0 0 10px;
 }
 
-.picture-list li h4 b {
+.picture-list > div h4 b {
     color: #17469e;
     font-weight: 700;
 }
 
-.picture-list li span {
+.picture-list > div span {
     font-size: 16px;
     line-height: 1.3;
     color: #888;
 }
 
-.picture-list li p {
+.picture-list > div p {
     font-size: 16px;
     color: #111;
     font-weight: 400;
