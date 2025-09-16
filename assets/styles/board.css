@@ -557,16 +557,17 @@ hr {
 }
 
 .fame-list .item p {
-    font-size: 1.6rem;
-    font-weight: 700;
+    font-size: 1.8rem;
+    font-weight: 600;
     text-align: center;
     margin: 20px 0 10px;
+    font-family: 'NanumSquareNeo';
 }
 
 .fame-list .item span {
     display: block;
     text-align: center;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     color: #999;
     font-weight: 400;
     font-family: 'Montserrat', 'Pretendard';
@@ -622,6 +623,7 @@ hr {
 }
 
 .fame-list .detail-contents .profile p {
+    font-family: 'NanumSquareNeo';
     font-size: 1.8rem;
     color: #111;
     font-weight: 600;
@@ -630,7 +632,7 @@ hr {
 }
 
 .fame-list .detail-contents .profile span {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     color: #999;
     font-weight: 400;
     text-align: center;
@@ -650,8 +652,9 @@ hr {
 }
 
 .fame-list .detail-contents .main-copy p {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     color: #999;
+    font-family: 'NanumSquareNeo';
 }
 
 .fame-list .detail-contents .sub-copy {
@@ -680,26 +683,30 @@ hr {
 }
 
 .fame-list .detail-info .list-style h4 {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
+    font-family: 'NanumSquareNeo';
     margin: 0 0 20px;
 }
 
 .fame-list .detail-info .list-style li {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
+    font-family: 'NanumSquareNeo';
     margin-bottom: 1.5rem;
     color: #666;
     line-height: 1.4;
 }
 
 .fame-list .detail-contents h2 {
-    font-size: 2.6rem;
+    font-size: 3rem;
+    font-family: 'NanumSquareNeo';
     line-height: 1.4;
     font-weight: 600;
     margin-bottom: 1rem;
 }
 
 .fame-list .detail-contents p {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
+    font-family: 'NanumSquareNeo';
     font-weight: 400;
     line-height: 1.6;
     color: #666;
