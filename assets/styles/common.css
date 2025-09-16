@@ -249,6 +249,7 @@ header h1 a span {
 
 header .btn {
     background-color: var(--main);
+    margin-right:2rem;
     border:0;
     border-radius: 2.5rem;
     color: #16626c;

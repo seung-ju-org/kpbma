@@ -428,9 +428,26 @@ hr {
     flex: 1;
 }
 
+.sticky-panel .separate+.separate {
+    margin-top:3rem;
+}
+
+.sticky-panel .separate h4 {
+    font-size:2.4rem;
+    font-family: 'NanumSquareNeo';
+    font-weight:600;
+    border-bottom:1px #111 solid;
+    padding-bottom:2.5rem;
+    margin-bottom:0;
+    color:#17469e;
+}
+.sticky-panel .separate.ind h4 {
+    color:#12a576;
+}
+
 .sticky-panel .year-list li {
     display: flex;
-    padding: 30px 0;
+    padding: 3rem 0;
 }
 
 .sticky-panel .year-list li + li {
@@ -442,7 +459,8 @@ hr {
     font-weight: 500;
     line-height: 1.4;
     color: #111;
-    margin-right: 40px;
+    min-width:8rem;
+    margin-right: 0;
     font-family: 'Montserrat';
 }
 
@@ -462,30 +480,26 @@ hr {
 }
 
 .sticky-panel .year-list li p {
-    color: #e87927;
+    color: #555;
+    font-family: 'NanumSquareNeo';
     position: relative;
     padding-left: 25px;
 }
 
 .sticky-panel .year-list li p:before {
     content: '';
-    border: 4px #e87927 solid;
+    border: 4px #17469e solid;
     width: 7px;
     height: 7px;
     border-radius: 50%;
     left: 0;
-    top: 6px;
+    top: 4px;
     position: absolute;
 }
 
-
-.sticky-panel .year-list li .ind {
-    color: #17469e;
-}
-
-.sticky-panel .year-list li .ind:before {
+.sticky-panel .year-list .ind li p:before {
     content: '';
-    border: 4px #17469e solid;
+    border: 4px #12a576 solid;
 }
 
 

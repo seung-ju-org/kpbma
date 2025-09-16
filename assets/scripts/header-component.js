@@ -21,6 +21,9 @@ class HeaderComponent extends HTMLElement {
             </a>
         </h1>
         <nav class="gnb">
+            <a class="btn" href="/highlight">
+                역사 하이라이트
+            </a>
             <div class="sub-menu-container">
                 <a href="/industrial">산업관</a>
                 <div class="sub-menu shadow">
@@ -40,9 +43,6 @@ class HeaderComponent extends HTMLElement {
                 <a href="/">80주년 기념사업</a>
             </div>
         </nav>
-        <a class="btn" href="/highlight">
-            역사 하이라이트
-        </a>
 <!--            <div class="header-btn-set">-->
 <!--                <a href="/industrial/details">-->
 <!--                    <div class="object book"></div>-->
