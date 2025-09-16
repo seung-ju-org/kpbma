@@ -51,7 +51,7 @@ main {
     height: 100%;
     justify-content: center;
     margin: auto 0;
-    padding: 10rem 0 14rem;
+    padding: 12rem 0 10rem;
     position: fixed;
     top: 0;
     width: 100%;
@@ -86,24 +86,34 @@ main .gallery .meta .text-container {
     align-items: flex-start;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
 }
 
 main .gallery .meta .text-container .year {
-    color: var(--text-main);
     font-family: 'Montserrat';
-    font-size: 2rem;
+    letter-spacing: 0.05em;
+    margin-bottom:-1.8rem;
     font-weight: 500;
-    opacity: 0.5;
+    opacity: 0.8;
+    background: #12a576;
+    color: #fff;
+    display: block;
+    font-size: 1.6rem;
+    line-height:1;
+    padding: 1.4rem 2.5rem;
+    border-radius: 2.2rem;
+    position: relative;
+    z-index: 1;
 }
 
 main .gallery .meta .text-container .title {
     color: var(--text-main);
     font-family: NanumSquareNeo sans-serif;
-    font-size: 5rem;
+    font-size: 5.2rem;
     font-weight: 800;
-    line-height: 6rem;
+    line-height: 6.6rem;
     word-break: keep-all;
+    position: relative;
+    z-index: 2;
 }
 
 main .gallery .images-container {
@@ -150,7 +160,6 @@ main .gallery .images-container .image-container a:hover span {
 }
 
 main .gallery .images-container a {
-    opacity: 0.8;
     overflow: hidden;
     transition-property: box-shadow, transform, opacity;
 }
@@ -160,7 +169,7 @@ main .gallery .images-container a.type1 img {
 }
 
 main .gallery .images-container a.type2 img {
-    height: 42rem;
+    height: 36rem;
 }
 
 main .gallery .images-container a.type3 img {
