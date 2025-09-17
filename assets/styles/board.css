@@ -1225,6 +1225,9 @@ section {
     transition: all 0.5s ease;
     margin-right:2rem;
 }
+.fixed-area .year.ind {
+    color: #288776;
+}
 .fixed-area .title {
     color: #111;
     font-family: 'NanumSquareNeo';

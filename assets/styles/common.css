@@ -457,11 +457,11 @@ a.shadow:hover {
     font-size:1.4rem;
     font-weight:500;
     white-space: nowrap;
-    color:#999;
+    color:#999 !important;
     font-family: 'NanumSquareNeo';
 }
 .breadcrumb li .sub-menu a.active {
-    color:#4fb8c5;
+    color:#4fb8c5 !important;
     font-weight:700;
 }
 
