@@ -909,6 +909,16 @@ section {
     background: linear-gradient(0deg,rgba(242, 236, 207, 1) 0%, rgba(255, 255, 255, 1) 100%);
 }
 
+.section-cover.red {
+    background: #f9e7eb;
+    background: linear-gradient(0deg,rgba(249, 231, 235, 1) 0%, rgba(255, 255, 255, 1) 100%);
+}
+
+.section-cover.mint {
+    background: #e5f2f1;
+    background: linear-gradient(0deg,rgba(229, 242, 241, 1) 0%, rgba(255, 255, 255, 1) 100%);
+}
+
 .section-cover label {
     font-weight: 700;
     font-family: 'Montserrat';
@@ -936,6 +946,99 @@ section {
     line-height: 1.5;
     text-align: center;
 }
+
+.mb200 {
+    margin-bottom:200px;
+}
+
+.card-item-wrapper {
+    display: flex;
+    align-items: center;
+    gap:6rem;
+    padding:0 8rem;
+    justify-content: center;
+}
+
+.card-item {
+    border:1px #e2e4e7 solid;
+    border-radius: 40px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.02);
+    padding:6rem;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.card-item:nth-child(2) {
+    margin-top:-3rem;
+}
+
+.card-item h4 {
+    font-size:2.6rem;
+    font-weight:600;
+    color:#111;
+    font-family: NanumSquareNeo;
+}
+.card-item .thumb {
+    margin:4rem 0;
+}
+.card-item p {
+    font-size:1.8rem;
+    font-weight:400;
+    color:#999;
+    line-height:1.7;
+    word-break: keep-all;
+}
+
+.card-item.blue {
+    background: #899dff;
+    border-width: 0;
+    flex:1;
+    max-width:460px;
+}
+
+.card-item.blue h4 {
+    color: #112689;
+}
+
+.card-item .county {
+    display: inline-block;
+    position: relative;
+    margin:4rem 0;
+    font-size:12rem;
+    line-height:1;
+    color:#fff;
+    font-weight:700;
+    font-family: Montserrat;
+}
+
+.card-item .county .unit {
+    font-size:1.8rem;
+    position: absolute;
+    right:0;
+    padding:0;
+    bottom:2rem;
+    color:#112689;
+}
+
+.card-item.red {
+    max-width:460px;
+    background: #f26b6b;
+    flex:1;
+    border-width: 0;
+}
+
+.card-item.red h4 {
+    color: #9e1d1d;
+}
+
+.card-item.red .county .unit {
+    color:#9e1d1d;
+}
+
+
+
+
 
 
 .stats-list {
@@ -1518,18 +1621,18 @@ section {
 }
 .section-contents h2 {
     font-size:4.6rem;
-    font-weight: 400;
     line-height:1.2;
-    color:#999;
     margin-bottom:20px;
     font-family: 'NanumSquareNeo';
     text-align: justify;
-}
-
-.section-contents h2 b{
-    font-family: 'NanumSquareNeo';
     font-weight:700;
     color:#111;
+}
+
+.section-contents h2 i{
+    font-weight: 400;
+    color:#999;
+    font-style: normal;
 }
 
 .section-contents .contents {
