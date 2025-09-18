@@ -1205,13 +1205,14 @@ section {
 
 .fixed-area {
     position: fixed;
-    top:80px;
+    top: 0;
     background: #fff;
     z-index: 10;
     border-bottom:1px #111 solid;
     left:0;
     right:0;
     padding:2rem 0;
+    transition: top 0.25s ease;
 }
 .fixed-area .container {
     display: flex;
