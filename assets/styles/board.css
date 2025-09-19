@@ -919,6 +919,16 @@ section {
     background: linear-gradient(0deg,rgba(229, 242, 241, 1) 0%, rgba(255, 255, 255, 1) 100%);
 }
 
+.section-cover.green {
+    background: #dfead8;
+    background: linear-gradient(0deg,rgba(223, 234, 216, 1) 0%, rgba(255, 255, 255, 1) 100%);
+}
+
+.section-cover.purple {
+    background: #efe5f2;
+    background: linear-gradient(0deg,rgba(239, 229, 242, 1) 0%, rgba(255, 255, 255, 1) 100%);
+}
+
 .section-cover label {
     font-weight: 700;
     font-family: 'Montserrat';
@@ -952,11 +962,24 @@ section {
 }
 
 .card-item-wrapper {
+    position: absolute;
+    left:4rem;
+    right:4rem;
+    top:50%;
+    transform: translateY(-50%);
+    z-index: 2;
     display: flex;
     align-items: center;
-    gap:6rem;
-    padding:0 8rem;
+    gap:12rem;
+    padding:6rem 8rem;
     justify-content: center;
+}
+
+.card-item-wrapper.noabs {
+    position: static;
+    gap:6rem;
+    transform: translateY(0%);
+    padding:4rem 8rem;
 }
 
 .card-item {
@@ -970,7 +993,7 @@ section {
 }
 
 .card-item:nth-child(2) {
-    margin-top:-3rem;
+    margin-top:-6rem;
 }
 
 .card-item h4 {
@@ -981,6 +1004,10 @@ section {
 }
 .card-item .thumb {
     margin:4rem 0;
+    text-align: center;
+}
+.card-item .thumb img {
+    max-width:200px;
 }
 .card-item p {
     font-size:1.8rem;
@@ -994,7 +1021,7 @@ section {
     background: #899dff;
     border-width: 0;
     flex:1;
-    max-width:460px;
+    max-width:420px;
 }
 
 .card-item.blue h4 {
@@ -1022,7 +1049,7 @@ section {
 }
 
 .card-item.red {
-    max-width:460px;
+    max-width:420px;
     background: #f26b6b;
     flex:1;
     border-width: 0;
@@ -1599,12 +1626,17 @@ section {
 }
 
 .section-contents {
-    padding:0 8rem;
+    padding:3rem 12rem;
+    position: relative;
+}
+
+.section-contents+.section-contents {
+    margin-top:14rem;
 }
 
 .section-contents .deco {
     width:110px;
-    height:20px;
+    height:20px;.section-contents
 }
 
 .section-contents .row {
@@ -1613,16 +1645,22 @@ section {
     align-items: flex-start;
 }
 
+
+
+.stats-back {
+    width:100%;
+}
+
 .section-contents .title {
     flex:1.4;
 }
 .section-contents .title img {
-    width:300px;
+    width:240px;
 }
 .section-contents h2 {
-    font-size:4.6rem;
-    line-height:1.2;
-    margin-bottom:20px;
+    font-size:4.2rem;
+    line-height:1.4;
+    margin-bottom:5rem;
     font-family: 'NanumSquareNeo';
     text-align: justify;
     font-weight:700;
@@ -1674,6 +1712,83 @@ section {
     align-items: flex-end;
 }
 
+.section-contents .item.horizontal {
+    flex-direction: row;
+}
+
+.section-contents .item.horizontal .numb {
+    position: relative;
+    flex:1;
+}
+.section-contents .item.horizontal .numb span {
+    position: absolute;
+    bottom:1rem;
+    right:-1rem;
+    color:#f72a2a;
+}
+
+.loca-remote {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left:4rem;
+    height:100%;
+    top:0;
+    bottom:0;
+    padding: 0;
+    margin:0;
+    z-index: 999;
+}
+.loca-remote ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    gap:1rem;
+}
+.loca-remote ul:before {
+    position: absolute;
+    content:'';
+    width:1px;
+    top:0;
+    bottom:0;
+    background: #e2e4e7;
+    left:4px;
+}
+.loca-remote a {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.loca-remote a:before {
+    width:8px;
+    height:8px;
+    border:1px #17469e solid;
+    background: #fff;
+    border-radius: 50%;
+    content:'';
+    display: block;
+    margin-right:1rem;
+    transition-duration: .3s;
+}
+.loca-remote span {
+    font-size:1.4rem;
+    font-weight:500;
+    color:#555;
+    opacity: 0;
+    transition-duration: .3s;
+}
+.loca-remote .active:before {
+    background: #17469e;
+    transition-duration: .3s;
+}
+.loca-remote .active span {
+    transition-duration: .3s;
+    opacity: 1;
+}
+
+
 .section-contents .item label {
     font-size:18px;
     color:#111;
@@ -1697,7 +1812,7 @@ section {
 }
 
 .section-contents .numb h4 {
-    font-size:10rem;
+    font-size:9rem;
     color:#999;
     font-family: 'Montserrat';
     font-weight:700;

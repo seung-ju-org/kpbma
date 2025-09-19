@@ -19,7 +19,7 @@
 
 * {
     letter-spacing: -0.04em;
-    font-family: NanumSquareNeo sans-serif;
+    font-family: 'NanumSquareNeo', sans-serif;
 }
 
 html, body {
@@ -128,7 +128,7 @@ header h1 a {
 
 header h1 a span {
     color: #111;
-    font-family: NanumSquareNeo sans-serif;
+    font-family: 'NanumSquareNeo', sans-serif;
     font-size: 1.4rem;
     margin-top: 0.3rem;
     font-weight: 400;
@@ -147,7 +147,7 @@ header h1 a span {
 
 .gnb a {
     color: #333;
-    font-family: NanumSquareNeo sans-serif;
+    font-family: 'NanumSquareNeo', sans-serif;
     font-size: 1.6rem;
     font-weight: 600;
     padding: 1.5rem 2.5rem;
@@ -255,7 +255,7 @@ header .btn {
     color: #16626c;
     display: flex;
     align-items: center;
-    font-family: NanumSquareNeo sans-serif;
+    font-family: 'NanumSquareNeo', sans-serif;
     font-size: 1.4rem;
     line-height:1;
     font-weight: 600;
