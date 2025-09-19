@@ -33,7 +33,8 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    const locaRemoteElements = document.querySelectorAll('.loca-remote li a');
+    const locaRemoteContainerElement = document.querySelector('.loca-remote');
+    const locaRemoteElements = locaRemoteContainerElement.querySelectorAll('li a');
 
     locaRemoteElements.forEach(function (locaRemoteElement) {
         locaRemoteElement.addEventListener('click', function (event) {
@@ -53,7 +54,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 locaRemoteElement.classList.remove('active');
             }
 
-            if (boundingClientRect.y - 130 < 0) {
+            if (boundingClientRect.y - (130 + window.innerHeight / 2) < 0) {
+                locaRemoteContainerElement.classList.remove('hide');
                 locaRemoteElements.forEach(function (locaRemoteElement, locaRemoteElementIndex) {
                     if (i !== locaRemoteElementIndex) {
                         locaRemoteElement.classList.remove('active');
@@ -61,6 +63,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 });
                 locaRemoteElement.classList.add('active');
                 break;
+            }
+
+            if (i === 0) {
+                locaRemoteContainerElement.classList.add('hide');
             }
         }
     }
