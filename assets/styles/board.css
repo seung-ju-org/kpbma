@@ -757,7 +757,7 @@ hr {
 
 .tab-area a {
     font-size: 1.8rem;
-    font-weight: 700;
+    font-weight: 600;
     color: #aaa;
     padding: 0 3px 20px;
     border-bottom: 3px transparent solid;
@@ -1862,3 +1862,83 @@ section {
     line-height: 1.5;
     text-align: center;
 }
+
+
+.tab-contents .row {
+    display: flex;
+    gap:6rem;
+    padding:4rem;
+}
+
+.tab-contents .row .contents {
+    flex:1.2;
+}
+
+.tab-contents .thumb {
+    flex:1;
+}
+
+.tab-contents .thumb img {
+    width:100%;
+}
+
+.tab-contents .thumb-format .thumb {
+    border:1px #e2e4e7 solid;
+    line-height:0;
+}
+
+
+.tab-contents h4 {
+    font-size:2rem;
+    padding:2rem 0;
+}
+
+.tab-contents .process-list h4 {
+    border-bottom:1px #111 solid;
+    font-size:2rem;
+    padding:2rem 0;
+}
+
+.tab-contents .process-list h5 {
+    border-bottom:1px #111 solid;
+    font-size:1.8rem;
+    padding:2rem 0;
+    margin-top:2rem;
+}
+
+.tab-contents .process-list li {
+    padding:2rem 0;
+    border-bottom:1px #e2e4e7 solid;
+}
+
+.tab-contents .process-list li label {
+    font-weight:700;
+    color:#17469e;
+    font-size:1.3rem;
+    line-height:1.6;
+}
+
+.tab-contents p {
+    font-weight:400;
+    color:#111;
+    font-size:1.8rem;
+    line-height:1.6;
+    text-align: center;
+}
+
+.tab-contents .process-list li p {
+    font-weight:400;
+    color:#111;
+    font-size:1.8rem;
+    line-height:1.6;
+    text-align: left;
+}
+
+
+
+
+
+
+
+
+
