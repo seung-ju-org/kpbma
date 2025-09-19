@@ -39,8 +39,8 @@ class HeaderComponent extends HTMLElement {
                 </div>
             </div>
             <a href="/digital-archive">디지털아카이브</a>
-            <div class="sub-menu-container">
-                <a href="/">80주년 기념사업</a>
+            <div class="sub-menu-container"> 
+                <a href="/celebrate">80주년 기념사업</a>
             </div>
         </nav>
 <!--            <div class="header-btn-set">-->
