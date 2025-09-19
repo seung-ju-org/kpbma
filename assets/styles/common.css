@@ -247,6 +247,10 @@ header h1 a span {
     color:var(--main)
 }
 
+.sub header .gnb a.btn:hover {
+    color:#16626c;
+}
+
 header .btn {
     background-color: var(--main);
     margin-right:2rem;
@@ -429,6 +433,7 @@ a.shadow:hover {
 
 
 .breadcrumb li .sub-menu {
+    z-index:9;
     opacity: 1;
     pointer-events: auto;
     transform: translateX(-50%) translateY(0rem);
