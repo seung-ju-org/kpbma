@@ -40,23 +40,23 @@ document.addEventListener('DOMContentLoaded', function () {
                 totalCountElement.innerText = filteredData.length + '';
 
                 const dataCounts = data.reduce(function (previousValue, currentValue) {
-                    function handleCount(key) {
+                    Object.keys(previousValue).forEach(function (key) {
                         const name = key === 'date' ? toByYear(currentValue[key]) : currentValue[key];
 
-                        if (!previousValue[key][name]) {
-                            previousValue[key][name] = 0;
-                        }
+                        if (name) {
+                            if (!previousValue[key][name]) {
+                                previousValue[key][name] = 0;
+                            }
 
-                        if ((!query || (currentValue.title.toLowerCase().includes(query.toLowerCase())))
-                            && (!type || (currentValue.type === type))
-                            && (!category || (category === currentValue.category))
-                            && (!date || (date === toByYear(currentValue.date)))
-                            && (!theme || (theme === currentValue.theme))) {
-                            previousValue[key][name] += 1;
+                            if ((!query || (currentValue.title.toLowerCase().includes(query.toLowerCase())))
+                                && (!type || (currentValue.type === type))
+                                && (!category || (category === currentValue.category))
+                                && (!date || (date === toByYear(currentValue.date)))
+                                && (!theme || (theme === currentValue.theme))) {
+                                previousValue[key][name] += 1;
+                            }
                         }
-                    }
-
-                    Object.keys(previousValue).forEach(handleCount);
+                    });
 
                     return previousValue;
                 }, {
@@ -84,7 +84,6 @@ document.addEventListener('DOMContentLoaded', function () {
                         2020: 0,
                     },
                     theme: {
-                        "테마없음": 0,
                         "한국제약바이오산업의 유산": 0,
                         "혁신의 발자국": 0,
                         "사회공헌": 0,
