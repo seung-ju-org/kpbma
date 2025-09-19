@@ -1,4 +1,9 @@
 document.addEventListener('DOMContentLoaded', function () {
+    new Swiper('.swiper', {
+        direction: 'horizontal',
+        slidesPerView: 2,
+    });
+
     ScrollTrigger.create({
         trigger: ".tab-area",
         pin: true,
@@ -26,12 +31,37 @@ document.addEventListener('DOMContentLoaded', function () {
             start: "-=125",
             end: element.scrollHeight + "-=300"
         });
-    })
-});
-
-document.addEventListener('DOMContentLoaded', function () {
-    new Swiper('.swiper', {
-        direction: 'horizontal',
-        slidesPerView: 2,
     });
+
+    const locaRemoteElements = document.querySelectorAll('.loca-remote li a');
+
+    locaRemoteElements.forEach(function (locaRemoteElement) {
+        locaRemoteElement.addEventListener('click', function (event) {
+            event.preventDefault();
+            smoother.scrollTo(locaRemoteElement.hash, true);
+        });
+    });
+
+    window.onUpdateSmoother = function () {
+        for (let i = locaRemoteElements.length - 1; i >= 0; i--) {
+            const locaRemoteElement = locaRemoteElements[i];
+            const hash = locaRemoteElement.hash;
+            const sectionElement = document.querySelector(hash);
+            const boundingClientRect = sectionElement.getBoundingClientRect();
+
+            if (locaRemoteElement.classList.contains('active')) {
+                locaRemoteElement.classList.remove('active');
+            }
+
+            if (boundingClientRect.y - 130 < 0) {
+                locaRemoteElements.forEach(function (locaRemoteElement, locaRemoteElementIndex) {
+                    if (i !== locaRemoteElementIndex) {
+                        locaRemoteElement.classList.remove('active');
+                    }
+                });
+                locaRemoteElement.classList.add('active');
+                break;
+            }
+        }
+    }
 });

@@ -33,10 +33,12 @@ window.addEventListener('load', function () {
             });
         }
 
-        if (scrollY >= (window.innerHeight - 80)) {
-            fixedAreaElement.style.top = '80px';
-        } else {
-            fixedAreaElement.style.top = '0px';
+        if (fixedAreaElement) {
+            if (scrollY >= (window.innerHeight - 80)) {
+                fixedAreaElement.style.top = '80px';
+            } else {
+                fixedAreaElement.style.top = '0px';
+            }
         }
     });
 });
