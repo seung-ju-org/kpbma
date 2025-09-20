@@ -462,7 +462,7 @@ hr {
     font-weight: 500;
     line-height: 1.4;
     color: #111;
-    min-width:8rem;
+    min-width:10rem;
     margin-right: 0;
     font-family: 'Montserrat';
 }
@@ -487,6 +487,11 @@ hr {
     font-family: 'NanumSquareNeo';
     position: relative;
     padding-left: 25px;
+}
+
+.sticky-panel .year-list li p span {
+    font-size:1.4rem;
+    color:#999;
 }
 
 .sticky-panel .year-list li p:before {
