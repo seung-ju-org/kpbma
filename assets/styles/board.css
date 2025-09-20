@@ -394,7 +394,8 @@ hr {
 }
 
 .sticky-panel .sticky-area h2 {
-    font-size: 4rem;
+    font-size: 3.8rem;
+    word-break: keep-all;
     line-height: 1.3;
     font-weight: 700;
     margin-bottom: 2rem;
