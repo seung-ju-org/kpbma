@@ -127,11 +127,11 @@ header h1 a {
 }
 
 header h1 a span {
-    color: #111;
+    color: #555;
     font-family: 'NanumSquareNeo', sans-serif;
     font-size: 1.4rem;
-    margin-top: 0.3rem;
-    font-weight: 400;
+    margin-top: 0.4rem;
+    font-weight: 600;
 }
 
 .gnb {
@@ -207,10 +207,6 @@ header h1 a span {
 
 .sub header {
     background-color: var(--white);
-}
-
-.sub header h1 a span,.sub header .gnb a {
-    color:#333;
 }
 
 .sub header h1 .logo-txt .color {

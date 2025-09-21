@@ -1886,6 +1886,11 @@ section {
     flex:1.2;
 }
 
+.tab-contents .row .typo p {
+    padding:1rem 0;
+
+}
+
 .tab-contents .thumb {
     flex:1;
 }
@@ -1935,7 +1940,6 @@ section {
     color:#111;
     font-size:1.8rem;
     line-height:1.6;
-    text-align: center;
 }
 
 .tab-contents .process-list li p {
