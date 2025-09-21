@@ -1565,7 +1565,7 @@ section {
     align-items: center;
     justify-content: center;
     border-radius: 40px;
-    background: #12a576;
+    background: #288776;
     color: #fff;
     font-weight: 700;
     padding: 0 9rem;
@@ -1574,7 +1574,7 @@ section {
 }
 
 .match-contents .btn-set a:hover {
-    background: #20CC95;
+    background: #2d9e89;
     transition-duration: .3s;
 }
 
