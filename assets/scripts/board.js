@@ -6,7 +6,7 @@ window.addEventListener('load', function () {
     const boardDetailMetaTitleElement = boardDetailElement.querySelector('.board-detail .meta-container .meta .title');
     const boardDetailMetaContainerElement = boardDetailElement.querySelector('.board-detail .meta-container');
     const boardDetailBreadcrumbItems = boardDetailElement.querySelectorAll('.board-detail .breadcrumb li a');
-    const fixedAreaElement = document.querySelector('.fixed-area');
+    const fixedAreaElement = document.querySelector('.top-fixed-area');
 
     window.addEventListener('scroll', function () {
         const scrollY = window.scrollY;
