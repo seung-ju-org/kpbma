@@ -91,10 +91,10 @@ main .gallery .meta .text-container {
 main .gallery .meta .text-container .year {
     font-family: 'Montserrat';
     letter-spacing: 0.05em;
-    margin-bottom:-1.8rem;
+    margin-bottom:1.5rem;
     font-weight: 500;
     opacity: 0.8;
-    background: #04835a;
+    background: #0d5abd;
     color: #fff;
     display: block;
     font-size: 1.6rem;
@@ -103,6 +103,10 @@ main .gallery .meta .text-container .year {
     border-radius: 2.2rem;
     position: relative;
     z-index: 1;
+}
+
+main .ind .gallery .meta .text-container .year {
+    background: #b71a1a;
 }
 
 main .gallery .meta .text-container .title {

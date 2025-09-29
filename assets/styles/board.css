@@ -446,7 +446,7 @@ hr {
     color:#17469e;
 }
 .sticky-panel .separate.ind h4 {
-    color:#288776;
+    color:#b71a1a;
 }
 
 .sticky-panel .year-list li {
@@ -508,7 +508,7 @@ hr {
 
 .sticky-panel .year-list .ind li p:before {
     content: '';
-    border: 4px #288776 solid;
+    border: 4px #b71a1a solid;
 }
 
 
@@ -1365,7 +1365,7 @@ section {
     margin-right:2rem;
 }
 .top-fixed-area .year.ind {
-    color: #288776;
+    color: #b71a1a;
 }
 .top-fixed-area .title {
     color: #111;
@@ -1435,14 +1435,14 @@ section {
     margin-top: 0.6rem;
     width: 110px;
     position: relative;
-    color: #288776;
+    color: #b71a1a;
 }
 
 .match-contents .item .num:before {
     width: 12px;
     height: 12px;
     border-radius: 50%;
-    background: #288776;
+    background: #b71a1a;
     content: '';
     position: absolute;
     top: -40px;
@@ -1450,7 +1450,7 @@ section {
 }
 
 .match-contents .item h4 {
-    color: #288776;
+    color: #b71a1a;
     font-size: 4rem;
     line-height: 1.5;
     font-weight: 700;
@@ -1567,7 +1567,7 @@ section {
     align-items: center;
     justify-content: center;
     border-radius: 40px;
-    background: #288776;
+    background: #b71a1a;
     color: #fff;
     font-weight: 700;
     padding: 0 9rem;
@@ -1576,7 +1576,7 @@ section {
 }
 
 .match-contents .btn-set a:hover {
-    background: #2d9e89;
+    background: #c31919;
     transition-duration: .3s;
 }
 
@@ -1594,7 +1594,7 @@ section {
     display: inline-block;
     width: 14px;
     height: 14px;
-    margin-left: 0px;
+    margin-left: 0;
     overflow: hidden;
     vertical-align: middle;
 }
