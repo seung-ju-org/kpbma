@@ -1,3 +1,4 @@
+/* global Swiper */
 document.addEventListener('DOMContentLoaded', function () {
     const introElement = document.querySelector('#intro');
     introElement.style.backgroundColor = 'transparent';
@@ -84,9 +85,8 @@ document.addEventListener('DOMContentLoaded', function () {
             const easedVerticalProgress = easeInOutCubic(verticalPhaseProgress);
 
             const verticalFactor = startVerticalFactor + (endVerticalFactor - startVerticalFactor) * easedVerticalProgress;
-            const flipProgress = easedVerticalProgress;
 
-            drawCurve(verticalFactor, flipProgress, horizontalProgress);
+            drawCurve(verticalFactor, easedVerticalProgress, horizontalProgress);
 
             if (progress < 1) {
                 requestAnimationFrame(animate);
