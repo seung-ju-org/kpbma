@@ -1813,15 +1813,15 @@ section {
 }
 
 .section-contents .title {
-    flex:1.4;
+    flex:1.2;
 }
 .section-contents .title img {
-    width:240px;
+    width:140px;
 }
 .tab-contents .section-contents h2 {
-    font-size:4.2rem;
+    font-size:3.4rem;
     line-height:1.4;
-    margin-bottom:5rem;
+    margin-top:3rem;
     font-family: 'NanumSquareNeo';
     text-align: justify;
     font-weight:700;
