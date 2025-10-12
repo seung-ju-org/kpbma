@@ -19,7 +19,7 @@ digitalArchiveFiles.forEach((digitalArchiveFile) => {
 const digitalArchives = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/digital-archive.json'), 'utf8'));
 
 digitalArchives.forEach((digitalArchive) => {
-    if (!digitalArchives.href) {
+    if (!digitalArchive.href) {
         return;
     }
 
@@ -95,7 +95,7 @@ digitalArchives.forEach((digitalArchive) => {
                                 </li>
                                 <li>
                                     <label>세부카테고리</label>
-                                    <span>${digitalArchive.theme}</span>
+                                    <span>${digitalArchive.theme ?? "없음"}</span>
                                 </li>
                             </ul>
                         </div>
