@@ -1226,7 +1226,6 @@ section {
 .stats-list {
     padding-top: 80px;
     padding-bottom: 80px;
-    border-bottom: 1px #e2e4e7 solid;
     background-color: #ffffff;
     position: relative;
 }
@@ -1275,6 +1274,7 @@ section {
 
 .stats-list li {
     display: flex;
+    align-items: flex-start;
     padding: 30px 0;
     border-bottom: 1px #e2e4e7 solid;
 }
@@ -1286,21 +1286,28 @@ section {
 .stats-list li label {
     font-size: 1.8rem;
     font-weight: 500;
-    line-height: 1.6;
+    line-height: 2;
     color: #111;
-    width: 80px;
-    min-width: 80px;
+    width: 160px;
+    min-width: 160px;
     font-family: 'Montserrat';
+    display: flex;
+    align-items: center;
+}
+
+.stats-list li label span {
+    font-size:1.4rem;
+    color:#999;
+    padding-left:8px;
 }
 
 .stats-list li p {
-    line-height: 1.4;
+    line-height: 1.8;
     font-size: 2rem;
     font-weight: 500;
     color: #111;
     margin: 0;
     word-break: keep-all;
-    white-space: nowrap;
 }
 
 .stats-list li p span {
@@ -1819,8 +1826,8 @@ section {
     width:140px;
 }
 .tab-contents .section-contents h2 {
-    font-size:3.4rem;
-    line-height:1.4;
+    font-size:3.6rem;
+    line-height:1.5;
     margin-top:3rem;
     font-family: 'NanumSquareNeo';
     text-align: justify;
@@ -1859,6 +1866,53 @@ section {
     top:0;
     left:0;
     right:0;
+}
+
+.tab-contents .section-contents .contents .table-group {
+    padding-top:2.5rem;
+    flex-direction: column;
+}
+
+.tab-contents .section-contents .contents .table-group span {
+    margin-top:2rem;
+    font-size:1.4rem;
+    text-align: left;
+    width: 100%;
+    color:#999;
+}
+
+.tab-contents .section-contents .contents table {
+    width:100%;
+}
+
+.tab-contents .section-contents .contents table th {
+    border-bottom:1px #333 solid;
+    padding:2rem 0;
+    font-size:1.6rem;
+    line-height:1;
+    vertical-align: center;
+}
+.tab-contents .section-contents .contents table td {
+    border-bottom:1px #e2e4e7 solid;
+    padding:2rem 0;
+    font-size:1.6rem;
+    line-height:1;
+    vertical-align: center;
+    text-align: center;
+}
+
+.tab-contents .section-contents .contents table.vertical {
+    margin-top:2rem;
+}
+.tab-contents .section-contents .contents table.vertical th,
+.tab-contents .section-contents .contents table.vertical td {
+    border-color:#e2e4e7;
+    text-align: left;
+}
+
+.tab-contents .section-contents .contents table .strong td {
+    font-weight:700;
+    color: #df2d2d;
 }
 
 .section-contents .item {
