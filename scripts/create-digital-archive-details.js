@@ -86,7 +86,7 @@ digitalArchives.forEach((digitalArchive) => {
                             </p>
                             <ul>
                                 <li>
-                                    <label>생성일</label>
+                                    <label>시대구분</label>
                                     <span>${digitalArchive.date}</span>
                                 </li>
                                 <li>
