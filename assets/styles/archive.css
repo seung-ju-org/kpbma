@@ -245,7 +245,7 @@
 }
 
 .swiper .swiper-wrapper .swiper-slide {
-    width:400px;
+    width:auto;
     height:360px;
     border:1px #e2e4e7 solid;
 }

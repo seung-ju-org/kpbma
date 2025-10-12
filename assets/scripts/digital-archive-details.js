@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function () {
             popupImageElement.style.display = 'block';
             popupImageElement.style.width = '100%';
             popupImageElement.style.height = '100%';
-            popupImageElement.style.objectFit = 'cover';
+            popupImageElement.style.objectFit = 'contain';
             popupImageElement.style.position = 'absolute';
             popupImageElement.style.top = '0px';
             popupImageElement.style.right = '0px';
@@ -64,6 +64,7 @@ document.addEventListener('DOMContentLoaded', function () {
             popupImageElement.style.left = '0px';
             popupImageElement.style.margin = 'auto';
             popupImageElement.style.pointerEvents = 'none';
+            popupImageElement.style.background = '#111';
 
             popupImageContainerElement.appendChild(popupImageElement);
 
