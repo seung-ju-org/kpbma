@@ -1825,6 +1825,9 @@ section {
 .section-contents .title img {
     width:140px;
 }
+.section-contents .title-img {
+    width:140px;
+}
 .tab-contents .section-contents h2 {
     font-size:3.6rem;
     line-height:1.5;
