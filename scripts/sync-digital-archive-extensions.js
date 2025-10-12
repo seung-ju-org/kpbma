@@ -8,6 +8,9 @@ const digitalArchives = JSON.parse(fs.readFileSync(jsonPath), 'utf8');
 
 const newDigitalArchives = digitalArchives.map((digitalArchive) => {
     function getRealFilename(path) {
+        if (path.startsWith("youtube:")) {
+            return path;
+        }
         const paths = path.replace(/\.[^/.]+$/, '').split('/')
         const filename = paths.at(-1)
         const realFilename = digitalArchiveFiles.find(digitalArchiveFile => {
