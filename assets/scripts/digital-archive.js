@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         "사료": 0,
                         "사진": 0,
                         "광고": 0,
-                        "문헌": 0,
+                        "출판물": 0,
                         "영상": 0,
                     },
                     date: {
