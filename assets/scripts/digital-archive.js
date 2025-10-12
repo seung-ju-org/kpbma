@@ -69,6 +69,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         "사진": 0,
                         "광고": 0,
                         "문헌": 0,
+                        "영상": 0,
                     },
                     date: {
                         1920: 0,
@@ -199,7 +200,12 @@ document.addEventListener('DOMContentLoaded', function () {
                         itemThumbElement.classList.add('thumb');
 
                         const itemThumbImgElement = document.createElement('img');
-                        itemThumbImgElement.src = value.thumbnail;
+                        if (value.thumbnail.startsWith("youtube:")) {
+                            const youtubeVideoId = value.thumbnail.split(":")[1];
+                            itemThumbImgElement.src = `https://img.youtube.com/vi/${youtubeVideoId}/hqdefault.jpg`;
+                        } else {
+                            itemThumbImgElement.src = value.thumbnail;
+                        }
 
                         itemThumbElement.appendChild(itemThumbImgElement);
 
