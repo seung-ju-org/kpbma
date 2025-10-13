@@ -212,6 +212,19 @@
     line-height:1.6;
     color:#222;
 }
+.archive-contents .row {
+    display: flex;
+}
+.archive-contents .row p {
+    flex:1;
+}
+.archive-contents a {
+    padding-bottom:.3rem;
+    font-size:1.6rem;
+    display: inline-block;
+    font-weight:700;
+    border-bottom:2px #222 solid;
+}
 .archive-contents ul {
     display: flex;
     flex-wrap: wrap;
