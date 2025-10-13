@@ -927,6 +927,123 @@ hr {
     transition-duration: .3s;
 }
 
+.ann-container {
+    padding:8rem 12rem;
+}
+
+.ann-title {
+    padding-bottom:4rem;
+}
+.ann-title h3 {
+    font-size:3rem;
+    margin-bottom:2rem;
+}
+.ann-title span {
+    font-size:1.6rem;
+    color:#666;
+}
+
+.ann-intro {
+    margin-bottom:4rem;
+}
+
+.ann-intro p {
+    font-size:1.6rem;
+}
+
+.ann-intro p+p {
+    margin-top:2rem;
+}
+
+.ann-step {
+    margin-bottom:6rem;
+    padding-bottom:6rem;
+    border-bottom:1px #e2e4e7 solid;
+}
+.ann-step .thumb {
+    margin:4rem 12rem;
+}
+.ann-step .step-title {
+    margin-bottom:2rem;
+}
+.ann-step .step-title h4{
+    font-size:2.4rem;
+    margin-bottom:0;
+}
+.ann-step .step-title span {
+    font-size:1.6rem;
+    color:#666;
+}
+.ann-step .row {
+    padding:0 !important;
+}
+.ann-step .row.half .thumb {
+    flex:0.5;
+    margin:0;
+}
+
+.ann-step .block+.block {
+    margin-top:4rem;
+    padding-top:4rem;
+    border-top:1px #e2e4e7 solid;
+}
+.ann-step .link {
+    border:1px #111 solid;
+    border-radius: 8px;
+    font-size:1.6rem;
+    padding:15px 18px;
+    margin-top:1.5rem;
+    display: inline-block;
+}
+
+.ann-step .contents p {
+    font-size:1.6rem;
+    line-height:1.8;
+}
+.ann-step .contents p+p {
+    margin-top:2rem;
+}
+
+.ann-step .book-list {
+    display: flex;
+    margin:2rem -2rem;
+}
+
+.ann-step .book-list li {
+    max-width:25%;
+    min-width:25%;
+}
+.ann-step .book-list li .item .thumb {
+    border:1px #e2e4e7 solid;
+    line-height:0;
+    width:100%;
+    margin:0 0 1rem 0;
+}
+.ann-step .book-list li .item .thumb img {
+    width:100%;
+}
+.ann-step .book-list li .item {
+    padding:0 2rem;
+}
+
+.ann-step .book-list li .item h5 {
+    font-size:1.4rem;
+    line-height:1.5;
+    font-weight:600;
+    margin-bottom:1rem;
+}
+.ann-step .book-list li .item p {
+    text-align: justify;
+    font-size:1.6rem;
+    line-height:1.5;
+}
+
+.ann-step .swiper .swiper-wrapper .swiper-slide {
+    width: 540px;
+    margin:0;
+}
+
+
 .picture-container {
     display: flex;
     gap: 4rem;
@@ -2122,9 +2239,14 @@ section {
     padding:2rem 0;
 }
 
+.tab-contents .process-list {
+    margin-bottom:3rem;
+    margin-top:3rem;
+}
+
 .tab-contents .process-list h4 {
     border-bottom:1px #111 solid;
-    font-size:2rem;
+    font-size:1.8rem;
     padding:2rem 0;
 }
 

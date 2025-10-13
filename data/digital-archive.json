@@ -2330,6 +2330,110 @@
     ]
   },
   {
+    "type": "산업",
+    "category": "출판물",
+    "date": "2010",
+    "theme": null,
+    "href": "/digital-archive/pbid2010no177",
+    "thumbnail": "/data/files/pbid2010no177002.jpg",
+    "title": "2014 대한민국 보건발달사",
+    "content": "2014 대한민국 보건발달사",
+    "images": [
+      "/data/files/pbid2010no177002.jpg"
+    ]
+  },
+  {
+    "type": "산업",
+    "category": "출판물",
+    "date": "2010",
+    "theme": null,
+    "href": "/digital-archive/pbid2010no178",
+    "thumbnail": "/data/files/pbid2010no178002.jpg",
+    "title": "2014 한국제약 100년",
+    "content": "2014 한국제약 100년",
+    "images": [
+      "/data/files/pbid2010no178002.jpg"
+    ]
+  },
+  {
+    "type": "산업",
+    "category": "출판물",
+    "date": "2010",
+    "theme": null,
+    "href": "/digital-archive/pbid2010no179",
+    "thumbnail": "/data/files/pbid2010no179002.jpg",
+    "title": "2017 한국약학사",
+    "content": "2017 한국약학사",
+    "images": [
+      "/data/files/pbid2010no179002.jpg"
+    ]
+  },
+  {
+    "type": "산업",
+    "category": "출판물",
+    "date": "1990",
+    "theme": null,
+    "href": "/digital-archive/pbid1990no180",
+    "thumbnail": "/data/files/pbid1990no180002.png",
+    "title": "1997 녹십자 30년사",
+    "content": "1997 녹십자 30년사",
+    "images": [
+      "/data/files/pbid1990no180002.png"
+    ]
+  },
+  {
+    "type": "산업",
+    "category": "출판물",
+    "date": "2010",
+    "theme": null,
+    "href": "/digital-archive/pbid2010no181",
+    "thumbnail": "/data/files/pbid2010no181002.png",
+    "title": "2015 JW중외제약 70년사 수액이야기",
+    "content": "2015 JW중외제약 70년사 수액이야기",
+    "images": [
+      "/data/files/pbid2010no181002.png"
+    ]
+  },
+  {
+    "type": "산업",
+    "category": "출판물",
+    "date": "2010",
+    "theme": null,
+    "href": "/digital-archive/pbid2010no182",
+    "thumbnail": "/data/files/pbid2010no182002.png",
+    "title": "2018 녹십자 50년사 통사",
+    "content": "2018 녹십자 50년사 통사",
+    "images": [
+      "/data/files/pbid2010no182002.png"
+    ]
+  },
+  {
+    "type": "산업",
+    "category": "출판물",
+    "date": "2010",
+    "theme": null,
+    "href": "/digital-archive/pbid2010no183",
+    "thumbnail": "/data/files/pbid2010no183002.png",
+    "title": "JW중외제약 역사 화보집 - 생명존중과 개척정신으로 이어온 길",
+    "content": "JW중외제약 역사 화보집 - 생명존중과 개척정신으로 이어온 길",
+    "images": [
+      "/data/files/pbid2010no183002.png"
+    ]
+  },
+  {
+    "type": "산업",
+    "category": "출판물",
+    "date": "2020",
+    "theme": null,
+    "href": "/digital-archive/pbid2020no184",
+    "thumbnail": "/data/files/pbid2020no184002.png",
+    "title": "윤원영 회장 자서전(일동제약 경영철학서) - 인간을 향한 빛, 생명을 위한 빛",
+    "content": "윤원영 회장 자서전(일동제약 경영철학서) - 인간을 향한 빛, 생명을 위한 빛",
+    "images": [
+      "/data/files/pbid2020no184002.png"
+    ]
+  },
+  {
     "type": null,
     "category": null,
     "date": null,
