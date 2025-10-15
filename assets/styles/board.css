@@ -1046,6 +1046,22 @@ hr {
     margin:0;
 }
 
+.ann-step .swiper .swiper-wrapper .swiper-slide p {
+    font-size:1.4rem;
+    margin-top:1rem;
+}
+
+.ann-step .thumb-list {
+    display: flex;
+    gap:1px;
+    margin-bottom:2rem;
+}
+
+.ann-step .thumb-list img {
+    flex:1;
+    width:25%;
+}
+
 
 .picture-container {
     display: flex;
