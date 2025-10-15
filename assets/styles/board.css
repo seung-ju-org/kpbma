@@ -1627,6 +1627,40 @@ section {
     margin-left: -20px;
 }
 
+.swiper-button-prev {
+    width:40px;
+    height:40px;
+    background: #fff;
+    border-radius: 50%;
+}
+.swiper-button-prev:after {
+    font-size:20px;
+    margin-left:-2px;
+}
+
+.swiper-button-next {
+    width:40px;
+    height:40px;
+    background: #fff;
+    border-radius: 50%;
+}
+.swiper-button-next:after {
+    font-size:20px;
+    margin-left:2px;
+}
+
+.slider-area .swiper-button-prev,
+.slider-area .swiper-button-next {
+    width:40px;
+    height:40px;
+    background: #4ba9f7;
+    border-radius: 50%;
+}
+.slider-area .swiper-button-prev:after,
+.slider-area .swiper-button-next:after {
+    color:#fff;
+}
+
 .swiper img {
     width: 100%;
     height: 100%;

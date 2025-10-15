@@ -3,6 +3,10 @@ document.addEventListener('DOMContentLoaded', function () {
         direction: 'horizontal',
         slidesPerView: 'auto',
         spaceBetween: 20,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
     });
 
     const tabElements = document.querySelectorAll('.tab-area a');
