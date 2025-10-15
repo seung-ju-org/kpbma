@@ -1,4 +1,10 @@
 document.addEventListener('DOMContentLoaded', function () {
+    new Swiper('.swiper', {
+        direction: 'horizontal',
+        slidesPerView: 'auto',
+        spaceBetween: 20,
+    });
+
     const tabElements = document.querySelectorAll('.tab-area a');
     const tabContentElements = document.querySelectorAll('.tab-contents');
 
