@@ -69,12 +69,12 @@ digitalArchives.forEach((digitalArchive) => {
                     <div class="container">
                         <div class="swiper">
                             <div class="swiper-wrapper">
-                                ${digitalArchive.images.map((image) => {
-        if (image.startsWith("youtube:")) {
-            const youtubeVideoId = image.split(":")[1];
+                                ${digitalArchive.images.map(({url, download}) => {
+        if (url.startsWith("youtube:")) {
+            const youtubeVideoId = url.split(":")[1];
             return `<div class="swiper-slide"><iframe width="860" height="360" src="https://www.youtube.com/embed/${youtubeVideoId}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>`;
         }
-        return `<div class="swiper-slide"><a href="#"><img src="${image}" alt="${digitalArchive.title}"/></a></div>`;
+        return `<div class="swiper-slide"><a href="#"><img src="${url}" alt="${digitalArchive.title}" referrerpolicy="no-referrer" data-download="${download}"/></a></div>`;
     }).join('')}
                             </div>
                         </div>
