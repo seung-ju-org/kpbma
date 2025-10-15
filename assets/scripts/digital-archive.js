@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     date = Number(urlSearchParams.get('date').replace(/[^0-9]/g, ''));
                 }
                 const theme = urlSearchParams.get('theme');
+                const filter = {query, type, category, date, theme};
 
                 const filteredData = data.filter(function (value) {
                     if (query && !value.title.toLowerCase().includes(query.toLowerCase())) return false;
@@ -39,21 +40,13 @@ document.addEventListener('DOMContentLoaded', function () {
                 const totalCountElement = document.querySelector('#total-count')
                 totalCountElement.innerText = filteredData.length + '';
 
-                const dataCounts = data.reduce(function (previousValue, currentValue) {
+                const dataCounts = Object.entries(data.reduce(function (previousValue, currentValue) {
                     Object.keys(previousValue).forEach(function (key) {
                         const name = key === 'date' ? toByYear(currentValue[key]) : currentValue[key];
 
                         if (name) {
                             if (!previousValue[key][name]) {
                                 previousValue[key][name] = 0;
-                            }
-
-                            if ((!query || (currentValue.title.toLowerCase().includes(query.toLowerCase())))
-                                && (!type || (currentValue.type === type))
-                                && (!category || (category === currentValue.category))
-                                && (!date || (date === toByYear(currentValue.date)))
-                                && (!theme || (theme === currentValue.theme))) {
-                                previousValue[key][name] += 1;
                             }
                         }
                     });
@@ -93,7 +86,30 @@ document.addEventListener('DOMContentLoaded', function () {
                         "스포츠와 함께": 0,
                         "사이버역사관": 0,
                     },
-                });
+                })).reduce(function (previousValue, currentValue) {
+                    const key = currentValue[0];
+                    const value = currentValue[1];
+
+                    if (!previousValue[key]) {
+                        previousValue[key] = {}
+                    }
+
+                    Object.keys(value).forEach(function (name) {
+                        previousValue[key][name] = data.filter(function (value) {
+                            return value[key] === name
+                                && Object.entries(filter).every(function (value2) {
+                                    const filterKey = value2[0];
+                                    const filterValue = value2[1];
+
+                                    return !filterValue
+                                        || value[filterKey] === (filterValue + "")
+                                        || filterKey === key;
+                                });
+                        }).length
+                    })
+
+                    return previousValue
+                }, {});
 
                 const searchFormElement = document.search;
 
