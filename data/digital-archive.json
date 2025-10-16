@@ -462,22 +462,6 @@
   {
     "type": "산업",
     "category": "사진",
-    "date": "2020",
-    "theme": null,
-    "href": "/digital-archive/ptid2020no027",
-    "thumbnail": "/data/files/ptid2020no027001.jpeg",
-    "title": "인도네시아 DBI 개소",
-    "content": "인도네시아 DBI 개소",
-    "images": [
-      {
-        "url": "/data/files/ptid2020no027001.jpeg",
-        "download": "/data/files/ptid2020no027001.jpeg"
-      }
-    ]
-  },
-  {
-    "type": "산업",
-    "category": "사진",
     "date": "1960",
     "theme": null,
     "href": "/digital-archive/ptid1960no028",
@@ -3100,17 +3084,6 @@
     "category": "출판물",
     "date": "2020",
     "theme": null,
-    "href": "/digital-archive/pbid2020no184",
-    "thumbnail": "https://lh3.google.com/u/0/d/1SNl6NrhkTUGim3gqq9huOVFimk7LGzlI",
-    "title": "윤원영 회장 자서전(일동제약 경영철학서) - 인간을 향한 빛, 생명을 위한 빛",
-    "content": "윤원영 회장 자서전(일동제약 경영철학서) - 인간을 향한 빛, 생명을 위한 빛",
-    "images": [
-      {
-        "url": "/data/files/pbid2020no184002.png",
-        "download": "/data/files/pbid2020no184002.png"
-      }
-    ]
-  },
   {
     "type": "산업",
     "category": "사진",
@@ -3960,22 +3933,6 @@
       {
         "url": "https://lh3.google.com/u/0/d/1TfZcjID7CHgF4APUNH6G35s09hZDBuNn",
         "download": "https://drive.google.com/file/d/1TfZcjID7CHgF4APUNH6G35s09hZDBuNn/view?usp=drive_link"
-      }
-    ]
-  },
-  {
-    "type": "협회",
-    "category": "사진",
-    "date": "2000",
-    "theme": null,
-    "href": "/digital-archive/ptas2000no238",
-    "thumbnail": "/data/files/ptas2000no238001.gif",
-    "title": "2007 02 어준선 회장 제21대 한국제약협회 이사장 취임",
-    "content": "2007 02 어준선 회장 제21대 한국제약협회 이사장 취임",
-    "images": [
-      {
-        "url": "/data/files/ptas2000no238001.gif",
-        "download": "/data/files/ptas2000no238001.gif"
       }
     ]
   },
@@ -5844,38 +5801,6 @@
       {
         "url": "https://lh3.google.com/u/0/d/1iqJm1_tGvs6ktUYn8YCehKakOmnqw4VL",
         "download": "https://drive.google.com/file/d/1fUfvDAMO_iM1J69IZlq-bEHO0bKlugJv/view?usp=drive_link"
-      }
-    ]
-  },
-  {
-    "type": "협회",
-    "category": "출판물",
-    "date": "2010",
-    "theme": null,
-    "href": "/digital-archive/pbas2010no355",
-    "thumbnail": "/data/files/pbas2010no355001.png",
-    "title": "2015 한국제약협회 70년사",
-    "content": "2015 한국제약협회 70년사",
-    "images": [
-      {
-        "url": "/data/files/pbas2010no355001.png",
-        "download": "/data/files/pbas2010no355001.png"
-      }
-    ]
-  },
-  {
-    "type": "협회",
-    "category": "출판물",
-    "date": "2020",
-    "theme": null,
-    "href": "/digital-archive/pbas2020no356",
-    "thumbnail": "/data/files/pbas2020no356001.png",
-    "title": "2025 한국제약바이오협회 80년사",
-    "content": "2025 한국제약바이오협회 80년사",
-    "images": [
-      {
-        "url": "/data/files/pbas2020no356001.png",
-        "download": "/data/files/pbas2020no356001.png"
       }
     ]
   },
