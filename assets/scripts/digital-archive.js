@@ -216,6 +216,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         itemThumbElement.classList.add('thumb');
 
                         const itemThumbImgElement = document.createElement('img');
+                        itemThumbImgElement.referrerPolicy = 'no-referrer';
                         if (value.thumbnail.startsWith("youtube:")) {
                             const youtubeVideoId = value.thumbnail.split(":")[1];
                             itemThumbImgElement.src = `https://img.youtube.com/vi/${youtubeVideoId}/hqdefault.jpg`;

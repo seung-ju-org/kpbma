@@ -53,6 +53,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const popupImageElement = document.createElement('img');
             popupImageElement.src = element.src;
             popupImageElement.alt = element.alt;
+            popupImageElement.referrerPolicy = 'no-referrer';
             popupImageElement.style.display = 'block';
             popupImageElement.style.width = '100%';
             popupImageElement.style.height = '100%';
@@ -147,7 +148,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     alt: 'Download',
                     src: '/assets/icons/download.png',
                     onClick() {
-
+                        window.open(element.dataset.download)
                     }
                 }
             ];
