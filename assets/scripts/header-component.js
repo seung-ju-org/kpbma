@@ -9,15 +9,15 @@ class HeaderComponent extends HTMLElement {
     <div class="container">
         <h1 class="logo">
             <a href="/">
-                <div class="logo-simbol">
-                    <img src="/assets/images/simbol-white.png" class="white" alt="kpbma">
-                    <img src="/assets/images/simbol.png" class="color" alt="kpbma">
-                </div>
                 <div class="logo-txt">
                     <img src="/assets/images/logotxt-white.png" class="white" alt="kpbma">
                     <img src="/assets/images/logotxt-color.png" class="color" alt="kpbma">
                 </div>
                 <span>디지털역사관</span>
+                <div class="logo-simbol">
+                    <img src="/assets/images/simbol-white.png" class="white" alt="kpbma">
+                    <img src="/assets/images/simbol.png" class="color" alt="kpbma">
+                </div>
             </a>
         </h1>
         <nav class="gnb">
