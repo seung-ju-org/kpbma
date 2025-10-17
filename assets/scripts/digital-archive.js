@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         2020: 0,
                     },
                     theme: {
-                        "한국제약바이오산업의 유산": 0,
+                        "한국 제약바이오산업의 유산": 0,
                         "혁신의 발자국": 0,
                         "사회공헌": 0,
                         "영광의 순간": 0,

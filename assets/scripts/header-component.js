@@ -27,7 +27,7 @@ class HeaderComponent extends HTMLElement {
             <div class="sub-menu-container">
                 <a href="/industrial">산업관</a>
                 <div class="sub-menu shadow">
-                    <a href="/industrial#1">한국제약바이오산업의 120년</a>
+                    <a href="/industrial#1">한국 제약바이오산업의 120년</a>
                     <a href="/evolution/first">그림으로 보는 산업 변천사</a>
                 </div>
             </div>
