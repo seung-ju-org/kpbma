@@ -636,7 +636,6 @@ hr {
     color: #555;
     font-family: 'NanumSquareNeo';
     position: relative;
-    padding-left: 25px;
 }
 
 .intro-panel .year-list li p span {
@@ -644,21 +643,21 @@ hr {
     color:#999;
 }
 
-.intro-panel .year-list li p:before {
-    content: '';
-    border: 4px #17469e solid;
-    width: 7px;
-    height: 7px;
-    border-radius: 50%;
-    left: 0;
-    top: 4px;
-    position: absolute;
-}
+/*.intro-panel .year-list li p:before {*/
+/*    content: '';*/
+/*    border: 4px #17469e solid;*/
+/*    width: 7px;*/
+/*    height: 7px;*/
+/*    border-radius: 50%;*/
+/*    left: 0;*/
+/*    top: 4px;*/
+/*    position: absolute;*/
+/*}*/
 
-.intro-panel .year-list .ind li p:before {
-    content: '';
-    border: 4px #b71a1a solid;
-}
+/*.intro-panel .year-list .ind li p:before {*/
+/*    content: '';*/
+/*    border: 4px #b71a1a solid;*/
+/*}*/
 
 
 .fame-list {
@@ -914,7 +913,7 @@ hr {
     font-size: 1.8rem;
     font-weight: 600;
     color: #aaa;
-    padding: 0 3px 20px;
+    padding: 20px 3px;
     border-bottom: 3px transparent solid;
     transition-duration: .3s;
     cursor: pointer;
