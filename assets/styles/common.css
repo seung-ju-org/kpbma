@@ -129,8 +129,7 @@ header h1 a {
 header h1 a span {
     color: #555;
     font-family: 'NanumSquareNeo', sans-serif;
-    font-size: 1.4rem;
-    margin-top: 0.4rem;
+    font-size: 1.9rem;
     font-weight: 600;
 }
 
@@ -248,26 +247,20 @@ header h1 a span {
 }
 
 header .btn {
-    background-color: var(--main);
-    margin-right:2rem;
-    border:0;
-    border-radius: 2.5rem;
-    color: #16626c;
+    color: #1562e1;
     display: flex;
     align-items: center;
     font-family: 'NanumSquareNeo', sans-serif;
-    font-size: 1.6rem;
+    font-size: 1.7rem;
     line-height:1;
     font-weight: 600;
-    padding: 1.4rem 2rem;
     transition-duration: 0.2s;
     transition-property: background-color, color;
     transition-timing-function: ease;
 }
 
 a.btn:hover {
-    background-color: var(--main-hover);
-    color:#16626c;
+    color:#4285f5;
 }
 
 .btn-sub {

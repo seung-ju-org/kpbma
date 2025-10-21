@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
         ScrollTrigger.create({
             trigger: element,
             pin: true,
-            start: "-=125",
+            start: "-=150",
             end: element.scrollHeight + "-=300"
         });
     });
