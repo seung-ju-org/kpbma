@@ -58,10 +58,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         "협회": 0,
                     },
                     category: {
-                        "사료": 0,
-                        "사진": 0,
-                        "광고": 0,
-                        "출판물": 0,
+                        "이미지": 0,
                         "영상": 0,
                     },
                     date: {
@@ -78,13 +75,16 @@ document.addEventListener('DOMContentLoaded', function () {
                         2020: 0,
                     },
                     theme: {
-                        "한국제약바이오산업의 유산": 0,
-                        "혁신의 발자국": 0,
-                        "사회공헌": 0,
-                        "영광의 순간": 0,
-                        "스타와 함께": 0,
-                        "스포츠와 함께": 0,
+                        "광고": 0,
+                        "출판물": 0,
                         "사이버역사관": 0,
+                        "인물": 0,
+                        "연구개발": 0,
+                        "제품": 0,
+                        "사회공헌": 0,
+                        "행사": 0,
+                        "수상": 0,
+                        "기타": 0,
                     },
                 })).reduce(function (previousValue, currentValue) {
                     const key = currentValue[0];

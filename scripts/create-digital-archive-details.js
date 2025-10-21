@@ -99,7 +99,7 @@ digitalArchives.forEach((digitalArchive) => {
                                 </li>
                                 <li>
                                     <label>세부카테고리</label>
-                                    <span>${digitalArchive.theme ?? "없음"}</span>
+                                    <span>${digitalArchive.subCategory ?? "없음"}</span>
                                 </li>
                             </ul>
                         </div>
