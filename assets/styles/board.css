@@ -1677,6 +1677,9 @@ section {
     padding:2rem 0;
     transition: top 0.25s ease;
 }
+.top-fixed-area.active {
+    top: 80px;
+}
 .top-fixed-area .container {
     display: flex;
     align-items: center;

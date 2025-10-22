@@ -35,9 +35,9 @@ window.addEventListener('load', function () {
 
         if (fixedAreaElement) {
             if (scrollY >= (window.innerHeight - 80)) {
-                fixedAreaElement.style.top = '80px';
+                fixedAreaElement.classList.add('active');
             } else {
-                fixedAreaElement.style.top = '0px';
+                fixedAreaElement.classList.remove('active');
             }
         }
     });
