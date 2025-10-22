@@ -465,3 +465,48 @@ a.shadow:hover {
     pointer-events: auto;
     transform: translateX(-50%) translateY(0rem);
 }
+
+
+@media screen and (max-width: 1440px) {
+    .gnb a {
+        font-size:1.6rem;
+        padding:1.5rem;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    header {
+        height:8rem;
+    }
+    header h1 .logo-txt {
+        width:12rem;
+    }
+    header h1 a span {
+        font-size:1.5rem;
+    }
+    header h1 .logo-simbol {
+        width:3.5rem;
+    }
+    .gnb a {
+        font-size:1.4rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .gnb {
+        display: none;
+    }
+    header {
+        height:auto;
+    }
+    .bg {
+        transform: scale(1.3);
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .copyright p {
+        font-size:1.2rem;
+        line-height:1.4;
+    }
+}

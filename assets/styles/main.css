@@ -180,3 +180,35 @@ main .swiper .swiper-wrapper .swiper-slide .container .description {
     line-height: 1.6;
     padding-left:1rem;
 }
+
+
+@media screen and (max-width: 1024px) {
+    main .swiper .swiper-wrapper .swiper-slide .container {
+        padding:0 4rem;
+    }
+    main .swiper .swiper-wrapper .swiper-slide .container .title {
+        font-size: 6rem;
+        line-height: 12rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    main .swiper .swiper-wrapper .swiper-slide .container .title {
+        font-size:5rem;
+    }
+    .bg {
+        transform: scale(1.3);
+    }
+}
+
+@media screen and (max-width: 450px) {
+    main .swiper .swiper-wrapper .swiper-slide .container .title {
+        font-size:3rem;
+        line-height:7rem;
+    }
+
+    main .swiper .swiper-wrapper .swiper-slide .container:first-child {
+        margin-bottom:0;
+    }
+
+}

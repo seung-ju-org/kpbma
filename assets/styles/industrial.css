@@ -221,3 +221,47 @@ main .history-year-container .btn:before {
     width: 100vw;
 }
 
+
+
+
+
+@media screen and (max-width: 768px) {
+    main .gallery .meta .text-container .year {
+        font-size:1.4rem;
+    }
+    main .gallery .meta .text-container .title {
+        font-size:3.2rem;
+        line-height:4.6rem;
+    }
+    main .gallery .meta {
+        width:35rem;
+    }
+    main .gallery .images-container .image-container span {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    main .gallery .images-container a.type2 img {
+        height:20rem;
+    }
+    main .gallery .images-container {
+        gap:4rem;
+    }
+    main .gallery .images-container a {
+        display: flex;
+        flex-direction: column-reverse;
+        box-shadow: none;
+    }
+    main .gallery .images-container .image-container span {
+        position: relative;
+        background: none;
+        padding:1rem 0 0 0;
+        transform:none;
+        font-size:1.3rem;
+        color:#111;
+        font-weight:600;
+    }
+
+
+}

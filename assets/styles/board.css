@@ -2336,8 +2336,68 @@ section {
     text-align: left;
 }
 
+@media screen and (max-width: 1440px) {
 
+}
 
+@media screen and (max-width: 1024px) {
+
+    .intro-panel .year-list {
+        gap:4rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .board-detail .content-container {
+        gap:4rem;
+        padding:0;
+    }
+
+    .intro-panel .year-list {
+        flex-direction: column;
+        padding:0 2rem;
+    }
+    .intro-panel {
+        margin:0 -2rem;
+        gap:4rem;
+    }
+    .intro-panel .intro-area {
+        flex-direction: column;
+        gap:3rem;
+    }
+    .intro-panel .intro-area .thumb {
+        min-width: 100%;
+        max-width:100%;
+    }
+    .intro-contents {
+        padding:0 2rem;
+    }
+
+}
+
+@media screen and (max-width: 450px) {
+    .intro-panel .intro-area h2 {
+        font-size:2.4rem;
+        margin-bottom:1rem;
+    }
+    .intro-panel .intro-area p {
+        font-size:1.6rem;
+    }
+    .intro-panel .separate h4 {
+        font-size:2rem;
+    }
+    .intro-panel .year-list li {
+        padding:2rem 0;
+    }
+    .intro-panel .year-list li label {
+        font-size:1.6rem;
+        min-width:8rem;
+    }
+    .intro-panel .year-list li p {
+        font-size:1.6rem;
+    }
+}
 
 
 
