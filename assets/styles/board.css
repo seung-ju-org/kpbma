@@ -44,10 +44,6 @@
     transition: all 0.5s ease;
 }
 
-.board-detail .meta-container .meta .title.active {
-    color: #ffffff;
-}
-
 .board-detail .meta-container .meta p {
     font-size: 1.6rem;
     margin-top: 2rem;
@@ -200,22 +196,11 @@
     width: 146rem;
 }
 
-.board-detail #board-detail-main-img.active {
-    width: 100%;
-    height: 100vh;
-    top: 0;
-    opacity: 0.45;
-}
-
 .board-detail #board-detail-main-img img {
     height: 100%;
     object-fit: cover;
     transition: all 0.5s ease;
     width: 100%;
-}
-
-.board-detail #board-detail-main-img img.active {
-    opacity: 0.45;
 }
 
 .board-detail .content-container {

@@ -12,20 +12,24 @@ window.addEventListener('load', function () {
         const scrollY = window.scrollY;
 
         if (scrollY > 0) {
-            boardDetailMainImgElement.classList.add("active");
-            boardDetailMainImgImgElement.classList.add("active");
-            boardDetailMetaContainerElement.classList.add("active");
-            boardDetailMetaTitleElement.classList.add("active");
+            boardDetailMainImgElement.style.width = '100%';
+            boardDetailMainImgElement.style.height = '100vh';
+            boardDetailMainImgElement.style.top = '0';
+            boardDetailMainImgImgElement.style.opacity = '0.45';
+            boardDetailMetaContainerElement.style.paddingTop = '60rem';
+            boardDetailMetaTitleElement.style.color = '#ffffff';
             boardDetailBreadcrumbItems.forEach(function (element) {
-                element.classList.add("active");
+                element.style.color = '#ffffff';
             });
         } else {
-            boardDetailMainImgElement.classList.remove("active");
-            boardDetailMainImgImgElement.classList.remove("active");
-            boardDetailMetaContainerElement.classList.remove("active");
-            boardDetailMetaTitleElement.classList.remove("active");
+            boardDetailMainImgElement.style.width = null;
+            boardDetailMainImgElement.style.height = null;
+            boardDetailMainImgElement.style.top = null;
+            boardDetailMainImgImgElement.style.opacity = null;
+            boardDetailMetaContainerElement.style.paddingTop = null;
+            boardDetailMetaTitleElement.style.color = null;
             boardDetailBreadcrumbItems.forEach(function (element) {
-                element.classList.remove("active");
+                element.style.color = null;
             });
         }
 
