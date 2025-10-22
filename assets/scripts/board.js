@@ -16,7 +16,7 @@ window.addEventListener('load', function () {
             boardDetailMainImgElement.style.height = '100vh';
             boardDetailMainImgElement.style.top = '0';
             boardDetailMainImgImgElement.style.opacity = '0.45';
-            boardDetailMetaContainerElement.style.paddingTop = '60rem';
+            boardDetailMetaContainerElement.style.paddingTop = '50rem';
             boardDetailMetaTitleElement.style.color = '#ffffff';
             boardDetailBreadcrumbItems.forEach(function (element) {
                 element.style.color = '#ffffff';
