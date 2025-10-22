@@ -222,9 +222,6 @@ main .history-year-container .btn:before {
 }
 
 
-
-
-
 @media screen and (max-width: 768px) {
     main .gallery .meta .text-container .year {
         font-size:1.4rem;

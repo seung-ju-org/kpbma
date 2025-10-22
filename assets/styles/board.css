@@ -196,11 +196,22 @@
     width: 146rem;
 }
 
+.board-detail #board-detail-main-img.active {
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    opacity: 0.45;
+}
+
 .board-detail #board-detail-main-img img {
     height: 100%;
     object-fit: cover;
     transition: all 0.5s ease;
     width: 100%;
+}
+
+.board-detail #board-detail-main-img img.active {
+    opacity: 0.45;
 }
 
 .board-detail .content-container {
@@ -1677,9 +1688,6 @@ section {
     padding:2rem 0;
     transition: top 0.25s ease;
 }
-.top-fixed-area.active {
-    top: 80px;
-}
 .top-fixed-area .container {
     display: flex;
     align-items: center;
@@ -2340,13 +2348,69 @@ section {
 }
 
 @media screen and (max-width: 1440px) {
-
+    .board-detail .meta-container {
+        padding-top:18rem;
+    }
 }
 
 @media screen and (max-width: 1024px) {
 
     .intro-panel .year-list {
         gap:4rem;
+    }
+    .board-detail .meta-container {
+        gap:4rem;
+    }
+    .board-detail .meta-container .meta .year {
+        font-size:1.4rem;
+    }
+    .board-detail .meta-container .meta .title {
+        font-size:4rem;
+    }
+    .match-contents .item h4 {
+        font-size:3rem;
+    }
+    .match-contents .item .num {
+        font-size:3.2rem;
+        width:8rem;
+    }
+    .top-fixed-area {
+        padding:1.5rem 0;
+    }
+    .top-fixed-area .title,
+    .top-fixed-area .year {
+        font-size:1.4rem;
+    }
+    .match-contents .item .title-depth {
+        padding:2rem 0 4rem;
+    }
+    .match-contents .item .contents p {
+        font-size:1.6rem;
+    }
+    .match-contents .item .row {
+        padding-left:6rem;
+        gap:8rem;
+    }
+    .match-contents .item article span {
+        font-size:1.4rem;
+        margin:1.5rem 0;
+    }
+    .match-contents .btn-set a {
+        height:5rem;
+        padding:0 5rem;
+    }
+    .match-contents .btn-set p {
+        font-size:1.4rem;
+    }
+    .match-contents .btn-set .arrow {
+        width:12px;
+        height:12px;
+    }
+    .match-contents .btn-set .arrow:before {
+        width:6px;
+        height:6px;
+        border-top-width:2px;
+        border-left-width:2px;
     }
 }
 
@@ -2377,6 +2441,25 @@ section {
         padding:0 2rem;
     }
 
+    .match-contents .item .row {
+        gap:4rem;
+        padding-left:4rem;
+        flex-direction: column;
+    }
+    .match-contents .item .num {
+        font-size:2.4rem;
+        width:5rem;
+    }
+    .match-contents .item h4 {
+        font-size:2.2rem;
+    }
+    .match-contents .item article {
+        flex:0.7;
+    }
+    .match-contents .item .title-depth {
+        padding:2rem 0;
+    }
+
 }
 
 @media screen and (max-width: 450px) {
@@ -2399,6 +2482,30 @@ section {
     }
     .intro-panel .year-list li p {
         font-size:1.6rem;
+    }
+    .breadcrumb {
+        display: none;
+    }
+    .board-detail .meta-container .meta .title {
+        font-size:3rem;
+        line-height:1.4;
+    }
+    .top-fixed-area .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .top-fixed-area .year {
+        margin-bottom:.5rem;
+    }
+    .match-contents .item .contents p {
+        font-size:1.4rem;
+    }
+    .match-contents .item .num {
+        font-size:2rem;
+        margin-top:0.3rem;
+    }
+    .match-contents .item h4 {
+        font-size:1.8rem;
     }
 }
 
