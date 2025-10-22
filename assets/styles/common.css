@@ -421,6 +421,10 @@ a.shadow:hover {
     font-family: 'NanumSquareNeo';
 }
 
+.breadcrumb li a.active {
+    color: #ffffff;
+}
+
 
 .breadcrumb li .sub-menu {
     z-index:9;
