@@ -1,3 +1,7 @@
+function toggleMenu() {
+    document.querySelector('.menu').classList.toggle('active')
+}
+
 class HeaderComponent extends HTMLElement {
     constructor() {
         super();
@@ -49,8 +53,19 @@ class HeaderComponent extends HTMLElement {
 <!--                    <label>KPBMA 80년사</label>-->
 <!--                </a>-->
 <!--            </div>-->
+        <button type="button" class="menu-button" onclick="toggleMenu()">
+            Open Menu
+        </button>
     </div>
 </header>
+<div class="menu">
+<a href="">#</a>
+<a href="">#</a>
+<a href="">#</a>
+<a href="">#</a>
+<a href="">#</a>
+<a href="">#</a>
+</div>
         `;
     }
 }

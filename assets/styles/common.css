@@ -133,6 +133,36 @@ header h1 a span {
     font-weight: 600;
 }
 
+header .menu-button {
+    display: none;
+}
+
+.menu {
+    background-color: #ffffff;
+    bottom: 0;
+    box-sizing: border-box;
+    height: 100vh;
+    left: 0;
+    margin: auto;
+    padding-top: 7rem;
+    position: fixed;
+    right: 0;
+    top: 0;
+    transform: translateX(100%);
+    transition: 0.5s all ease;
+    width: 100vw;
+    z-index: 999;
+    display: none;
+}
+
+.menu.active {
+    transform: translateX(0);
+}
+
+.menu a {
+
+}
+
 .gnb {
     display: flex;
 }
@@ -508,5 +538,13 @@ a.shadow:hover {
     .copyright p {
         font-size:1.2rem;
         line-height:1.4;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+    .menu {
+        display: block;
     }
 }
