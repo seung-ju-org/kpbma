@@ -130,7 +130,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
     setTimeout(function () {
         logoSpanElement.style.opacity = '1';
-        logoSpanElement.style.transform = 'translateY(0) translateX(13rem)';
+        if (window.innerWidth >= 425) {
+            logoSpanElement.style.transform = 'translateY(0) translateX(13rem)';
+        } else {
+            logoSpanElement.style.transform = 'translateY(0) translateX(5rem)';
+        }
     }, 1000);
 
     setTimeout(function () {
@@ -139,7 +143,11 @@ document.addEventListener('DOMContentLoaded', function () {
         logoTxtElement.style.opacity = '0';
         logoTxtElement.style.transform = 'translateY(1rem)';
         logoSpanElement.style.opacity = '0';
-        logoSpanElement.style.transform = 'translateY(1rem) translateX(13rem)';
+        if (window.innerWidth >= 425) {
+            logoSpanElement.style.transform = 'translateY(1rem) translateX(13rem)';
+        } else {
+            logoSpanElement.style.transform = 'translateY(1rem) translateX(5rem)';
+        }
     }, 2000);
 
 

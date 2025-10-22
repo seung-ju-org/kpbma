@@ -87,6 +87,17 @@
     width: 25rem;
 }
 
+
+@media screen and (max-width: 425px) {
+    #intro .logo {
+        transform: scale(0.5);
+    }
+
+    #intro .logo span {
+        transform: translateY(1rem) translateX(5rem);
+    }
+}
+
 .bg {
     height: 100%;
     object-fit: cover;
