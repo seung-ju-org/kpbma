@@ -11,9 +11,8 @@ document.addEventListener('DOMContentLoaded', function () {
     ScrollTrigger.create({
         trigger: ".tab-area",
         pin: true,
-        start: "-=85",
+        start: window.innerWidth > 768 ? "-=85" : "-=60",
         end: document.body.scrollHeight + "+=100",
-
     });
 
     document.querySelectorAll(".section-cover").forEach(function (element) {
