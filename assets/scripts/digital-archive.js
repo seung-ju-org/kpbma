@@ -77,13 +77,12 @@ document.addEventListener('DOMContentLoaded', function () {
                     theme: {
                         "광고": 0,
                         "출판물": 0,
-                        "기업역사관": 0,
                         "인물": 0,
-                        "R&D": 0,
+                        "연구개발": 0,
                         "제품": 0,
                         "사회공헌": 0,
                         "행사": 0,
-                        "표창": 0,
+                        "수상": 0,
                         "기타": 0,
                     },
                 })).reduce(function (previousValue, currentValue) {
@@ -133,8 +132,42 @@ document.addEventListener('DOMContentLoaded', function () {
                     const childContentsElement = child.querySelector('.contents');
 
                     childContentsElement.innerHTML = '';
-
                     function handleSetFilter(key) {
+                        const count = Object.values(dataCounts[key]).reduce(function (previousValue, currentValue) {
+                            return previousValue + currentValue;
+                        }, 0);
+                        const filterButtonElement = document.createElement('a');
+
+                        const url = new URL(window.location.href);
+
+                        if (!url.searchParams.get(key)) {
+                            filterButtonElement.classList.add('active');
+                        }
+
+                        url.searchParams.set(key, '');
+
+                        const urlString = url.toString();
+
+                        filterButtonElement.href = urlString;
+
+                        filterButtonElement.addEventListener('click', function (event) {
+                            event.preventDefault();
+
+                            window.history.replaceState({}, "", urlString);
+
+                            init();
+                        });
+
+                        const nameElement = document.createElement('b');
+                        const countElement = document.createElement('span');
+
+                        nameElement.innerText = '전체';
+                        countElement.innerText = count + '';
+
+                        filterButtonElement.appendChild(nameElement);
+                        filterButtonElement.appendChild(countElement);
+                        childContentsElement.appendChild(filterButtonElement);
+
                         Object.entries(dataCounts[key]).forEach(function (value) {
                             let name = value[0];
                             const count = value[1];
