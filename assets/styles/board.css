@@ -878,7 +878,7 @@ hr {
 }
 
 .fame-list .detail-info:after {
-    background-color: #f0f0f0;
+    background-color: #f5f5f5;
     bottom: 0;
     content: "";
     left: calc((100vw - 148rem) / 2 * -1);
@@ -2667,6 +2667,29 @@ section {
     .stats-list .fixed-area h4 {
         margin:1rem 0;
     }
+    .fame-list .detail-info.active .detail-contents .aside {
+        display: none;
+    }
+    .fame-list .detail-info {
+        padding:6rem 4rem;
+    }
+    .fame-list .detail-contents h2 {
+        font-size:2.2rem;
+    }
+    .fame-list .detail-contents p,
+    .fame-list .detail-info .list-style h4,
+    .fame-list .detail-contents .main-copy p {
+        font-size:1.6rem;
+    }
+    .fame-list .detail-info .list-style li {
+        font-size:1.4rem;
+    }
+    .fame-list .detail-contents .main-contents {
+        padding-right:0;
+    }
+    .fame-list .item p {
+        font-size:1.6rem;
+    }
 }
 
 @media screen and (max-width: 450px) {
@@ -2774,6 +2797,20 @@ section {
     .tab-contents .card-item .thumb img {
         height:100%;
         object-fit: contain;
+    }
+    .fame-list {
+        margin:-1rem -1rem 0;
+    }
+    .fame-list .item {
+        padding:1rem;
+    }
+    .fame-list .detail-info {
+        margin:2rem -1rem;
+        padding:4rem 2rem;
+    }
+    .fame-list .detail-info .half {
+        gap:3rem;
+        flex-direction: column;
     }
 }
 
