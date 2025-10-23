@@ -132,41 +132,44 @@ document.addEventListener('DOMContentLoaded', function () {
                     const childContentsElement = child.querySelector('.contents');
 
                     childContentsElement.innerHTML = '';
+
                     function handleSetFilter(key) {
-                        const count = Object.values(dataCounts[key]).reduce(function (previousValue, currentValue) {
-                            return previousValue + currentValue;
-                        }, 0);
-                        const filterButtonElement = document.createElement('a');
+                        if (key === 'theme') {
+                            const count = Object.values(dataCounts[key]).reduce(function (previousValue, currentValue) {
+                                return previousValue + currentValue;
+                            }, 0);
+                            const filterButtonElement = document.createElement('a');
 
-                        const url = new URL(window.location.href);
+                            const url = new URL(window.location.href);
 
-                        if (!url.searchParams.get(key)) {
-                            filterButtonElement.classList.add('active');
+                            if (!url.searchParams.get(key)) {
+                                filterButtonElement.classList.add('active');
+                            }
+
+                            url.searchParams.set(key, '');
+
+                            const urlString = url.toString();
+
+                            filterButtonElement.href = urlString;
+
+                            filterButtonElement.addEventListener('click', function (event) {
+                                event.preventDefault();
+
+                                window.history.replaceState({}, "", urlString);
+
+                                init();
+                            });
+
+                            const nameElement = document.createElement('b');
+                            const countElement = document.createElement('span');
+
+                            nameElement.innerText = '전체';
+                            countElement.innerText = count + '';
+
+                            filterButtonElement.appendChild(nameElement);
+                            filterButtonElement.appendChild(countElement);
+                            childContentsElement.appendChild(filterButtonElement);
                         }
-
-                        url.searchParams.set(key, '');
-
-                        const urlString = url.toString();
-
-                        filterButtonElement.href = urlString;
-
-                        filterButtonElement.addEventListener('click', function (event) {
-                            event.preventDefault();
-
-                            window.history.replaceState({}, "", urlString);
-
-                            init();
-                        });
-
-                        const nameElement = document.createElement('b');
-                        const countElement = document.createElement('span');
-
-                        nameElement.innerText = '전체';
-                        countElement.innerText = count + '';
-
-                        filterButtonElement.appendChild(nameElement);
-                        filterButtonElement.appendChild(countElement);
-                        childContentsElement.appendChild(filterButtonElement);
 
                         Object.entries(dataCounts[key]).forEach(function (value) {
                             let name = value[0];
