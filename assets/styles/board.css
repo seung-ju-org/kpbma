@@ -1468,7 +1468,7 @@ section {
 }
 
 .numbers {
-    padding: 80px 0;
+    padding: 60px 0;
     border-bottom: 1px #e2e4e7 solid;
     position: relative;
     background-color: #ffffff;
@@ -2434,6 +2434,78 @@ section {
     .ann-step .thumb {
         margin:4rem 8rem;
     }
+
+    .section-contents {
+        padding-right:2rem;
+    }
+    .tab-contents .section-contents .contents .group {
+        padding-top:0;
+    }
+    .tab-contents .section-contents .contents .group-title {
+        top:-4rem;
+        font-size:1.8rem;
+    }
+    .section-contents .item label {
+        font-size:1.6rem;
+    }
+    .section-contents .numb h4 {
+        font-size:5rem;
+    }
+    .section-contents .item span {
+        font-size:1.6rem;
+    }
+
+    .tab-contents .section-contents .row {
+        gap:10rem;
+    }
+    .tab-contents .section-contents h2 {
+        font-size:2rem;
+    }
+    .tab-contents .section-contents .row .contents {
+        gap:8rem;
+    }
+
+    .section-cover {
+        padding-bottom:80px !important;
+    }
+    .stats-list .fixed-area h4 {
+        font-size:2rem;
+    }
+    .stats-list li {
+        flex-direction: column;
+    }
+    .stats-list li label,
+    .stats-list li p {
+        font-size:1.6rem;
+    }
+    .stats-list .container {
+        gap:10rem;
+    }
+    .stats-list .fixed-area {
+        max-width:250px !important;
+        min-width: 250px !important;
+    }
+    .stats-list li {
+        padding:1.5rem 0;
+    }
+    .stats-list li .contents {
+        gap:0.8rem;
+    }
+    .card-item-wrapper.noabs {
+        gap:2rem;
+    }
+    .tab-contents .card-item h4 {
+        font-size:2rem;
+    }
+    .tab-contents .card-item .thumb {
+        margin:2rem 0;
+    }
+    .tab-contents .card-item p {
+        font-size:1.6rem;
+    }
+    .tab-contents .card-item {
+        padding:3rem;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -2540,6 +2612,73 @@ section {
         min-width:  49.5%;
     }
 
+    .loca-remote {
+        left:2rem;
+    }
+
+    .loca-remote span {
+        display: none;
+    }
+    .section-contents .item span {
+        display: none;
+    }
+
+    .numbers {
+        padding-top:4rem;
+    }
+    .section-contents {
+        padding:0 2rem;
+    }
+    .stats-list .container,
+    .tab-contents .section-contents .row {
+        gap:6rem;
+    }
+
+    .slider-area {
+        padding-top:0;
+    }
+    .tab-contents .section-contents .contents table th,
+    .tab-contents .section-contents .contents table td {
+        font-size:1.4rem;
+    }
+
+    .tab-contents .row {
+        padding-right:0;
+    }
+
+    .card-item-wrapper.noabs {
+        flex-direction: column;
+    }
+    .tab-contents .card-item {
+        width:100%;
+    }
+    .tab-contents h4 {
+        padding:0;
+    }
+    .tab-contents .card-item:nth-child(2) {
+        margin:0;
+    }
+    .section-cover label {
+        font-size:1.4rem;
+    }
+    .section-cover h2 {
+        font-size:2.4rem;
+        margin:2rem 0;
+    }
+    section .pin-spacer {
+        margin:0 !important;
+        padding-bottom:0 !important;
+        height:360px !important;
+    }
+    .section-cover {
+        height:100% !important;
+    }
+    .stats-list {
+        padding-top:2rem;
+    }
+    .stats-list .fixed-area h4 {
+        margin:1rem 0;
+    }
 }
 
 @media screen and (max-width: 450px) {
@@ -2593,6 +2732,60 @@ section {
     }
     .ann-step .thumb {
         margin:4rem 0;
+    }
+    .tab-contents .section-contents .row {
+        flex-direction: column;
+        padding:0;
+    }
+    .tab-contents .section-contents h2 {
+        margin-top:1rem;
+    }
+    .section-contents .title-img,
+    .section-contents .title img {
+        width:60px;
+    }
+    .tab-contents .section-contents .row {
+        gap:6rem;
+    }
+    .stats-list {
+        padding-bottom:2rem;
+    }
+    .stats-list .container {
+        gap:1rem;
+    }
+    .section-contents+.section-contents {
+        margin-top:3rem;
+    }
+    .tab-contents .section-contents .contents .group-title {
+        font-size:1.4rem;
+        top:-3rem;
+    }
+    .section-cover {
+        padding:4rem 0 !important;
+        max-height:100% !important;
+    }
+    .stats-list .container {
+        flex-direction: column;
+        padding: 0;
+    }
+    section .stats-list .pin-spacer {
+        height:auto !important;
+    }
+    .card-item-wrapper.noabs {
+        padding:2rem 0;
+    }
+    .tab-contents .card-item h4 {
+        font-size:1.6rem;
+    }
+    .tab-contents .card-item p {
+        font-size:1.4rem;
+    }
+    .tab-contents .card-item .thumb {
+        height:3rem;
+    }
+    .tab-contents .card-item .thumb img {
+        height:100%;
+        object-fit: contain;
     }
 }
 
