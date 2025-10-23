@@ -54,17 +54,29 @@ class HeaderComponent extends HTMLElement {
 <!--                </a>-->
 <!--            </div>-->
         <button type="button" class="menu-button" onclick="toggleMenu()">
-            Open Menu
+        <div class="wrap">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
         </button>
     </div>
 </header>
 <div class="menu">
-<a href="">#</a>
-<a href="">#</a>
-<a href="">#</a>
-<a href="">#</a>
-<a href="">#</a>
-<a href="">#</a>
+    <button class="close" onclick="toggleMenu()"><span></span><span></span></button>
+    <a class="btn" href="/highlight">역사 하이라이트</a>
+    <a href="/industrial">산업관</a>
+    <div class="sub-menu">
+        <a href="/industrial#1">한국 제약바이오산업의 120년</a>
+        <a href="/evolution/first">그림으로 보는 산업 변천사</a>
+    </div>
+    <a href="/association">협회관</a>
+    <div class="sub-menu">
+        <a href="/association">KPBMA 80년</a>
+        <a href="/fame">역대 회장/이사장</a>
+    </div>
+    <a href="/digital-archive">디지털아카이브</a>
+    <a href="/celebrate">80주년 기념사업</a>
 </div>
         `;
     }

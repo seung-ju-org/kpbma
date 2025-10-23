@@ -2693,6 +2693,19 @@ section {
 }
 
 @media screen and (max-width: 450px) {
+    .board-detail .meta-container {
+        gap:2rem;
+    }
+    .tab-contents .section-contents .deco {
+        width:6rem;
+        margin-top:2rem;
+    }
+    .tab-contents .section-contents .row {
+        align-items: stretch;
+    }
+    .tab-contents .section-contents .contents .group {
+        justify-content: space-between;
+    }
     .board-detail .meta-container .meta .year {
         font-size:1.2rem;
         letter-spacing: 0;
@@ -2716,9 +2729,6 @@ section {
     }
     .intro-panel .year-list li p {
         font-size:1.6rem;
-    }
-    .breadcrumb {
-        display: none;
     }
     .board-detail .meta-container .meta .title {
         font-size:3rem;
@@ -2756,7 +2766,7 @@ section {
         width:60px;
     }
     .tab-contents .section-contents .row {
-        gap:6rem;
+        gap:5rem;
     }
     .stats-list {
         padding-bottom:2rem;
@@ -2765,7 +2775,7 @@ section {
         gap:1rem;
     }
     .section-contents+.section-contents {
-        margin-top:3rem;
+        margin-top:4rem;
     }
     .tab-contents .section-contents .contents .group-title {
         font-size:1.4rem;
