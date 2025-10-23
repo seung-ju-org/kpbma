@@ -32,9 +32,11 @@ const data = json.reduce((previousValue, currentValue) => {
     const previousData = previousValue.find(value => value.key === key);
 
     if (currentValue['파일키']) {
+        const youtubeLink = currentValue['유튜브 링크']
+        const youtubeKey = youtubeLink?.replace('https://youtu.be/', 'youtube:')
         const image = {
-            url: currentValue['파일키'].startsWith('youtube:') ? currentValue['파일키'] : `https://lh3.googleusercontent.com/d/${currentValue['파일키']}?authuser=0`,
-            download: currentValue['파일키'].startsWith('youtube:') ? currentValue['파일키'] : `https://drive.google.com/file/d/${currentValue['pdf파일키'] ?? currentValue['파일키']}/view?usp=drive_link`
+            url: currentValue['파일키'].startsWith('youtube:') ? currentValue['파일키'] : youtubeKey ?? `https://lh3.googleusercontent.com/d/${currentValue['파일키']}?authuser=0`,
+            download: currentValue['파일키'].startsWith('youtube:') ? currentValue['파일키'] : youtubeKey ?? `https://drive.google.com/file/d/${currentValue['pdf파일키'] ?? currentValue['파일키']}/view?usp=drive_link`
         }
 
         if (previousData) {
@@ -49,7 +51,7 @@ const data = json.reduce((previousValue, currentValue) => {
                 theme: CODE_MAP[currentValue['테마']],
                 href: `/digital-archive/${key}`,
                 thumbnail: image.url,
-                title: currentValue['제목'],
+                title: `[${currentValue['세부카테고리']}] ${currentValue['제목']}`,
                 content: currentValue['내용'],
                 images: [image],
                 createdAt: currentValue['생성일']
