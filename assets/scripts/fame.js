@@ -1,5 +1,10 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const columnCount = 4;
+    let columnCount = 4;
+    if (window.innerWidth <= 768) {
+        columnCount = 2
+    } else if (window.innerWidth <= 1024) {
+        columnCount = 3
+    }
     const arrowSize = 24;
 
     const fameListElement = document.querySelector('.fame-list');
@@ -35,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             detailInfoElements.forEach(function (element) {
                 element.style.display = 'none';
-                element.style.transform = 'translateY(-100%)';
+                element.style.transform = 'translateY(-50%)';
                 element.classList.remove('active');
             });
 
