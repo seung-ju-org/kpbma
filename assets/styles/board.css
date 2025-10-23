@@ -877,23 +877,6 @@ hr {
     margin-top: 1rem;
 }
 
-.fame-list .detail-info:before {
-    transform: translateY(0);
-    background-color: #ffffff;
-    content: "";
-    height: 100%;
-    left: calc((100vw - 148rem) / 2 * -1);
-    position: absolute;
-    top: -2.5rem;
-    width: 100vw;
-    z-index: 1;
-    transition: transform 0.5s ease;
-}
-
-.fame-list .detail-info.active:before {
-    transform: translateY(-100%);
-}
-
 .fame-list .detail-info:after {
     background-color: #f0f0f0;
     bottom: 0;
@@ -2351,6 +2334,9 @@ section {
 }
 
 @media screen and (max-width: 1024px) {
+    .fame-list .item {
+        width: 33%;
+    }
 
     .intro-panel .year-list {
         gap:4rem;
@@ -2437,7 +2423,9 @@ section {
 }
 
 @media screen and (max-width: 768px) {
-
+    .fame-list .item {
+        width: 50%;
+    }
     .board-detail .content-container {
         gap:4rem;
         padding:0;
