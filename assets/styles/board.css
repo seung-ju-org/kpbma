@@ -948,12 +948,14 @@ hr {
 }
 .ann-title h3 {
     font-size:3.6rem;
+    line-height:1.5;
     margin-bottom:2rem;
     color:#1562e1;
 }
 .ann-title span {
     font-size:1.6rem;
     color:#666;
+    line-height:1.5;
 }
 
 .ann-intro {
@@ -2412,6 +2414,31 @@ section {
         border-top-width:2px;
         border-left-width:2px;
     }
+    .board-detail .content-container {
+        padding-top:3rem;
+    }
+    .picture-list > div {
+        gap:3rem;
+    }
+    .picture-title-list li button {
+        font-size:1.4rem;
+    }
+    .picture-list > div h4 {
+        font-size:30px;
+    }
+    .picture-list > div .thumb {
+        height:24rem;
+    }
+    .tab-area a {
+        font-size:1.6rem;
+    }
+
+    .ann-container {
+        padding:4rem 0;
+    }
+    .ann-step .thumb {
+        margin:4rem 8rem;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -2459,10 +2486,72 @@ section {
     .match-contents .item .title-depth {
         padding:2rem 0;
     }
+    .picture-list > div span,
+    .picture-list > div p {
+        font-size:1.4rem;
+    }
+    .picture-title-list {
+        display: none;
+    }
+    .swiper .swiper-wrapper .swiper-slide {
+        margin-left:0;
+    }
+
+    .ann-title {
+        padding-bottom:2rem;
+        margin-bottom:2rem;
+    }
+
+    .ann-title h3 {
+        font-size:2.4rem;
+        margin-bottom:1rem;
+    }
+    .ann-title span {
+        font-size:1.4rem;
+
+    }
+
+    .ann-step .contents p,
+    .tab-contents p {
+        font-size:1.4rem;
+    }
+
+    .ann-step .step-title h4 {
+        font-size:1.8rem;
+        padding:1rem 0;
+    }
+    .ann-step .step-title span {
+        font-size:1.4rem;
+    }
+    .ann-step .contents p+p {
+        margin-top:1rem;
+    }
+    .tab-contents .process-list h4 {
+        font-size:1.6rem;
+        padding:1rem 0;
+    }
+    .tab-contents .process-list li p {
+        font-size:1.6rem;
+    }
+    .tab-contents .process-list li {
+        padding:1.5rem 0;
+    }
+
+    .ann-step .thumb-list {
+        flex-wrap: wrap;
+    }
+    .ann-step .thumb-list img {
+        max-width: 49.5%;
+        min-width:  49.5%;
+    }
 
 }
 
 @media screen and (max-width: 450px) {
+    .board-detail .meta-container .meta .year {
+        font-size:1.2rem;
+        letter-spacing: 0;
+    }
     .intro-panel .intro-area h2 {
         font-size:2.4rem;
         margin-bottom:1rem;
@@ -2506,6 +2595,9 @@ section {
     }
     .match-contents .item h4 {
         font-size:1.8rem;
+    }
+    .ann-step .thumb {
+        margin:4rem 0;
     }
 }
 

@@ -329,6 +329,7 @@ a.btn-white:hover {
     width: 100%;
     z-index: 1000;
 }
+#content .copyright { position: relative; height: auto; padding-bottom:3rem; }
 
 .copyright p {
     color: var(--text-copyright);
@@ -339,6 +340,7 @@ a.btn-white:hover {
     opacity: 0.5;
 }
 
+#content .copyright p { color:#3d4a53; }
 .slide-page .copyright p { color:#3d4a53; }
 
 .shadow {
