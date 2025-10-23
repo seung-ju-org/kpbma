@@ -33,7 +33,7 @@ const data = json.reduce((previousValue, currentValue) => {
 
     if (currentValue['파일키']) {
         const image = {
-            url: currentValue['파일키'].startsWith('youtube:') ? currentValue['파일키'] : `https://lh3.google.com/u/0/d/${currentValue['파일키']}`,
+            url: currentValue['파일키'].startsWith('youtube:') ? currentValue['파일키'] : `https://lh3.googleusercontent.com/d/${currentValue['파일키']}?authuser=0`,
             download: currentValue['파일키'].startsWith('youtube:') ? currentValue['파일키'] : `https://drive.google.com/file/d/${currentValue['pdf파일키'] ?? currentValue['파일키']}/view?usp=drive_link`
         }
 
