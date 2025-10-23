@@ -2434,9 +2434,6 @@ section {
     .ann-step .thumb {
         margin:4rem 8rem;
     }
-    .fame-list .item {
-        width:33.3%;
-    }
 }
 
 @media screen and (max-width: 768px) {
