@@ -77,12 +77,13 @@ document.addEventListener('DOMContentLoaded', function () {
                     theme: {
                         "광고": 0,
                         "출판물": 0,
+                        "기업역사관": 0,
                         "인물": 0,
-                        "연구개발": 0,
+                        "R&D": 0,
                         "제품": 0,
                         "사회공헌": 0,
                         "행사": 0,
-                        "수상": 0,
+                        "표창": 0,
                         "기타": 0,
                     },
                 })).reduce(function (previousValue, currentValue) {
