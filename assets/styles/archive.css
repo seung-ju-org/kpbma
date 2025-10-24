@@ -193,6 +193,21 @@
     transition-duration: .2s;
 }
 
+.search-field li.theme .contents a:first-child {
+    border:1px #1562e1 solid;
+    background: #fff;
+}
+
+.search-field li .contents a:first-child:hover,
+.search-field li .contents a:first-child.active {
+    background: #1562e1;
+    transition-duration: .2s;
+}
+.search-field li .contents a:first-child:hover span,
+.search-field li .contents a:first-child.active span {
+    color:#fff;
+    transition-duration: .2s;
+}
 .archive-title {
     margin-top:12rem;
 }
