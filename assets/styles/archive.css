@@ -273,9 +273,11 @@
 }
 
 .swiper .swiper-wrapper .swiper-slide {
-    width:auto;
-    height:360px;
+    width:400px;
     border:1px #e2e4e7 solid;
+}
+.archive-detail-layout .swiper .swiper-wrapper .swiper-slide {
+    aspect-ratio: 4 / 3;
 }
 .swiper img {
     width:100%;
@@ -289,9 +291,6 @@
     }
     .archive-title h2 {
         font-size:3.4rem;
-    }
-    .swiper .swiper-wrapper .swiper-slide {
-        height:280px;
     }
     .archive-contents {
         padding-top:3rem;
@@ -339,7 +338,7 @@
         margin:3rem 0;
     }
     .archive-detail-layout .swiper .swiper-wrapper .swiper-slide {
-        height:200px;
+        width:100%;
     }
     .archive-contents {
         padding-top:3rem;
