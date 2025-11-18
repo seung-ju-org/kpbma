@@ -1754,16 +1754,16 @@ section {
     color: #b71a1a;
 }
 
-.match-contents .item .num:before {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background: #b71a1a;
-    content: '';
-    position: absolute;
-    top: -40px;
-    left: 0;
-}
+/*.match-contents .item .num:before {*/
+/*    width: 12px;*/
+/*    height: 12px;*/
+/*    border-radius: 50%;*/
+/*    background: #b71a1a;*/
+/*    content: '';*/
+/*    position: absolute;*/
+/*    top: -40px;*/
+/*    left: 0;*/
+/*}*/
 
 .match-contents .item h4 {
     color: #b71a1a;
