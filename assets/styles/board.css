@@ -1613,8 +1613,7 @@ section {
 
 .swiper .swiper-wrapper .swiper-slide {
     width: 100%;
-    margin: 0 10px;
-    margin-left: -20px;
+    margin: 0;
 }
 
 .swiper-button-prev {
