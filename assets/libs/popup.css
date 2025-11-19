@@ -1,0 +1,62 @@
+.popup-wrapper {
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    left: 0;
+    margin: auto;
+    opacity: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    transition: 0.2s all ease;
+    width: 100vw;
+}
+
+.popup-wrapper .popup-container {
+    background-color: #ffffff;
+    border-radius: 15px;
+    height: 80%;
+    overflow: hidden;
+    position: relative;
+    width: 80%;
+}
+
+.popup-wrapper .popup-container .popup-close-button {
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: block;
+    height: 30px;
+    padding: 0;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 30px;
+}
+
+.popup-wrapper .popup-container .popup-close-button::before,
+.popup-wrapper .popup-container .popup-close-button::after {
+    background-color: #cccccc;
+    bottom: 0;
+    content: '';
+    display: block;
+    height: 1px;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 5;
+}
+
+.popup-wrapper .popup-container .popup-close-button::before {
+    transform: rotate(45deg);
+}
+
+.popup-wrapper .popup-container .popup-close-button::after {
+    transform: rotate(-45deg);
+}

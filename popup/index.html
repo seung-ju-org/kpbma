@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"/>
+    <link rel="stylesheet" href="/assets/libs/interactive.css">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
+    <script type="application/javascript" src="/assets/libs/interactive.js"></script>
+
+    <link rel="stylesheet" href="/assets/libs/popup.css">
+    <script type="application/javascript" src="/assets/libs/popup.js"></script>
+
+    <link rel="stylesheet" href="/assets/styles/font.css">
+    <link rel="stylesheet" href="/assets/styles/reset.css">
+    <link rel="stylesheet" href="/assets/styles/common.css">
+    <script type="application/javascript" src="/assets/scripts/header-component.js"></script>
+</head>
+<body>
+<div id="wrapper">
+    <button onclick="openPopup({
+    html: `
+<div>content</div>
+    `.trim()
+    })">popup
+    </button>
+</div>
+</body>
+</html>
