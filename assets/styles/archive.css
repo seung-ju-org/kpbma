@@ -346,6 +346,9 @@
     .archive-detail-layout .swiper .swiper-wrapper .swiper-slide {
         width:100%;
     }
+    .swiper.vd .noswip-slide {
+        width:100%;
+    }
     .archive-contents {
         padding-top:3rem;
     }
