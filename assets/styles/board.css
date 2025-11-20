@@ -1598,6 +1598,20 @@ section {
     position: relative;
 }
 
+.slider-area.stat .swiper-button-prev,
+.slider-area.stat .swiper-button-next {
+    top: auto;
+    bottom: -40px;
+}
+.slider-area.stat .swiper-button-prev {
+    left:50%;
+    margin-left:-50px;
+}
+.slider-area.stat .swiper-button-next {
+    right:50%;
+    margin-right:-50px;
+}
+
 .slider-area img {
     width: 1000px;
 }
