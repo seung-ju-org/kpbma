@@ -1,33 +1,4 @@
-const path = require('path');
-const fs = require('fs');
-
-const digitalArchivePath = path.join(__dirname, '../www/digital-archive');
-
-const digitalArchiveFiles = fs.readdirSync(digitalArchivePath);
-
-digitalArchiveFiles.forEach((digitalArchiveFile) => {
-    if (digitalArchiveFile !== 'index.html') {
-        const p = path.join(digitalArchivePath, digitalArchiveFile);
-        const stats = fs.statSync(p);
-
-        if (!stats.isDirectory()) {
-            fs.rmSync(p);
-        }
-    }
-});
-
-const digitalArchives = JSON.parse(fs.readFileSync(path.join(__dirname, '../www/data/digital-archive.json'), 'utf8'));
-
-digitalArchives.forEach((digitalArchive) => {
-    if (!digitalArchive.href) {
-        return;
-    }
-
-    const key = digitalArchive.href.split('/')[2].split('.')[0];
-    const filename = `${key}.html`;
-
-    const html = `
-    <!doctype html>
+<!doctype html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
@@ -59,7 +30,7 @@ digitalArchives.forEach((digitalArchive) => {
                 <div class="archive-detail-layout">
                     <div class="container">
                         <div class="archive-title">
-                            <h2>${digitalArchive.title}</h2>
+                            <h2>[동성제약] 동성제약 록소앤겔 CM(2022)</h2>
                             <ul class="breadcrumb">
                                 <li><a href=""><i class="fa fa-home"></i></a></li>
                                 <li><a href="">디지털 아카이브 <i class="fa fa-angle-down"></i></a></li>
@@ -69,37 +40,31 @@ digitalArchives.forEach((digitalArchive) => {
                     <div class="container">
                         <div class="swiper">
                             <div class="swiper-wrapper">
-                                ${digitalArchive.images.map(({url, download}) => {
-        if (url.startsWith("youtube:")) {
-            const youtubeVideoId = url.split(":")[1];
-            return `<div class="swiper-slide"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/${youtubeVideoId}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>`;
-        }
-        return `<div class="swiper-slide"><a href="#"><img src="${url}" alt="${digitalArchive.title}" referrerpolicy="no-referrer" data-download="${download}"/></a></div>`;
-    }).join('')}
+                                <div class="swiper-slide"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/M4UFV-5dchQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
                             </div>
                         </div>
                     </div>
                     <div class="container">
                         <div class="archive-contents">
                             <p>
-                                ${digitalArchive.content}
+                                동성제약 록소앤겔 CM(2022)
                             </p>
                             <ul>
                                 <li>
                                     <label>시대구분</label>
-                                    <span>${digitalArchive.date}</span>
+                                    <span>2020</span>
                                 </li>
                                 <li>
                                     <label>카테고리</label>
-                                    <span>${digitalArchive.category}</span>
+                                    <span>영상</span>
                                 </li>
                                 <li>
                                     <label>사료구분</label>
-                                    <span>${digitalArchive.type}</span>
+                                    <span>산업</span>
                                 </li>
                                 <li>
                                     <label>세부카테고리</label>
-                                    <span>${digitalArchive.subCategory ?? "없음"}</span>
+                                    <span>동성제약</span>
                                 </li>
                             </ul>
                         </div>
@@ -112,10 +77,3 @@ digitalArchives.forEach((digitalArchive) => {
 </div>
 </body>
 </html>
-`.trim();
-
-    const p = path.join(digitalArchivePath, filename);
-    fs.writeFileSync(p, html);
-});
-
-console.log('Done');

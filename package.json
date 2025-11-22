@@ -1,0 +1,12 @@
+{
+	"scripts": {
+		"create-digital-archive-data": "node ./scripts/create-digital-archive-data.js",
+		"create-digital-archive-details": "node ./scripts/create-digital-archive-details.js",
+		"build": "pnpm create-digital-archive-data && pnpm create-digital-archive-details",
+		"dev": "pnpm serve public"
+	},
+	"devDependencies": {
+		"serve": "^14.2.5",
+		"xlsx": "^0.18.5"
+	}
+}

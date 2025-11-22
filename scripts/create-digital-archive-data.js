@@ -20,8 +20,8 @@ const CODE_MAP = {
 }
 
 const rootPath = path.join(__dirname, '..');
-const xlsxPath = path.join(rootPath, 'data/digital-archive.xlsx');
-const jsonPath = path.join(rootPath, 'data/digital-archive.json');
+const xlsxPath = path.join(rootPath, 'digital-archive.xlsx');
+const jsonPath = path.join(rootPath, 'www/data/digital-archive.json');
 
 const workBook = xlsx.readFile(xlsxPath);
 
