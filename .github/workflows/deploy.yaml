@@ -20,6 +20,5 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: ftp
           local-dir: ./public/
-          server-dir: ./www/
           timeout: 120000
           log-level: verbose
