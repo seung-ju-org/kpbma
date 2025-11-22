@@ -13,7 +13,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Sync files
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.0
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.6
         with:
           server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USERNAME }}
@@ -21,3 +21,4 @@ jobs:
           protocol: ftp
           local-dir: ./public/
           server-dir: ${{ secrets.FTP_SERVER_DIR }}
+          timeout: 120000
