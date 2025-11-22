@@ -21,3 +21,4 @@ jobs:
           protocol: ftp
           local-dir: ./public/
           server-dir: ${{ secrets.FTP_SERVER_DIR }}
+          timeout: 120000
