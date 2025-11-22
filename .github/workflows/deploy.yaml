@@ -3,6 +3,12 @@ name: Deploy
 on:
   push:
     branches: [ "main" ]
+    paths:
+      - 'public/**'
+
+concurrency:
+  group: deploy
+  cancel-in-progress: true
 
 jobs:
   web-deploy:
