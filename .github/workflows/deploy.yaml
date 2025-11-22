@@ -22,4 +22,3 @@ jobs:
           local-dir: ./public/
           server-dir: ${{ secrets.FTP_SERVER_DIR }}
           timeout: 120000
-          log-level: verbose
